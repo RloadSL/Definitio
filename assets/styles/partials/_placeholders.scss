@@ -1,0 +1,40 @@
+@use "./variables/colors" as colors;
+@use "./mixins/devices" as devices;
+
+%mainLayout{
+  max-width: 1500px;
+  width: 100%;
+  margin: auto;
+  font-size: 1rem;
+  padding: .8rem;
+}
+
+%mainTitle {
+  color: colors.$main;
+  margin-top: 0px;
+  font-weight: 600;
+  font-size: max(3.8vw, 45px);
+}
+
+%titleButton {
+  color: colors.$palette2;
+  font-size: 1.2rem;
+  margin-top: 0px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid colors.$palette2;
+  width: 100%;
+  padding: .8rem;
+  text-align: center;
+  border-radius: 50px;
+
+  @include devices.device(600px) {
+    min-width: 200px;
+    width: fit-content;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,59 @@
+@mixin device ($breakpoint) {
+
+  @if $breakpoint == smTablet {
+    @media only screen and (min-width: 780px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 980px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == smScreen {
+    @media only screen and (min-width: 1080px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mdScreen {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lgScreen {
+    @media only screen and (min-width: 1500px) {
+      @content;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+
+// @mixin button($textColor,$bgColor,$hoverTextColor,$hoverBgColor) {
+//   a.magnetic-button {
+//     color: $textColor;
+
+//     &::before {
+//       background-color: $bgColor;
+//     }
+
+//     &:hover {
+//       color: $hoverTextColor;
+//       &::before {
+//         transform: scaleX(0.9);
+//         background-color: $hoverBgColor;
+//       }
+//     }
+//   }
+// }
+
+// @mixin hoverMenuBold($textColor){
+//   text-shadow: 0 0.015em $textColor,0 -0.015em $textColor,0.01em 0 $textColor,-0.01em 0 $textColor;
+// }

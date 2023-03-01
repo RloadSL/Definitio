@@ -1,0 +1,15 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+
+.home {
+  @extend %mainLayout;
+
+  h1 {
+    @extend %mainTitle
+  }
+
+}
+
+.titleButton {
+  @extend %titleButton
+}
