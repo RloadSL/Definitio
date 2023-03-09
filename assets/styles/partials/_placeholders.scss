@@ -2,18 +2,25 @@
 @use "./mixins/devices" as devices;
 
 %mainLayout{
-  max-width: 1500px;
+  max-width: 1800px;
   width: 100%;
   margin: auto;
   font-size: 1rem;
   padding: .8rem;
 }
 
+%mainContent{
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
+}
+
 %mainTitle {
   color: colors.$main;
   margin-top: 0px;
   font-weight: 600;
-  font-size: max(3.8vw, 45px);
+  // font-size: max(3.8vw, 45px);
+  // line-height: 3rem;
 }
 
 %titleButton {

@@ -1,0 +1,23 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+
+.navigation {
+  position: fixed;
+  width: 100%;
+
+  &_content {
+    @extend %mainLayout;
+
+    @include devices.device(smScreen) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &_menu {
+    ul {
+      display: flex;
+    }
+  }
+}

@@ -7,9 +7,9 @@ interface SEOHeaderProps {
 }
 
 /**
- Componente para SEO que permite definir tanto el título como la descripción de la página, se pueden añadir las props necesarias para los meta que se necesiten
- * @param title Título de la página
- * @param description Descripción de la página
+SEO component that allows you to define both the title and the description of the page, you can add the necessary props for the needed meta tags 
+ * @param title Title of the page
+ * @param description Description of the page
  */
 
 const SEOHeader = ({title,description}: SEOHeaderProps) => {

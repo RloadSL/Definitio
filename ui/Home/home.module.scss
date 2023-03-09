@@ -1,15 +1,146 @@
 @use "../../assets/styles/partials/placeholders" as placeholders;
 @use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
 
 .home {
-  @extend %mainLayout;
+  &_hero {
+    background: url(../../assets/img/home_bgtop.jpg) no-repeat;
+    background-size: cover;
 
-  h1 {
-    @extend %mainTitle
+    .content {
+      & > div {
+        @include devices.device(smScreen) {
+          width: 50%;
+        }
+      }
+    }
+
+    p {
+      max-width: 60%;
+    }
+
+    &__image {
+      @include devices.device(smScreen) {
+        padding-left: 3rem;
+      }
+    }
   }
 
+  &_whoweare {
+    &__image {
+      @include devices.device(smScreen) {
+        padding-right: 3rem;
+        width: 100%;
+      }
+    }
+
+    &__text {
+      width: 30%;
+
+      p {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+  &_weoffer {
+    &__image {
+      @include devices.device(smScreen) {
+        padding-left: 3rem;
+        width: 60%;
+      }
+    }
+
+    &__text {
+      width: 30%;
+
+      p {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+  &_ourtechnology {
+    &__image {
+      @include devices.device(smScreen) {
+        padding-right: 3rem;
+        width: 50%;
+      }
+    }
+
+    &__text {
+      width: 30%;
+
+      p {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+  &_experience {
+    &__image {
+      @include devices.device(smScreen) {
+        padding-left: 3rem;
+        width: 60%;
+      }
+    }
+
+    &__text {
+      width: 30%;
+
+      p {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+  &_dataoptimization{
+    &__image {
+      @include devices.device(smScreen) {
+        padding-right: 3rem;
+        width: 50%;
+      }
+    }
+
+    &__text {
+      width: 30%;
+
+      p {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+  h1 {
+    @include layout.mainTitle;
+    span {
+      color: colors.$palette2;
+    }
+  }
+
+  section,
+  main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .titleButton {
-  @extend %titleButton
+  @extend %titleButton;
+}
+
+.content {
+  @include layout.mainContent;
+  @include devices.device(smScreen) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

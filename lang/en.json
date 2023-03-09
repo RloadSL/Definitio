@@ -1,5 +1,36 @@
 {
-  "page.home.h1": "Home English",
+  "topmenu.item.label.services": "Services",
+  "topmenu.item.label.why-us": "Why Us",
+  "topmenu.item.label.about": "About",
+  "topmenu.item.label.contact": "Contact",
 
-  "page.about.h1": "About Us"
+  "legalmenu.item.label.privacypolicy": "Privacy Policy",
+  "legalmenu.item.label.legalpolicy": "Legal Policy",
+  "legalmenu.item.label.cookiepolicy": "Cookie Policy",
+
+  "btn.label.send": "Send",
+  "btn.label.accept": "Accept",
+  "btn.label.cancel": "Cancel",
+
+  "input.label.namesurname": "Name & surname",
+  "input.label.company": "Company",
+  "input.label.phone": "Phone",
+  "input.label.email": "Email",
+
+  "page.home.top.h1": "<b>Level up</b> your mobile performance marketing",
+  "page.home.top.text": "Define your path to success and reach new frontiers with machine-learning powered solutions",
+  "page.home.whoweare.h2": "Who we are",
+  "page.home.whoweare.text": "Definitio is a leading Programmatic Mobile Advertising Agency based out of Dubai, which is a vibrant international business hub.",
+  "page.home.weoffer.h2": "We offer",
+  "page.home.weoffer.text": "We help our clients grow by boosting user acquistion (UA) and enhancing long-term ROAS. Our solutions are fully transparent and fraud free.",
+  "page.home.ourtechnology.h2": "Our technology",
+  "page.home.ourtechnology.text": "Definitio uses its proprietary bidder and Machine Learning algorithms to effectively match clients with the most engaged/Paying users.",
+  "page.home.experience.h2": "Experience",
+  "page.home.experience.text": "Our Team will help you navigate through a variety of options and offer the best hassle-free experience. From self-service to fully managed.",
+  "page.home.dataoptimization.h2": "Data & Optimization",
+  "page.home.dataoptimization.text": "Full access to first-party data and predictive analytics allow to identify and focus on the right strategies and optimize your investments.",
+
+  "page.about.h1": "About Us",
+
+  "section.contact.title": "Contact Us"
 }
