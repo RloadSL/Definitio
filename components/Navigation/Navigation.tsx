@@ -9,20 +9,22 @@ interface NavigationProps {
 
 const Navigation = ({ }: NavigationProps) => {
   //adding the formatted label Array for the top menu translation JSON
-  const menuLabelJSONids: Array<string> = ['services', 'why-us', 'about', 'contact'];
+  const menuLabelIDs: Array<string> = ['services', 'why-us', 'about', 'contact'];
 
   return (
     <div className={style.navigation}>
       <div className={style.navigation_content}>
-        <div className={style.navigation_logo}>
-          <Image src={definitioLogo} alt={'Definitio logo'} />
-        </div>
+        <Link href={'/'}>
+          <div className={style.navigation_logo}>
+            <Image src={definitioLogo} alt={'Definitio logo'} />
+          </div>
+        </Link>
         <nav className={style.navigation_menu}>
           <ul>
-            {menuLabelJSONids.map((item, index: number) => {
+            {menuLabelIDs.map((item, index: number) => {
               return (
                 <li className={style.navigation_menu__item} key={index}>
-                  <Link href={`/${item}`}>
+                  <Link href={`/${item}`} className={style[item]}>
                     <FormattedMessage id={`topmenu.item.label.${item}`} />
                   </Link>
                 </li>

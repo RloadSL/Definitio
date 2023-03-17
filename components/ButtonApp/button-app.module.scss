@@ -1,0 +1,31 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.button {
+  border: 1px solid colors.$main;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: .4rem;
+  padding-left: 1rem;
+  min-width: 180px;
+
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: colors.$palette4;
+      border-radius: 100%;
+    }
+  }
+}

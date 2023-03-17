@@ -22,9 +22,7 @@ const getDirection = (locale: string) => {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-  const locale: any = useRouter().locale || 'en'
-
-  console
+  const locale: any = useRouter().locale || 'en';
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>

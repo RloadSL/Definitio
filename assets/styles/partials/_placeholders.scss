@@ -9,18 +9,10 @@
   padding: .8rem;
 }
 
-%mainContent{
-  max-width: 1600px;
-  width: 100%;
-  margin: auto;
-}
-
 %mainTitle {
   color: colors.$main;
   margin-top: 0px;
   font-weight: 600;
-  // font-size: max(3.8vw, 45px);
-  // line-height: 3rem;
 }
 
 %titleButton {
@@ -38,6 +30,28 @@
   @include devices.device(600px) {
     min-width: 200px;
     width: fit-content;
+  }
+}
+
+
+%maxContent {
+  width: 100%;
+
+  @include devices.device(tablet) {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  @include devices.device(smScreen) {
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include devices.device(xlgScreen) {
+    max-width: 1800px;
+    margin: auto;
   }
 }
 

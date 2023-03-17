@@ -3,8 +3,22 @@
 @use "../placeholders";
 
 @mixin mainContent {
-	@extend %mainContent;
-	padding: 1rem;
+	width: 100%;
+  margin: auto;
+	padding: 0 1rem;
+
+	@include devices.device(700px) {
+		padding: 0 6rem;
+	}
+
+	@include devices.device(smScreen) {
+		padding: 0 4rem;
+	}
+
+	@include devices.device(lgScreen) {
+		padding: 0 4rem;
+		max-width:  1600px
+	}
 }
 
 @mixin mainTitle {
@@ -12,12 +26,22 @@
 	font-size: 3rem;
 	line-height: 3.5rem;
 
+	@include devices.device(tablet) {
+		font-size: 4rem;
+		line-height: 4.2rem;
+	}
+
 	@include devices.device(smScreen) {
 		font-size: 5rem;
 		line-height: 5rem;
 	}
 
-	@include devices.device(lgScreen) {
+	// @include devices.device(lgScreen) {
+	// 	font-size: 6rem;
+	// 	line-height: 6rem;
+	// }
+
+	@include devices.device(xlgScreen) {
 		font-size: 6rem;
 		line-height: 6rem;
 	}

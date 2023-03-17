@@ -1,0 +1,52 @@
+@use "../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../assets/styles/partials/variables/colors" as colors;
+@use "../../../assets/styles/partials/placeholders";
+
+.whoweare {
+  padding-top: 120px;
+  justify-content: flex-end;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  // .content {
+  //   @extend %maxContent;
+  //   padding-top: 120px;
+  //   justify-content: flex-end;
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+
+  //   & > div {
+  //     @include devices.device(smScreen) {
+  //       width: 50%;
+  //     }
+  //   }
+  // }
+
+  .content {
+    @extend %maxContent;
+    align-items: flex-start;
+  }
+
+  &_image {
+    @include devices.device(smScreen) {
+      padding-right: 3rem;
+      width: 95%;
+    }
+  }
+
+  &_text {
+    opacity: 1;
+    position: relative;
+    top: 0;
+    width: 35%;
+
+    p {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .titleButton {
+    @extend %titleButton;
+  }
+}

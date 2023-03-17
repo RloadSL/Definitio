@@ -3,49 +3,10 @@
 @use "../../assets/styles/partials/mixins/layout" as layout;
 @use "../../assets/styles/partials/variables/colors" as colors;
 
+
 .home {
-  &_hero {
-    background: url(../../assets/img/home_bgtop.jpg) no-repeat;
-    background-size: cover;
-
-    .content {
-      & > div {
-        @include devices.device(smScreen) {
-          width: 50%;
-        }
-      }
-    }
-
-    p {
-      max-width: 60%;
-    }
-
-    &__image {
-      @include devices.device(smScreen) {
-        padding-left: 3rem;
-      }
-    }
-  }
-
-  &_whoweare {
-    &__image {
-      @include devices.device(smScreen) {
-        padding-right: 3rem;
-        width: 100%;
-      }
-    }
-
-    &__text {
-      width: 30%;
-
-      p {
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
-    }
-  }
-
   &_weoffer {
+    
     &__image {
       @include devices.device(smScreen) {
         padding-left: 3rem;
@@ -132,15 +93,13 @@
   }
 }
 
-.titleButton {
-  @extend %titleButton;
+
+
+
+
+.textSpan {
+  opacity: 1;
+  position: relative;
+  top: 0;
 }
 
-.content {
-  @include layout.mainContent;
-  @include devices.device(smScreen) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}

@@ -1,6 +1,6 @@
 import SEOHead from '@/components/SEOHead';
 import { NextPage } from 'next';
-import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { FormattedMessage } from 'react-intl';
 import Image from 'next/image';
 import style from './home.module.scss'
@@ -10,83 +10,60 @@ import boylaptop from '../../assets/img/home_weoffer.png'
 import factory from '../../assets/img/home_ourtechnology.png'
 import girllaptop from '../../assets/img/home_experience.png'
 import windows from '../../assets/img/home_dataoptimization.png'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import useComponentUtils from '@/hooks/component.hooks';
+import HeroAnim from './Hero/HeroAnim';
+import ButtonApp from '@/components/ButtonApp';
+import WhoweareAnim from './WhoWeAre/WhoweareAnim';
+import Hero from './Hero';
+import WhoWeAre from './WhoWeAre';
+import WeOffer from './WeOffer';
 
 
 const Home: NextPage = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const homeRef = useRef<null | HTMLDivElement>(null);
-  const circle = useRef<null | HTMLDivElement>(null);
   
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.fromTo(
-        circle.current,
-        {
-          opacity: 0,
-          y: -20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scrollTrigger: {
-            trigger: circle.current,
-            start: "top top",
-            end: "bottom center",
-            scrub: true,
-          },
-        }
-      );
-      
-    }, homeRef);
-    
-    return () => ctx.revert();
-  }, []);
+  // const {homeAnim} = useComponentUtils();
+
+  // const homeRef = useRef<null | HTMLDivElement>(null);
+  // const whoText = useRef<null | HTMLDivElement>(null);
+  // const whoweare = useRef<null | HTMLDivElement>(null);
+  // const textTitle = useRef<null | HTMLDivElement>(null);
+
+  // useEffect(() => {
+  //   homeAnim(homeRef,textTitle);
+  // //   gsap.registerPlugin(ScrollTrigger);
+  // // gsap.registerPlugin(SplitText);
+  // //   let textAnimation = gsap.timeline();
+  // //   let mySplitText = new SplitText(textTitle.current, { type: "lines" });
+  // //   let lines = mySplitText.lines
+  // //   let ctx = gsap.context(() => {
+  // //     textAnimation.from(lines, {
+  // //       opacity: 0,
+  // //       y: -50,
+  // //       stagger: {
+  // //         each: 0.07
+  // //       }
+  // //     });
+
+  // //   }, homeRef);
+
+  // //   return () => ctx.revert();
+
+  //  }, []);
+
+   const onClick = () => {
+    alert('hola')
+   }
 
   return (
-    <div className={style.home} ref={homeRef}>
+    <div className={style.home}>
       <SEOHead title='Definitio::Programmatic Mobile Advertising Agency' description='Here the SEO description of the page' />
 
-      <main className={style.home_hero}>
-        <div className={style.content}>
-          <div className={style.home_hero__text}>
-            <h1>
-              <FormattedMessage
-                id="page.home.top.h1"
-                values={{
-                  b: children => <span>{children}</span>
-                }}
-              />
-            </h1>
-            <p>
-              <FormattedMessage id='page.home.top.text' />
-            </p>
-          </div>
-          <div className={style.home_hero__image}>
-            <Image src={manHero} alt={''} />
-          </div>
-        </div>
-      </main>
+      <Hero onClick={onClick}/>
 
-      <section className={style.home_whoweare}>
-        <div className={style.content}>
-          <div className={style.home_whoweare__image}>
-            <Image src={city} alt={''} />
-          </div>
-          <div className={style.home_whoweare__text} ref={circle}>
-            <h2 className={style.titleButton}>
-              <FormattedMessage id='page.home.whoweare.h2' />
-            </h2>
-            <p>
-              <FormattedMessage id='page.home.whoweare.text' />
-            </p>
-          </div>
-        </div>
-      </section>
+      <WhoWeAre />
+      <WeOffer/>
 
-      <section className={style.home_weoffer}>
+      {/* <section className={style.home_weoffer}>
         <div className={style.content}>
           <div className={style.home_weoffer__text}>
             <h2 className={style.titleButton}>
@@ -148,7 +125,7 @@ const Home: NextPage = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
