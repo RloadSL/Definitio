@@ -1,42 +1,34 @@
 import React from 'react'
-import style from './hero-anim.module.scss'
+import style from './weoffer-anim.module.scss'
 import Image from 'next/image';
-import manBody from '../../../../assets/img/home/hero/man_body.svg'
-import manHead from '../../../../assets/img/home/hero/man_head.svg'
-import circle from '../../../../assets/img/home/hero/circle.svg'
-import mobile from '../../../../assets/img/home/hero/mobile.svg'
-import graphic from '../../../../assets/img/home/hero/graphic.svg'
+import boy from '../../../../assets/img/home/we_offer/boy.svg'
+import circle from '../../../../assets/img/home/we_offer/circle.svg'
+import shield from '../../../../assets/img/home/we_offer/shield.svg'
+import graphic from '../../../../assets/img/home/we_offer/graphic.svg'
 
-const HeroAnim = () => {
+const WeOfferAnim = () => {
   return (
     <div className={style.wrapper}>
-      <canvas width={725} height={655}/>
-      <div className={style.man}>
-        <div className={style.man_head}>
-          <div className={style.man_head__eyes}></div>
-          <Image src={manHead} alt={''} />
-        </div>
-        <div className={style.man_body}>
-          <Image src={manBody} alt={''} />
-        </div>      
+      <canvas width={860} height={570}/>
+      <div className={style.boy}>
+
+      <Image src={boy} alt={''} />
+     
       </div>
-      <div className={style.manBg_circle}>
+      <div className={style.boyBg_circle}>
           <Image src={circle} alt={''} />
         </div>
-        <div className={style.manBg_mobile}>
-          <Image src={mobile} alt={''} />
+        <div className={style.boyBg_shield}>
+          <Image src={shield} alt={''} />
         </div>
         <div className={style.manBg_graphic}>
           <Image src={graphic} alt={''} />
         </div>
-      {/* <div className={style.manBg}>
-
-      </div> */}
     </div>
   )
 }
 
-export default HeroAnim;
+export default WeOfferAnim;
 
  // gsap.from(
       //   textSpan.current,
