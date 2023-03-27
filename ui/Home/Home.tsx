@@ -17,10 +17,16 @@ import WhoweareAnim from './WhoWeAre/WhoweareAnim';
 import Hero from './Hero';
 import WhoWeAre from './WhoWeAre';
 import WeOffer from './WeOffer';
+import ContactForm from '@/components/ContactForm/ContactForm';
+import OurTechnology from './OurTechnology';
+import Experience from './Experience';
+import DataOptimization from './DataOptimization';
+import BottomSection from '@/components/BottomSection';
+
 
 
 const Home: NextPage = () => {
-  
+
   // const {homeAnim} = useComponentUtils();
 
   // const homeRef = useRef<null | HTMLDivElement>(null);
@@ -50,82 +56,24 @@ const Home: NextPage = () => {
 
   //  }, []);
 
-   const onClick = () => {
+  const onClick = () => {
     alert('hola')
-   }
+  }
 
   return (
     <div className={style.home}>
       <SEOHead title='Definitio::Programmatic Mobile Advertising Agency' description='Here the SEO description of the page' />
 
-      <Hero onClick={onClick}/>
+      <Hero onClick={onClick} />
 
       <WhoWeAre />
-      <WeOffer/>
+      <WeOffer />
+      <OurTechnology/>
+      <Experience />
+      <DataOptimization />
 
-      {/* <section className={style.home_weoffer}>
-        <div className={style.content}>
-          <div className={style.home_weoffer__text}>
-            <h2 className={style.titleButton}>
-              <FormattedMessage id='page.home.weoffer.h2' />
-            </h2>
-            <p>
-              <FormattedMessage id='page.home.weoffer.text' />
-            </p>
-          </div>
-          <div className={style.home_weoffer__image}>
-            <Image src={boylaptop} alt={''} />
-          </div>
-        </div>
-      </section>
-
-      <section className={style.home_ourtechnology}>
-        <div className={style.content}>
-          <div className={style.home_ourtechnology__image}>
-            <Image src={factory} alt={''} />
-          </div>
-          <div className={style.home_ourtechnology__text}>
-            <h2 className={style.titleButton}>
-              <FormattedMessage id='page.home.ourtechnology.h2' />
-            </h2>
-            <p>
-              <FormattedMessage id='page.home.ourtechnology.text' />
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className={style.home_experience}>
-        <div className={style.content}>
-          <div className={style.home_experience__text}>
-            <h2 className={style.titleButton}>
-              <FormattedMessage id='page.home.experience.h2' />
-            </h2>
-            <p>
-              <FormattedMessage id='page.home.experience.text' />
-            </p>
-          </div>
-          <div className={style.home_experience__image}>
-            <Image src={girllaptop} alt={''} />
-          </div>
-        </div>
-      </section>
-
-      <section className={style.home_dataoptimization}>
-        <div className={style.content}>
-          <div className={style.home_dataoptimization__image}>
-            <Image src={windows} alt={''} />
-          </div>
-          <div className={style.home_dataoptimization__text}>
-            <h2 className={style.titleButton}>
-              <FormattedMessage id='page.home.dataoptimization.h2' />
-            </h2>
-            <p>
-              <FormattedMessage id='page.home.dataoptimization.text' />
-            </p>
-          </div>
-        </div>
-      </section> */}
+    <BottomSection/>
+  
     </div>
   )
 }

@@ -54,7 +54,7 @@ const Hero = ({onClick }: HeroProps) => {
             <p>
               <FormattedMessage id='page.home.top.text' />
             </p>
-            <ButtonApp labelID='Yalla!' onClick={onClick} />
+            <ButtonApp labelID='page.home.hero.button' onClick={onClick} />
           </article>
         </div>
         <div className={style.hero_image}>

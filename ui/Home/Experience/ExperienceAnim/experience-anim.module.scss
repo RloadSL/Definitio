@@ -1,0 +1,63 @@
+@use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/variables/colors" as colors;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  & > div {
+    position: absolute;
+  }
+}
+
+.girl {
+  z-index: 100;
+  width: 52%;
+  left: 15%;
+  bottom: 0;
+}
+
+.circle {
+  width: 53%;
+  left: 39%;
+  top: 0;
+}
+
+.bubble1 {
+  width: 15%;
+  right: 0;
+  bottom: 30%;
+}
+
+.bubble2 {
+  width: 25%;
+  right: 5%;
+  bottom: 15%;
+}
+
+.graphic {
+  width: 15%;
+  left: 8%;
+  top: 38%;
+}
+
+.window {
+  width: 43%;
+  right: 8%;
+  top: 17%;
+}
+
+.mobile {
+  width: 20%;
+  left: 12%;
+  top: 12%;
+}
+
+.people {
+  width: 10%;
+  left: 0;
+  top: 13%;
+}
+
+

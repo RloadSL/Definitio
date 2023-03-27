@@ -9,19 +9,17 @@ import graphic from '../../../../assets/img/home/we_offer/graphic.svg'
 const WeOfferAnim = () => {
   return (
     <div className={style.wrapper}>
-      <canvas width={860} height={570}/>
+      <canvas width={858} height={569}/>
       <div className={style.boy}>
-
-      <Image src={boy} alt={''} />
-     
+        <Image src={boy} alt={''} />
       </div>
       <div className={style.boyBg_circle}>
-          <Image src={circle} alt={''} />
-        </div>
-        <div className={style.boyBg_shield}>
+        <Image src={circle} alt={''} />
+      </div>
+       <div className={style.boyBg_shield}>
           <Image src={shield} alt={''} />
         </div>
-        <div className={style.manBg_graphic}>
+        <div className={style.boyBg_graphic}>
           <Image src={graphic} alt={''} />
         </div>
     </div>

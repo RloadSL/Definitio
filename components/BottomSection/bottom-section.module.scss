@@ -1,0 +1,38 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.bottomSection {
+  background-color: colors.$palette1;
+  color: white;
+
+  h3 {
+    margin-top: 0;
+    font-size: 3rem
+  }
+
+  &_content {
+    @extend %mainLayout;
+  }
+
+  &_top {
+    background: url(../../assets/img/semicircle.svg) no-repeat;
+    background-size: contain;
+    height: 90vh;
+  }
+}
+
+.flexContainer {
+  margin-top: 4rem;
+
+  @include devices.device(smScreen) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form {
+  border: 1px solid red;
+  width: 70%;
+}

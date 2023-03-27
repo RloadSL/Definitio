@@ -3,7 +3,7 @@
 @use "../../../assets/styles/partials/placeholders";
 
 
-.weoffer {
+.dataoptimization {
     background: url(../../../assets/img/home_bgtop.jpg) no-repeat;
     background-size: cover;
   
@@ -13,18 +13,6 @@
       justify-content: flex-end;
       padding-left: 1rem;
       padding-right: 1rem;
-  
-      & > div {
-        @include devices.device(smScreen) {
-          width: 50%;
-        }
-      }
-    }
-  
-    p {
-      @include devices.device(smScreen) {
-        max-width: 60%;
-      }
     }
   
     &_text {
@@ -40,7 +28,7 @@
     }
   
     &_image {
-      // padding-bottom: 6%;
+      width: 60%;
     }
 
     .titleButton {

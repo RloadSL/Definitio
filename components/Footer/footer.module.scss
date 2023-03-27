@@ -1,0 +1,85 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.footer {
+  padding-bottom: 2rem;
+
+  a {
+    &:hover {
+      color: colors.$palette4
+    }
+  }
+
+  &_content {
+    @extend %mainLayout;
+
+    ul {
+      @include devices.device(tablet) {
+        display: flex;
+      }
+
+      li {
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+
+      @include devices.device(tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: .8rem;
+      margin-top: 2rem;
+
+      @include devices.device(tablet) {
+        flex-direction: row;
+      }
+    }
+  }
+
+&_rload {
+  font-size: .8rem;
+
+  @include devices.device(tablet) {
+    margin-left: 10rem;
+  }
+}
+
+  &_logo {
+    max-width: 250px;
+    filter: brightness(100);
+  }
+
+  &_social {
+    font-size: 1.2rem;
+
+    li {
+      @include devices.device(tablet) {
+        margin-left: 3rem;
+      }
+    }
+  }
+
+  &_legal {
+    li {
+      @include devices.device(tablet) {
+        margin-left: 3rem;
+      }
+    }
+  }
+
+}

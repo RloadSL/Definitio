@@ -5,36 +5,37 @@
   position: relative;
   width: 100%;
   height: auto;
-  border: 1px solid red;
 }
 
 .boy {
   position: absolute;
-  bottom: 0%;
   z-index: 100;
-  width: 58%;
+  width: 52%;
   left: 15%;
+  bottom: 0;
 
 }
 
 .boyBg {
-  // position: absolute;
-  // width: 100%;
-  // top: 0;
-
   &_circle{
     position: absolute;
-    width: 85%;
+    width: 65%;
     bottom: 0;
-    left: 8%;
+    left: 12%;
   } 
  
-
   &_graphic{
     position: absolute;
-    width: 40%;
-    top: 45%;
+    width: 38%;
     left: 60%;
+    top: 38%;
   } 
+
+  &_shield {
+    position: absolute;
+    width: 18%;
+    top: 38%;
+    left: 5%;
+  }
 }
 

@@ -1,0 +1,62 @@
+@use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/variables/colors" as colors;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  & > div {
+    position: absolute;
+  }
+}
+
+.factory {
+  position: absolute;
+  z-index: 100;
+  width: 80%;
+  left: 15%;
+  top: 10%;
+}
+
+.stone1 {
+  top: 10%;
+  width: 6%;
+  left: 20%;
+}
+
+.stone2 {
+  top: 17%;
+  width: 4%;
+  left: 27%;
+  transform: rotate(90deg);
+}
+
+.robot1 {
+  top: 16%;
+  width: 6%;
+  left: 15%;
+}
+
+.robot2 {
+  top: 2%;
+  width: 4%;
+  left: 24%;
+  transform: rotate(70deg);
+}
+
+.gold {
+  bottom: 35%;
+  width: 28%;
+  left: 64%;
+  z-index: 100;
+}
+
+.shield {
+  top: 32%;
+  width: 15%;
+  left: 60%;
+  z-index: 100;
+}
+
+

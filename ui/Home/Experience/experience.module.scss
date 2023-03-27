@@ -3,7 +3,7 @@
 @use "../../../assets/styles/partials/placeholders";
 
 
-.weoffer {
+.experience {
     background: url(../../../assets/img/home_bgtop.jpg) no-repeat;
     background-size: cover;
   
@@ -39,9 +39,8 @@
       }
     }
   
-    &_image {
-      // padding-bottom: 6%;
-    }
+    // &_image {
+    // }
 
     .titleButton {
       @extend %titleButton;
