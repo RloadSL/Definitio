@@ -3,27 +3,28 @@
 @use "../../../assets/styles/partials/placeholders";
 
 
-.dataoptimization {
-    background: url(../../../assets/img/home_bgtop.jpg) no-repeat;
-    background-size: cover;
-  
+.dataoptimization {  
     .content {
       @extend %maxContent;
-      padding-top: 120px;
-      justify-content: flex-end;
+      display: flex;
+      flex-direction: column-reverse;
       padding-left: 1rem;
       padding-right: 1rem;
+  
+      @include devices.device(tablet) {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-top: 120px;
+      }
     }
   
     &_text {
       opacity: 1;
       position: relative;
       top: 0;
-      width: 35%;
-  
-      p {
-        font-size: 2rem;
-        line-height: 2.5rem;
+
+      @include devices.device(tablet) {
+        width: 35%;
       }
     }
   

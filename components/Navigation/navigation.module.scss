@@ -2,27 +2,43 @@
 @use "../../assets/styles/partials/mixins/devices" as devices;
 @use "../../assets/styles/partials/variables/colors" as colors;
 
-
 .navigation {
   position: fixed;
   width: 100%;
+  z-index: 900;
 
   &_content {
     @extend %mainLayout;
 
-    @include devices.device(smScreen) {
+    &__top {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
   }
 
-  &_menu {
+  img {
+    width: auto;
+  }
+}
+
+.pc {
+  .navigation_content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+  }
+
+  .menu {
     ul {
       display: flex;
+      align-items: center;
+      height: auto !important;
 
       li {
         padding-right: 2rem;
+        opacity: 1 !important;
+        transform: none !important;
 
         &:last-child {
           padding: 0px;
@@ -31,7 +47,7 @@
 
       a {
         display: inline-block;
-        padding: 1rem;
+        // padding: 1rem;
 
         &:hover {
           color: colors.$palette2;
@@ -43,13 +59,46 @@
           text-align: center;
           color: white;
           padding: 1rem 3rem;
-
         }
       }
     }
   }
+}
 
-  img {
-    width: auto;
+
+
+.mobile {
+  background-color: white !important;
+
+  .navigation_logo {
+    max-width: 40px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    ul {
+      position: absolute;
+      width: 100%;
+      top: 40%;
+      left: 0;
+      z-index: -1;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // opacity: 0;
+      height: 0;
+      overflow: hidden;
+
+      li {
+        margin: 1rem 0;
+        font-size: 3rem;
+        color: colors.$main;
+        font-weight: 500;
+      }
+    }
   }
 }

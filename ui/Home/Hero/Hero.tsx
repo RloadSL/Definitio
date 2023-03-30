@@ -1,5 +1,5 @@
 import ButtonApp from '@/components/ButtonApp'
-import useComponentUtils from '@/hooks/component.hooks'
+import useComponentAnimations from '@/hooks/animations.hooks'
 import React, { useEffect, useRef } from 'react'
 import { FormattedMessage } from 'react-intl'
 import HeroAnim from './HeroAnim'
@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 const Hero = ({onClick }: HeroProps) => {
-  const {homeAnim} = useComponentUtils();
+  const {homeAnim} = useComponentAnimations();
 
   const homeRef = useRef<null | HTMLDivElement>(null);
   const whoText = useRef<null | HTMLDivElement>(null);

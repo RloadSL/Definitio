@@ -3,10 +3,56 @@
 @use "../../assets/styles/partials/mixins/layout" as layout;
 @use "../../assets/styles/partials/variables/colors" as colors;
 
-
 .home {
+  overflow-x: hidden;
+  position: relative;
+  .colorShadow {
+    background-image: url(../../assets/img/ellipse_bg.svg);
+    background-size: contain;
+    position: absolute;
+    z-index: 0;
+    opacity: .8;
+
+    &_1 {
+      height: 90vw;
+      width: 90vw;
+      left: -20%;
+      filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
+    }
+
+    &_2 {
+      height: 100vw;
+      width: 90vw;
+      top: 150vh;
+      right: -35%;
+      filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
+    }
+
+    &_3 {
+      height: 90vw;
+      width: 90vw;
+      left: -20%;
+      top: 300vh;
+      filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
+    }
+  }
+
+  section {
+    p {
+      font-size: 1.4rem;
+      line-height: 2rem;
+
+      @include devices.device(tablet) {
+        font-size: 1.6rem;
+      }
+
+      @include devices.device(lgScreen) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
   &_weoffer {
-    
     &__image {
       @include devices.device(smScreen) {
         padding-left: 3rem;
@@ -60,7 +106,7 @@
     }
   }
 
-  &_dataoptimization{
+  &_dataoptimization {
     &__image {
       @include devices.device(smScreen) {
         padding-right: 3rem;
@@ -87,19 +133,18 @@
 
   section,
   main {
-    min-height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 5rem;
+
+    @include devices.device(tablet) {
+      min-height: 100vh;
+    }
   }
 }
-
-
-
-
 
 .textSpan {
   opacity: 1;
   position: relative;
   top: 0;
 }
-

@@ -1,0 +1,17 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+
+.button {
+  background-color: colors.$palette4;
+  border-radius: 50px;
+  text-align: center;
+  color: colors.$main;
+  padding: 1rem 5rem;
+  font-size: 1rem;
+  margin-top: 20px;
+  width: 100%;
+  margin-left: 0px;
+}

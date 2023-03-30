@@ -8,10 +8,11 @@ import mobile from '../../../../assets/img/home/hero/mobile.svg'
 import graphic from '../../../../assets/img/home/hero/graphic.svg'
 
 const HeroAnim = () => {
+  
   return (
     <div className={style.wrapper}>
       <canvas width={725} height={655}/>
-      <div className={style.man}>
+      <div className={`${style.man} man`}>
         <div className={style.man_head}>
           <div className={style.man_head__eyes}></div>
           <Image src={manHead} alt={''} />

@@ -1,47 +1,47 @@
 import { useEffect, useState } from "react";
-import gsap from "gsap";
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
-import SplitText from 'gsap/dist/SplitText';
 
 const useComponentUtils = () => {
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(SplitText);
-  }, []);
-
-  const homeAnim = (homeRef:any,textTitle:any) => {
-    let textAnimation = gsap.timeline();
-    let mySplitText = new SplitText(textTitle.current, { type: "lines" });
-    let lines = mySplitText.lines
-    let ctx = gsap.context(() => {
-      textAnimation.from(lines, {
-        opacity: 0,
-        y: -50,
-        stagger: {
-          each: 0.07
-        }
-      });
-
-    }, homeRef);
-
-    return () => ctx.revert();
+  const useScrollDistance = () => {
+    const [scrollDistance, setScrollDistance] = useState(0);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollTop = window.pageYOffset;
+        setScrollDistance(scrollTop);
+      }
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
+    return scrollDistance;
   }
 
-  // const useIsSsr = () => {
-  //   // we always start off in "SSR mode", to ensure our initial browser render
-  //   // matches the SSR render
-  //   const [isSsr, setIsSsr] = useState(true);
+  const useWindowSize = () => {
+    const [windowSize, setWindowSize] = useState<any>({
+      width: undefined,
+      height: undefined,
+    });
+
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
   
-  //   useEffect(() => {
-  //     // `useEffect` never runs on the server, so we must be on the client if
-  //     // we hit this block
-  //     setIsSsr(false);
-  //   }, []);
-  
-  //   return isSsr;
-  // }  
-  return { homeAnim }
+    return windowSize;
+  }
+
+  return { useScrollDistance, useWindowSize }
 }
 
 export default useComponentUtils;

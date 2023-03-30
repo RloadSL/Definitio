@@ -1,9 +1,12 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import InputFormikApp from "../Forms/InputFormikApp";
+import { FormattedMessage } from "react-intl";
+import style from './contact-form.module.scss'
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string().required("Name is required"),
+  fullname: Yup.string().required("Name is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
 });
 
@@ -20,18 +23,28 @@ const ContactForm = () => (
   >
     {({ isSubmitting }) => (
       <Form>
-        <div>
-          <label htmlFor="name">Name</label>
-          <Field type="text" name="name" />
-          <ErrorMessage name="name" />
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
-          <Field type="email" name="email" />
-          <ErrorMessage name="email" />
-        </div>
-        <button type="submit" disabled={isSubmitting}>
-          Submit
+        <InputFormikApp
+          labelID='Name and surname'
+          type='text'
+          name='fullname'
+        />
+        <InputFormikApp
+          labelID='Company'
+          type='text'
+          name='company'
+        />
+        <InputFormikApp
+          labelID='Phone'
+          type='text'
+          name='phone'
+        />
+        <InputFormikApp
+          labelID='Email'
+          type='email'
+          name='email'
+        />
+        <button type="submit" disabled={isSubmitting} className={style.button}>
+          <FormattedMessage id="btn.label.send"/>
         </button>
       </Form>
     )}

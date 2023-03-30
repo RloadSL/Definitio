@@ -12,6 +12,12 @@
   padding: .4rem;
   padding-left: 1rem;
   min-width: 180px;
+  width: 100%;
+  max-width: 360px;
+
+  @include devices.device(tablet) {
+    width: auto;
+  }
 
 
   span {

@@ -65,7 +65,9 @@ const Home: NextPage = () => {
       <SEOHead title='Definitio::Programmatic Mobile Advertising Agency' description='Here the SEO description of the page' />
 
       <Hero onClick={onClick} />
-
+      <div className={`${style.colorShadow} ${style.colorShadow_1}`}></div>
+      <div className={`${style.colorShadow} ${style.colorShadow_2}`}></div>
+      <div className={`${style.colorShadow} ${style.colorShadow_3}`}></div>
       <WhoWeAre />
       <WeOffer />
       <OurTechnology/>
