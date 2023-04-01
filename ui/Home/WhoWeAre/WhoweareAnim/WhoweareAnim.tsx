@@ -18,7 +18,7 @@ const WhoweareAnim = ({ }: WhoweareAnimProps) => {
       <div className={style.city}>
         <Image src={city} alt={''} />
       </div>
-      <div className={style.building}>
+      <div className={`${style.building} building`}>
         <Image src={building} alt={''} />
       </div>
     </div>

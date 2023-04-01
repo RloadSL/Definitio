@@ -4,13 +4,15 @@ import React, { useEffect, useRef } from 'react'
 import { FormattedMessage } from 'react-intl'
 import HeroAnim from './HeroAnim'
 import style from './hero.module.scss'
+import gsap, { Power2 } from 'gsap';
+
 
 interface HeroProps {
   onClick: Function
 }
 
-const Hero = ({onClick }: HeroProps) => {
-  const {homeAnim} = useComponentAnimations();
+const Hero = ({ onClick }: HeroProps) => {
+  const { homeAnim } = useComponentAnimations();
 
   const homeRef = useRef<null | HTMLDivElement>(null);
   const whoText = useRef<null | HTMLDivElement>(null);
@@ -19,25 +21,13 @@ const Hero = ({onClick }: HeroProps) => {
 
   useEffect(() => {
     homeAnim(homeRef,textTitle);
-  //   gsap.registerPlugin(ScrollTrigger);
-  // gsap.registerPlugin(SplitText);
-  //   let textAnimation = gsap.timeline();
-  //   let mySplitText = new SplitText(textTitle.current, { type: "lines" });
-  //   let lines = mySplitText.lines
-  //   let ctx = gsap.context(() => {
-  //     textAnimation.from(lines, {
-  //       opacity: 0,
-  //       y: -50,
-  //       stagger: {
-  //         each: 0.07
-  //       }
-  //     });
-
-  //   }, homeRef);
-
-  //   return () => ctx.revert();
-
-   }, []);
+    gsap.from('.hero_animation', {
+      x: -80,
+      ease: Power2.easeInOut,
+      duration: 1,
+      opacity: 0,
+    });
+  }, []);
   return (
     <main className={style.hero}>
       <div className={style.content}>
@@ -51,10 +41,13 @@ const Hero = ({onClick }: HeroProps) => {
                 }}
               />
             </h1>
-            <p>
-              <FormattedMessage id='page.home.top.text' />
-            </p>
-            <ButtonApp labelID='page.home.hero.button' onClick={onClick} />
+            <div className='hero_animation'>
+              <p>
+                <FormattedMessage id='page.home.top.text' />
+              </p>
+              <ButtonApp labelID='page.home.hero.button' onClick={onClick} />
+            </div>
+
           </article>
         </div>
         <div className={style.hero_image}>

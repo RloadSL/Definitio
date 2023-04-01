@@ -15,20 +15,36 @@
   width: 69%;
   left: 0;
   top: 0;
+  animation: rotate 40s linear infinite;
 }
 
-.windowGroup {
-  top: 18%;
-  width: 70%;
+.data_windowBlue {
+  top: 27%;
+  width: 49%;
+  left: 25%;
+  z-index: 100;
+}
+
+
+.data_window1 {
+  bottom: 18%;
+  width: 20%;
   left: 15%;
   z-index: 100;
 }
 
-.window {
-  top: 26%;
-  width: 43%;
-  left: 28%;
-  z-index: 110;
+.data_window2 {
+  top: 32%;
+  width: 20%;
+  right: 15%;
+  z-index: 100;
+}
+
+.data_window3 {
+  top: 11%;
+  width: 39%;
+  left: 15%;
+  z-index: 90;
 }
 
 .blueSpot {
@@ -38,15 +54,24 @@
 }
 
 .yellowSpot {
-  bottom: 12%;
+  bottom: 2%;
   width: 14%;
-  left: 10%;
+  left: 5%;
 }
 
 .mobiles {
   bottom: 5%;
   width: 28%;
   right: 0px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 

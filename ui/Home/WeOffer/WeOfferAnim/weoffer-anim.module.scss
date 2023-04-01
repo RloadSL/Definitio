@@ -20,22 +20,39 @@
   &_circle{
     position: absolute;
     width: 65%;
-    bottom: 0;
+    bottom: 2%;
     left: 12%;
+    animation: rotate 40s linear infinite;
   } 
  
-  &_graphic{
+  &_window{
     position: absolute;
-    width: 38%;
-    left: 60%;
-    top: 38%;
+    width: 45%;
+    left: 55%;
+    top: 10%;
   } 
 
   &_shield {
     position: absolute;
-    width: 18%;
-    top: 38%;
+    width: 15%;
+    top: 20%;
     left: 5%;
+  }
+
+  &_details {
+    position: absolute;
+    width: 90%;
+    bottom: 12%;
+    left: -5%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

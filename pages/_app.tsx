@@ -6,6 +6,10 @@ import es from '../lang/es.json'
 import en from '../lang/en.json'
 import '../assets/styles/layout.scss'
 import Navigation from '@/components/Navigation'
+import { useEffect } from 'react'
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+// import SplitText from 'gsap/dist/SplitText';
 
 
 const messages: any = {

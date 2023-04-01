@@ -17,28 +17,28 @@ const ExperienceAnim = () => {
   return (
     <div className={style.wrapper}>
       <canvas width={670} height={615}/>
-      <div className={style.girl}>
+      <div className={`${style.girl} girl`}>
         <Image src={girl} alt={''} />
       </div>
        <div className={style.circle}>
         <Image src={circle} alt={''} />
       </div>
-       <div className={style.bubble1}>
+       <div className={`${style.bubble1} bubble1`}>
           <Image src={bubble1} alt={''} />
         </div>
-        <div className={style.bubble2}>
+        <div className={`${style.bubble2} bubble2`}>
           <Image src={bubble2} alt={''} />
         </div>
-        <div className={style.graphic}>
+        <div className={`${style.graphic} graphic`}>
           <Image src={graphic} alt={''} />
         </div>
-        <div className={style.window}>
+        <div className={`${style.exp_window} exp_window`}>
           <Image src={window} alt={''} />
         </div>
         <div className={style.mobile}>
           <Image src={mobile} alt={''} />
         </div>
-        <div className={style.people}>
+        <div className={`${style.people} people`}>
           <Image src={people} alt={''} />
         </div>
     </div>

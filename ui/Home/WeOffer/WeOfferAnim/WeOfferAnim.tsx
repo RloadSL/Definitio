@@ -5,22 +5,26 @@ import boy from '../../../../assets/img/home/we_offer/boy.svg'
 import circle from '../../../../assets/img/home/we_offer/circle.svg'
 import shield from '../../../../assets/img/home/we_offer/shield.svg'
 import graphic from '../../../../assets/img/home/we_offer/graphic.svg'
+import details from '../../../../assets/img/home/we_offer/small_details.svg'
 
 const WeOfferAnim = () => {
   return (
     <div className={style.wrapper}>
       <canvas width={858} height={569}/>
-      <div className={style.boy}>
+      <div className={`${style.boy} boy`}>
         <Image src={boy} alt={''} />
       </div>
       <div className={style.boyBg_circle}>
         <Image src={circle} alt={''} />
       </div>
-       <div className={style.boyBg_shield}>
+       <div className={`${style.boyBg_shield} shield`}>
           <Image src={shield} alt={''} />
         </div>
-        <div className={style.boyBg_graphic}>
+        <div className={`${style.boyBg_window} window`}>
           <Image src={graphic} alt={''} />
+        </div>
+        <div className={`${style.boyBg_details} details`}>
+          <Image src={details} alt={''} />
         </div>
     </div>
   )

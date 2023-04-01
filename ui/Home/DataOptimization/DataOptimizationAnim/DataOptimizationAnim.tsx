@@ -6,19 +6,26 @@ import blueSpot from '../../../../assets/img/home/data_optimization/blue_spot.sv
 import yellowSpot from '../../../../assets/img/home/data_optimization/yellow_spot.svg'
 import mobiles from '../../../../assets/img/home/data_optimization/mobiles.svg'
 import window from '../../../../assets/img/home/data_optimization/window.svg'
-import windowGroup from '../../../../assets/img/home/data_optimization/window_group.svg'
-
+import window1 from '../../../../assets/img/home/data_optimization/data_window1.svg'
+import window2 from '../../../../assets/img/home/data_optimization/data_window2.svg'
+import window3 from '../../../../assets/img/home/data_optimization/data_window3.svg'
 
 
 const DataOptimizationAnim = () => {
   return (
     <div className={style.wrapper}>
       <canvas width={640} height={485}/>
-      <div className={style.windowGroup}>
-        <Image src={windowGroup} alt={''} />
-      </div>
-      <div className={style.window}>
+      <div className={`${style.data_windowBlue} data_windowBlue`}>
           <Image src={window} alt={''} />
+        </div> 
+      <div className={`${style.data_window1} data_window1`}>
+          <Image src={window1} alt={''} />
+        </div> 
+        <div className={`${style.data_window2} data_window2`}>
+          <Image src={window2} alt={''} />
+        </div> 
+        <div className={`${style.data_window3} data_window3`}>
+          <Image src={window3} alt={''} />
         </div> 
         <div className={style.circle}>
           <Image src={circle} alt={''} />
@@ -26,7 +33,7 @@ const DataOptimizationAnim = () => {
       <div className={style.mobiles}>
         <Image src={mobiles} alt={''} />
       </div>
-      <div className={style.blueSpot}>
+      <div className={`${style.blueSpot} blueSpot`}>
         <Image src={blueSpot} alt={''} />
       </div>
        <div className={style.yellowSpot}>
