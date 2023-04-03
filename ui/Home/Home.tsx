@@ -65,17 +65,32 @@ const Home: NextPage = () => {
       <SEOHead title='Definitio::Programmatic Mobile Advertising Agency' description='Here the SEO description of the page' />
 
       <Hero onClick={onClick} />
-      <div className={`${style.colorShadow} ${style.colorShadow_1}`}></div>
+      {/* <div className={`${style.colorShadow} ${style.colorShadow_1}`}></div>
       <div className={`${style.colorShadow} ${style.colorShadow_2}`}></div>
       <div className={`${style.colorShadow} ${style.colorShadow_3}`}></div>
-      <WhoWeAre />
-      <WeOffer />
-      <OurTechnology/>
-      <Experience />
-      <DataOptimization />
+      <div className={`${style.colorShadow} ${style.colorShadow_4}`}></div>
+      <div className={`${style.colorShadow} ${style.colorShadow_5}`}></div> */}
+      <div className={style.whoweare_container}>
+        <WhoWeAre />
+      </div>
+      <div className={style.weoffer_container}>
+        <WeOffer />
+      </div>
+      <div className={style.ourtechnology_container}>
+        <OurTechnology />
+      </div>
 
-    <BottomSection/>
-  
+      <div className={style.experience_container}>
+
+        <Experience />
+      </div>
+      <div className={style.dataoptimization_container}>
+        <DataOptimization />
+
+      </div>
+
+      <BottomSection />
+
     </div>
   )
 }

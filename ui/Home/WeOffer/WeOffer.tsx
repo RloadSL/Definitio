@@ -62,12 +62,21 @@ const WeOffer = ({ }: WeOfferProps) => {
         end: "400px 90%",
       },
     });
+    gsap.from('.weofferText_animation', {
+      x: -80,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".weofferText_animation",
+        start: "top center",
+        end: "bottom center",
+      },
+    });
   }, [])
 
   return (
     <section className={style.weoffer}>
       <div className={`${style.content} animation`}>
-        <div className={style.weoffer_text}>
+        <div className={`${style.weoffer_text} weofferText_animation`}>
           <article>
             <h2 className={style.titleButton}>
               <FormattedMessage id='page.home.weoffer.h2' />

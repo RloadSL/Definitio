@@ -9,9 +9,10 @@ const useComponentAnimations = () => {
     gsap.registerPlugin(SplitText);
   }, []);
 
-  const fadeInAnim = (className: string, yAxis: number, duration:number) => {
+  const fadeInAnim = (className: string, duration:number,yAxis?: number,xAxis?: number) => {
     gsap.from(className, {
       y: yAxis,
+      x: xAxis,
       ease: Power2.easeInOut,
       duration: duration,
       opacity: 0,

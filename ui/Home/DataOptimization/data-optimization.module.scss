@@ -3,7 +3,9 @@
 @use "../../../assets/styles/partials/placeholders";
 
 
-.dataoptimization {  
+.dataoptimization {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
     .content {
       @extend %maxContent;
       display: flex;
@@ -29,7 +31,12 @@
     }
   
     &_image {
-      width: 60%;
+      width: 85%;
+      margin: 3rem auto;
+
+      @include devices.device(tablet) {
+        width: 50%;
+      }
     }
 
     .titleButton {

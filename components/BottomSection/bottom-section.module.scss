@@ -6,6 +6,7 @@
 .bottomSection {
   background-color: colors.$palette1;
   color: white;
+  position: relative;
 
   h3 {
     margin-top: 0;
@@ -27,10 +28,13 @@
 }
 
 .flexContainer {
-  margin-top: 8rem;
+  margin-top: 3rem;
 
   @include devices.device(smScreen) {
     display: flex;
+    margin-top: 8rem;
+    margin-left: 10rem;
+
     // justify-content: space-between;
   }
 }

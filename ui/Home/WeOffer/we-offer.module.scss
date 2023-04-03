@@ -4,21 +4,13 @@
 
 
 .weoffer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
     .content {
       @extend %maxContent;
-      justify-content: flex-end;
       padding-left: 1rem;
       padding-right: 1rem;
-
-      @include devices.device(smScreen) {
-        //padding-top: 120px;
-      }
-  
-      & > div {
-        @include devices.device(smScreen) {
-          width: 50%;
-        }
-      }
     }
   
     p {
@@ -34,12 +26,19 @@
   
       @include devices.device(smScreen) {
         width: 35%;
+        margin-left: 10rem;
       }
     }
   
     &_image {
-      margin: 2rem auto 3rem auto;
-      width: 80%;    }
+      margin: 4rem auto 3rem auto;
+      width: 90%;  
+      
+      @include devices.device(smScreen) {
+        width: 50%;  
+        margin: 0px
+      }
+    }
 
     .titleButton {
       @extend %titleButton;

@@ -11,7 +11,6 @@ interface ExperienceProps {
 }
 
 const Experience = ({ }: ExperienceProps) => {
-
   useEffect(() => {
     gsap.from('.girl', {
       x: -20,
@@ -73,12 +72,21 @@ const Experience = ({ }: ExperienceProps) => {
         end: "300px center",
       },
     });
+    gsap.from('.experienceText_animation', {
+      x: -80,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".experienceText_animation",
+        start: "top center",
+        end: "bottom center",
+      },
+    });
   }, [])
 
   return (
     <section className={style.experience}>
       <div className={`${style.content} experience_animation`}>
-        <div className={style.experience_text}>
+        <div className={`${style.experience_text} experienceText_animation`}>
           <article>
             <h2 className={style.titleButton}>
               <FormattedMessage id='page.home.experience.h2' />

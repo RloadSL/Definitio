@@ -7,18 +7,36 @@
     position: absolute;
     top: 10%;
     width: 20%;
+    left: 10%;
   }
 
-  .building {
+  .buildingTop {
     position: absolute;
-    bottom: 1.5%;
-    width: 11%;
-    left: 45%;
+    bottom: 45.8%;
+    width: 6%;
+    left: 35.9%;
+  }
+
+  .building2 {
+    position: absolute;
+    bottom: -2%;
+    width: 5.5%;
+    right: 25%;
+    z-index: 0;
+  }
+
+  .building3 {
+    position: absolute;
+    bottom: 0;
+    width: 5.5%;
+    right: 17.9%;
+    z-index: 0;
   }
 
   .city {
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 10;
   }
 }

@@ -2,47 +2,81 @@
 @use "../../../assets/styles/partials/variables/colors" as colors;
 @use "../../../assets/styles/partials/placeholders";
 
-
 .hero {
   background: url(../../../assets/img/home_bgtop.jpg) no-repeat;
   background-size: cover;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+
+  @include devices.device(tablet) {
+    padding-top: 9rem;
+    padding-bottom: 5rem;
+  }
 
   h1 {
-  font-size: clamp(5vw,15vw,5.5rem);
-  line-height: 1em;
+    font-size: clamp(4.5vw, 13vw, 5.5rem);
+    line-height: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+      margin-left: 1rem;
+      @include devices.device(smScreen) {
+        margin-left: 0;
+
+      }
+    }
+    @include devices.device(smScreen) {
+      display: block;
+    }
   }
-  
+
   .content {
     @extend %maxContent;
-    padding-top: 120px;
     justify-content: flex-end;
+    padding-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    text-align: center;
+
+    @include devices.device(smScreen) {
+      text-align: left;
+    }
   }
 
   p {
+    margin: auto;
+    margin-bottom: 2rem;
     @include devices.device(smScreen) {
       max-width: 60%;
+      margin-left: 0;
     }
   }
 
   &_text {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    // align-items: flex-end;
     width: 100%;
+
     @include devices.device(smScreen) {
       width: 50%;
+      // padding-left: 4rem;
+      display: block;
     }
-
   }
 
   &_image {
     margin: 2rem auto 3rem auto;
     width: 80%;
+
+    @include devices.device(tablet) {
+      width: 65%;
+      //margin: 0%;
+    }
     @include devices.device(smScreen) {
-      width: 45%;
+      margin: 0 auto 3rem auto;
+      width: 42%;
     }
   }
 }
-

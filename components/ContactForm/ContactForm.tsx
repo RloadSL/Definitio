@@ -44,7 +44,7 @@ const ContactForm = () => (
           name='email'
         />
         <button type="submit" disabled={isSubmitting} className={style.button}>
-          <FormattedMessage id="btn.label.send"/>
+          <span><FormattedMessage id="btn.label.send" /></span>
         </button>
       </Form>
     )}

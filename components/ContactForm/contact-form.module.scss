@@ -9,9 +9,50 @@
   border-radius: 50px;
   text-align: center;
   color: colors.$main;
-  padding: 1rem 5rem;
-  font-size: 1rem;
-  margin-top: 20px;
+  padding: 1.2rem 3rem;
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  margin-left: 0px;
+  max-width: 250px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @include devices.device(smScreen) {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+
+  span {
+    position: relative;
+    z-index: 100;
+  }
+   &::after {
+    content: '';
+    background-color: colors.$main;
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    top: -35%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 0;
+    border-radius: 100%;
+    transform: scale(0);
+    transition: all .2s ease-in-out;
+    transform-origin: center;
+   }
+
+   &:hover {
+    span {
+      color: white;
+    }
+   }
+
+   &:hover::after {
+    transform: scale(4);
+    transition: all .2s ease-in-out;
+   }
 }

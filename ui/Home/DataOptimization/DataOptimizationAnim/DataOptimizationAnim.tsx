@@ -9,6 +9,8 @@ import window from '../../../../assets/img/home/data_optimization/window.svg'
 import window1 from '../../../../assets/img/home/data_optimization/data_window1.svg'
 import window2 from '../../../../assets/img/home/data_optimization/data_window2.svg'
 import window3 from '../../../../assets/img/home/data_optimization/data_window3.svg'
+import gameSpot from '../../../../assets/img/home/data_optimization/game.svg'
+
 
 
 const DataOptimizationAnim = () => {
@@ -38,6 +40,9 @@ const DataOptimizationAnim = () => {
       </div>
        <div className={style.yellowSpot}>
           <Image src={yellowSpot} alt={''} />
+        </div> 
+        <div className={`${style.gameSpot} gameSpot`}>
+          <Image src={gameSpot} alt={''} />
         </div> 
     </div>
   )

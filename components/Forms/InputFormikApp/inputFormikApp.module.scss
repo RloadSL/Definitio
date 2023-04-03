@@ -14,7 +14,7 @@
 
 .inputContainer {
   background-color: transparent;
-  padding: 12px 5px;
+  padding: 12px 0px;
   position: relative;
   margin-bottom: 20px;
   width: 100%;
@@ -23,10 +23,10 @@
 
   .label {
     @extend %label; 
-    transform: translate(10px, 8px) scale(1);
+    transform: translate(0px, 8px) scale(1);
 
     &.filled {
-      transform: translate(10px, -5px) scale(0.8);
+      transform: translate(0px, -5px) scale(0.8);
       color: white;
     }
   }
@@ -81,7 +81,7 @@
   border-bottom: 2px solid white;
 
   .label {
-    transform: translate(10px, -5px) scale(0.8);
+    transform: translate(0px, -5px) scale(0.8);
     color: white;
   }
   .iconLabel {

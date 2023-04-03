@@ -22,14 +22,20 @@
   font-weight: 500;
   text-transform: uppercase;
   border: 1px solid colors.$palette2;
-  width: 100%;
-  padding: .8rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   text-align: center;
   border-radius: 50px;
+  width: fit-content;
 
   @include devices.device(600px) {
-    min-width: 200px;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
     width: fit-content;
+
+
   }
 }
 

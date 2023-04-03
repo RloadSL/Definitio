@@ -14,15 +14,21 @@
 .factory {
   position: absolute;
   z-index: 100;
-  width: 80%;
-  left: 15%;
+  width: 100%;
+  left: 2%;
   top: 10%;
+
+  @include devices.device(smScreen) {
+    width: 80%;
+    left: 15%;
+    top: 10%;
+  }
 
   &_part {
     z-index: 200;
-    width: 13.3%;
-    right: 34.9%;
-    bottom: 23.1%;
+    width: 14.9%;
+    right: 33%;
+    bottom: 23.2%;
     position: absolute;
 }
   }

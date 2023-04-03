@@ -21,7 +21,7 @@ const Hero = ({ onClick }: HeroProps) => {
 
   useEffect(() => {
     homeAnim(homeRef,textTitle);
-    gsap.from('.hero_animation', {
+    gsap.from('.heroText_animation', {
       x: -80,
       ease: Power2.easeInOut,
       duration: 1,
@@ -41,7 +41,7 @@ const Hero = ({ onClick }: HeroProps) => {
                 }}
               />
             </h1>
-            <div className='hero_animation'>
+            <div className='heroText_animation'>
               <p>
                 <FormattedMessage id='page.home.top.text' />
               </p>

@@ -4,38 +4,7 @@
 @use "../../assets/styles/partials/variables/colors" as colors;
 
 .home {
-  overflow-x: hidden;
   position: relative;
-  .colorShadow {
-    background-image: url(../../assets/img/ellipse_bg.svg);
-    background-size: contain;
-    position: absolute;
-    z-index: 0;
-    opacity: .8;
-
-    &_1 {
-      height: 90vw;
-      width: 90vw;
-      left: -20%;
-      filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
-    }
-
-    &_2 {
-      height: 100vw;
-      width: 90vw;
-      top: 150vh;
-      right: -35%;
-      filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
-    }
-
-    &_3 {
-      height: 90vw;
-      width: 90vw;
-      left: -20%;
-      top: 300vh;
-      filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
-    }
-  }
 
   section {
     p {
@@ -52,77 +21,6 @@
     }
   }
 
-  &_weoffer {
-    &__image {
-      @include devices.device(smScreen) {
-        padding-left: 3rem;
-        width: 60%;
-      }
-    }
-
-    &__text {
-      width: 30%;
-
-      p {
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
-    }
-  }
-
-  &_ourtechnology {
-    &__image {
-      @include devices.device(smScreen) {
-        padding-right: 3rem;
-        width: 50%;
-      }
-    }
-
-    &__text {
-      width: 30%;
-
-      p {
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
-    }
-  }
-
-  &_experience {
-    &__image {
-      @include devices.device(smScreen) {
-        padding-left: 3rem;
-        width: 60%;
-      }
-    }
-
-    &__text {
-      width: 30%;
-
-      p {
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
-    }
-  }
-
-  &_dataoptimization {
-    &__image {
-      @include devices.device(smScreen) {
-        padding-right: 3rem;
-        width: 50%;
-      }
-    }
-
-    &__text {
-      width: 30%;
-
-      p {
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
-    }
-  }
 
   h1 {
     @include layout.mainTitle;
@@ -135,7 +33,11 @@
   main {
     display: flex;
     align-items: center;
-    padding-top: 5rem;
+
+    p {
+      max-width: 500px;
+      margin: auto;
+    }
 
     @include devices.device(tablet) {
       min-height: 100vh;
@@ -147,4 +49,87 @@
   opacity: 1;
   position: relative;
   top: 0;
+}
+
+%colorShadow {
+  background-image: url(../../assets/img/ellipse_bg.svg);
+  background-size: contain;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.8;
+  background-repeat: no-repeat;
+}
+
+
+.whoweare_container {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    @extend %colorShadow;
+    background-position: 30%;
+    height: 50vw;
+    width: 100%;
+    left: -20%;
+    filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
+  }
+}
+
+.weoffer_container {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    @extend %colorShadow;
+    height: 100%;
+    width: 100%;
+    top: 7%;
+    right: -50%;
+    filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
+  }
+}
+
+.ourtechnology_container {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    @extend %colorShadow;
+    height: 90vh;
+    width: 200%;
+    left: 0%;
+    top: 0%;
+    filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
+  }
+}
+
+.experience_container {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    @extend %colorShadow;
+    background-position: 50% center;
+    height: 90vh;
+    width: 100vw;
+    right: -10%;
+    top: 0%;
+    filter: invert(37%) sepia(92%) saturate(1874%) hue-rotate(214deg) brightness(101%) contrast(99%);
+  }
+}
+
+.dataoptimization_container {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    opacity: .5;
+    @extend %colorShadow;
+    background-position: 50% center;
+    height: 100vh;
+      width: 90vw;
+      top: -20%;
+      left: -30%;
+      filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
+  }
 }

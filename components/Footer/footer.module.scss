@@ -63,8 +63,8 @@
 }
 
   &_logo {
-    max-width: 180px;
-    filter: brightness(100);
+    max-width: 150px;
+    filter: brightness(200);
     margin-bottom: 20px;
 
     @include devices.device(tablet) {

@@ -16,13 +16,13 @@ const HeroAnim = () => {
   const {fadeInAnim} = useComponentAnimations()
 
   useEffect(() => {
-    fadeInAnim('.man',0,0.8)
-    fadeInAnim('.mobile',-50,1)
-    fadeInAnim('.graphic',-30,1.2)
-    fadeInAnim('.game',-50,1.2)
-    fadeInAnim('.bubble',-50,1.2)
-    fadeInAnim('.list',-70,1.5)
-    fadeInAnim('.line',-70,1.5)
+    fadeInAnim('.man',0.8,0)
+    fadeInAnim('.mobile',1,-50)
+    fadeInAnim('.graphic',1.2,-30)
+    fadeInAnim('.game',1.2,-50)
+    fadeInAnim('.bubble',1.2,-50)
+    fadeInAnim('.list',1.5,-70)
+    fadeInAnim('.line',1.5,-70)
   }, [])
   
   return (

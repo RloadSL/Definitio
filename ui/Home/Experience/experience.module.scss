@@ -4,6 +4,8 @@
 
 
 .experience {  
+  padding-top: 4rem;
+  padding-bottom: 4rem;
     .content {
       @extend %maxContent;
       justify-content: flex-end;
@@ -12,12 +14,6 @@
 
       @include devices.device(tablet) {
         padding-top: 120px;
-      }
-  
-      & > div {
-        @include devices.device(smScreen) {
-          width: 50%;
-        }
       }
     }
   
@@ -33,12 +29,22 @@
       top: 0;
 
       @include devices.device(tablet) {
-        width: 35%;
+        width: 20%;
+        margin-left: 15rem;
       }
     }
   
-    // &_image {
-    // }
+    &_image {
+      width: 85%;
+      margin: auto;
+      margin-top: 4rem;
+
+      @include devices.device(smScreen) {
+        width: 45%;
+        margin-left: 7rem;
+
+      }
+    }
 
     .titleButton {
       @extend %titleButton;

@@ -4,7 +4,8 @@
 
 
 .ourtechnology {
-    background-size: cover;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   
     .content {
       @extend %maxContent;
@@ -32,7 +33,11 @@
     }
   
     &_image {
-      width: 60%;
+      width: 90%;
+
+      @include devices.device(smScreen) {
+        width: 60%;
+      }
     }
 
     .titleButton {

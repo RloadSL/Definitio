@@ -34,6 +34,15 @@ const OurTechnology = ({ }: OurTechnologyProps) => {
         end: "300px center",
       },
     });
+    gsap.from('.ourtechnologyText_animation', {
+      x: 80,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".ourtechnologyText_animation",
+        start: "top center",
+        end: "bottom center",
+      },
+    });
     // gsap.from('.shield', {
     //   y: -120,
     //   ease: Power2.easeInOut,
@@ -68,7 +77,7 @@ const OurTechnology = ({ }: OurTechnologyProps) => {
         <div className={style.ourtechnology_image}>
           <OurTechnologyAnim />
         </div>
-        <div className={style.ourtechnology_text}>
+        <div className={`${style.ourtechnology_text} ourtechnologyText_animation`}>
           <article>
             <h2 className={style.titleButton}>
               <FormattedMessage id='page.home.ourtechnology.h2' />

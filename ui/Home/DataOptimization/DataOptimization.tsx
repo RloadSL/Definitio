@@ -71,6 +71,25 @@ const DataOptimization = ({ }: DataOptimizationProps) => {
         end: "300px center",
       },
     });
+    gsap.from('.gameSpot', {
+      scale: 0,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".dataOptimization_animation",
+        scrub: 1,
+        start: "50px center",
+        end: "300px center",
+      },
+    });
+    gsap.from('.dataoptimizationText_animation', {
+      x: 80,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".dataoptimizationText_animation",
+        start: "top center",
+        end: "bottom center",
+      },
+    });
   }, [])
   return (
     <section className={style.dataoptimization}>
@@ -78,7 +97,7 @@ const DataOptimization = ({ }: DataOptimizationProps) => {
         <div className={style.dataoptimization_image}>
           <DataOptimizationAnim />
         </div>
-        <div className={style.dataoptimization_text}>
+        <div className={`${style.dataoptimization_text} dataoptimizationText_animation`}>
           <article>
             <h2 className={style.titleButton}>
               <FormattedMessage id='page.home.dataoptimization.h2' />
