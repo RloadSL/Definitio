@@ -36,7 +36,13 @@
 
     p {
       max-width: 500px;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include devices.device(smScreen) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
 
     @include devices.device(tablet) {

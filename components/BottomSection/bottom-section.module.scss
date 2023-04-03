@@ -10,11 +10,15 @@
 
   h3 {
     margin-top: 0;
-    font-size: 3rem
+    font-size: 3rem;
   }
 
   &_content {
     @extend %mainLayout;
+    max-width: 500px;
+    @include devices.device(smScreen) {
+      max-width: 1800px;
+    }
   }
 
   &_top {
@@ -30,6 +34,7 @@
 .flexContainer {
   margin-top: 3rem;
 
+
   @include devices.device(smScreen) {
     display: flex;
     margin-top: 8rem;
@@ -40,8 +45,10 @@
 }
 
 .form {
+  margin-left: auto;
+  margin-right: auto;
 
-  @include devices.device(tablet) {
+  @include devices.device(smScreen) {
     margin-left: 10rem;
     width: 50%;
   }

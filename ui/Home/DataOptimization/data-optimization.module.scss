@@ -13,7 +13,7 @@
       padding-left: 1rem;
       padding-right: 1rem;
   
-      @include devices.device(tablet) {
+      @include devices.device(smScreen) {
         flex-direction: row;
         justify-content: flex-end;
         padding-top: 120px;
@@ -24,9 +24,11 @@
       opacity: 1;
       position: relative;
       top: 0;
+      text-align: center;
 
-      @include devices.device(tablet) {
+      @include devices.device(smScreen) {
         width: 35%;
+        text-align: left;
       }
     }
   
@@ -35,12 +37,18 @@
       margin: 3rem auto;
 
       @include devices.device(tablet) {
-        width: 50%;
+        width: 45%;
       }
     }
 
     .titleButton {
       @extend %titleButton;
+      margin: auto;
+      margin-bottom: 2rem;
+      @include devices.device(smScreen) {
+        margin: 0;
+        margin-bottom: 2rem;
+      }
     }
 }
 

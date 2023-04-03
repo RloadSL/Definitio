@@ -23,10 +23,12 @@
       opacity: 1;
       position: relative;
       top: 0;
+      text-align: center;
   
       @include devices.device(smScreen) {
         width: 35%;
-        margin-left: 10rem;
+        margin-left: 2rem;
+        text-align: left;
       }
     }
   
@@ -42,6 +44,12 @@
 
     .titleButton {
       @extend %titleButton;
+      margin: auto;
+      margin-bottom: 2rem;
+      @include devices.device(smScreen) {
+        margin: 0;
+        margin-bottom: 2rem;
+      }
     }
 }
 

@@ -42,6 +42,12 @@
 
     .titleButton {
       @extend %titleButton;
+      margin: auto;
+      margin-bottom: 2rem;
+      @include devices.device(smScreen) {
+        margin: 0;
+        margin-bottom: 2rem;
+      }
     }
 }
 
