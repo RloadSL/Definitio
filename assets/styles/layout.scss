@@ -201,4 +201,8 @@ canvas {
 
 .cube1,.cube2 {
 	display: none;
+
+	@include devices.device(tablet) {
+		display: block;
+	}
 }
