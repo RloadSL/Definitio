@@ -33,12 +33,13 @@
 
 .flexContainer {
   margin-top: 3rem;
-
+  text-align: center;
 
   @include devices.device(smScreen) {
     display: flex;
     margin-top: 8rem;
     margin-left: 10rem;
+    text-align: left;
 
     // justify-content: space-between;
   }

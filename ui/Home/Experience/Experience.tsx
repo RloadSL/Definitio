@@ -22,10 +22,10 @@ const Experience = ({ }: ExperienceProps) => {
       duration: 1.5,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".experience_animation",
+        trigger: ".experience",
         scrub: 1,
-        start: "50px center",
-        end: "300px center",
+        start: "top center",
+        end: "top center",
       },
     });
     gsap.from('.bubble1', {
@@ -58,10 +58,10 @@ const Experience = ({ }: ExperienceProps) => {
       duration: 2,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".experience_animation",
+        trigger: ".experience",
         scrub: 1,
-        start: "50px center",
-        end: "300px center",
+        start: "top center",
+        end: "top center",
       },
     });
     gsap.from('.people', {
@@ -80,15 +80,15 @@ const Experience = ({ }: ExperienceProps) => {
       x: -80,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".experienceText_animation",
+        trigger: ".experience",
         start: "top center",
-        end: "bottom center",
+        end: "top center",
       },
     });
   }, [])
 
   return (
-    <section className={style.experience}>
+    <section className={`${style.experience} experience`}>
             <div className={`${style.cube1} cube1`}>
       <Image src={cube1} alt={''} />
       </div>

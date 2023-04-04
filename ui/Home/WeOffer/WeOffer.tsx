@@ -23,10 +23,10 @@ const WeOffer = ({ }: WeOfferProps) => {
       duration: 1.5,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".animation",
+        trigger: ".weoffer",
         scrub: 1,
-        start: "50px center",
-        end: "300px center",
+        start: "top center",
+        end: "top center",
       },
     });
     gsap.from('.window', {
@@ -47,9 +47,9 @@ const WeOffer = ({ }: WeOfferProps) => {
       duration: 2,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".animation",
+        trigger: ".weoffer",
         scrub: 1,
-        start: "50px center",
+        start: "top center",
         end: "400px center",
       },
     });
@@ -69,37 +69,15 @@ const WeOffer = ({ }: WeOfferProps) => {
       x: -80,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".weofferText_animation",
+        trigger: ".weoffer",
         start: "top center",
         end: "bottom center",
       },
     });
-    // gsap.to('.cube1', {
-    //   y: -600,
-    //   duration: 6,
-    //   stagger: { each: 0.4, ease: Power2.easeInOut },
-    //   scrollTrigger: {
-    //     trigger: ".cube1",
-    //     // start: "top center",
-    //     // end: "bottom center",
-    //     scrub:1
-    //   },
-    // });
-    // gsap.to('.cube2', {
-    //   y: -100,
-    //   duration: 5,
-    //   stagger: { each: 0.4, ease: Power2.easeInOut },
-    //   scrollTrigger: {
-    //     trigger: ".cube2",
-    //     // start: "top center",
-    //     // end: "bottom center",
-    //     scrub:1
-    //   },
-    // });
   }, [])
 
   return (
-    <section className={style.weoffer}>
+    <section className={`${style.weoffer} weoffer`}>
             <div className={`${style.cube1} cube1`}>
       <Image src={cube1} alt={''} />
       </div>

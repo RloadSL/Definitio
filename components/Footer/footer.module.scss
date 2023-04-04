@@ -14,6 +14,8 @@
 
   &_content {
     @extend %mainLayout;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     ul {
       @include devices.device(tablet) {
@@ -30,8 +32,10 @@
     &__top {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      @include devices.device(tablet) {
+      @include devices.device(smScreen) {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -56,24 +60,36 @@
   order: 2;
   margin-top: 20px;
 
-  @include devices.device(tablet) {
+
+  @include devices.device(smScreen) {
     margin-left: 10rem;
     order: initial;
+
   }
 }
 
   &_logo {
-    max-width: 150px;
+    max-width: 100px;
     filter: brightness(200);
     margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
 
     @include devices.device(tablet) {
-      max-width: 250px;
+      max-width: 200px;
     }
   }
 
   &_social {
     font-size: 1.2rem;
+    text-align: center;
+    ul {
+      @include devices.device(tablet) {
+        display: flex;
+      }
+    }
+
 
     li {
       @include devices.device(tablet) {
@@ -83,6 +99,7 @@
   }
 
   &_legal {
+    text-align: center;
     li {
       @include devices.device(tablet) {
         margin-left: 3rem;

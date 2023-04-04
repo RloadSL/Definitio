@@ -17,10 +17,10 @@ const OurTechnology = ({ }: OurTechnologyProps) => {
       duration: 1.5,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".ourtechnology_animation",
+        trigger: ".ourtechnology",
         scrub: 1,
-        start: "50px center",
-        end: "300px center",
+        start: "top center",
+        end: "top center",
       },
     });
     gsap.from('.technology_shield', {
@@ -38,7 +38,7 @@ const OurTechnology = ({ }: OurTechnologyProps) => {
       x: 80,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".ourtechnologyText_animation",
+        trigger: ".ourtechnology",
         start: "top center",
         end: "bottom center",
       },
@@ -72,7 +72,7 @@ const OurTechnology = ({ }: OurTechnologyProps) => {
   }, [])
 
   return (
-    <section className={style.ourtechnology}>
+    <section className={`${style.ourtechnology} ourtechnology`}>
       <div className={`${style.content} ourtechnology_animation`}>
         <div className={style.ourtechnology_image}>
           <OurTechnologyAnim />

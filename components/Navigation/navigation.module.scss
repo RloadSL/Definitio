@@ -23,6 +23,13 @@
 }
 
 .pc {
+  .navigation_logo {
+      padding-left: 1rem;
+      
+    @include devices.device(xlgScreen) {
+      padding-left: 0rem;
+    }
+  }
   .navigation_content {
     display: flex;
     justify-content: space-between;
@@ -40,6 +47,7 @@
 
 
   .menu {
+    padding-right: 1rem;
     ul {
       display: flex;
       align-items: center;

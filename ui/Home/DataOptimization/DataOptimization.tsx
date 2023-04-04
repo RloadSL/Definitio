@@ -17,10 +17,10 @@ const DataOptimization = ({ }: DataOptimizationProps) => {
       duration: 1.5,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".dataOptimization_animation",
+        trigger: ".dataoptimization",
         scrub: 1,
-        start: "50px center",
-        end: "300px center",
+        start: "top center",
+        end: "top center",
       },
     });
     gsap.from('.data_window1', {
@@ -29,7 +29,7 @@ const DataOptimization = ({ }: DataOptimizationProps) => {
       duration: 1,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".dataOptimization_animation",
+        trigger: ".dataoptimization",
         scrub: 1,
         start: "50px center",
         end: "300px center",
@@ -85,14 +85,14 @@ const DataOptimization = ({ }: DataOptimizationProps) => {
       x: 80,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".dataoptimizationText_animation",
+        trigger: ".dataoptimization",
         start: "top center",
         end: "bottom center",
       },
     });
   }, [])
   return (
-    <section className={style.dataoptimization}>
+    <section className={`${style.dataoptimization} dataoptimization`}>
       <div className={`${style.content} dataOptimization_animation`}>
         <div className={style.dataoptimization_image}>
           <DataOptimizationAnim />
