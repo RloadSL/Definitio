@@ -6,6 +6,7 @@
 .experience {  
   padding-top: 4rem;
   padding-bottom: 4rem;
+  position: relative;
     .content {
       @extend %maxContent;
       justify-content: flex-end;
@@ -17,15 +18,15 @@
       }
 
       @include devices.device(mdScreen) {
-        padding-left: 12rem;
+        padding-left: 8rem;
       }
     }
   
-    p {
-      @include devices.device(smScreen) {
-        max-width: 60%;
-      }
-    }
+    // p {
+    //   @include devices.device(smScreen) {
+    //     max-width: 60%;
+    //   }
+    // }
   
     &_text {
       opacity: 1;
@@ -40,7 +41,7 @@
       }
 
       @include devices.device(mdScreen) {
-        width: 20%;
+        width: 24%;
       }
 
     }
@@ -68,3 +69,48 @@
     }
 }
 
+
+.cube1 {
+  position: absolute;
+  right: 20%;
+  bottom: 10%;
+  animation: float 5.5s ease-in-out infinite;
+  animation-delay: .5s;
+  transform: rotate(30deg);
+  width: 30px;
+
+}
+
+.cube2 {
+  position: absolute;
+  right: 60%;
+  top: 10%;
+  transform: scale(.5) rotate(90deg);
+  animation: float2 5.5s ease-in-out infinite;
+  width: 60px;
+
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-50px) rotate(30deg);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(100px) rotate(90deg);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

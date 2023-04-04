@@ -6,28 +6,37 @@
 .home {
   position: relative;
 
+  .bg {
+background-image: url(../../assets/img/bg.jpg);
+background-size: cover;
+  }
+
   section {
     p {
-      font-size: 1.4rem;
-      line-height: 2rem;
+      font-size: 1.8rem;
+      line-height: 2.5rem;
 
-      @include devices.device(tablet) {
-        font-size: 1.6rem;
-      }
 
-      @include devices.device(lgScreen) {
-        font-size: 1.6rem;
-      }
+      // @include devices.device(tablet) {
+      //   font-size: 1.6rem;
+      //   line-height: 2.3rem;
+      // }
+
+      // @include devices.device(lgScreen) {
+      //   font-size: 1.8rem;
+      //   line-height: 2.5rem;
+      // }
     }
   }
 
 
-  h1 {
-    @include layout.mainTitle;
-    span {
-      color: colors.$palette2;
-    }
-  }
+  // h1 {
+  //   @include layout.mainTitle;
+  //   span {
+  //     color: colors.$palette2;
+  //     font-size: 6.5rem;
+  //   }
+  // }
 
   section,
   main {
@@ -57,85 +66,111 @@
   top: 0;
 }
 
-%colorShadow {
-  background-image: url(../../assets/img/ellipse_bg.svg);
-  background-size: contain;
-  position: absolute;
-  z-index: 0;
-  opacity: 0.8;
-  background-repeat: no-repeat;
+.hero_container {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 200px;
+    background-image: url(../../assets/img/circles.svg);
+    position: absolute;
+    bottom: 0%;
+    right: 42%;
+    background-size: contain;
+    z-index: 1;
+    background-repeat: no-repeat;
+
+  }
 }
 
 
+// %colorShadow {
+//   background-image: url(../../assets/img/ellipse_bg.svg);
+//   background-size: contain;
+//   position: absolute;
+//   z-index: 0;
+//   opacity: 0.8;
+//   background-repeat: no-repeat;
+// }
+
+
 .whoweare_container {
-  position: relative;
-  overflow: hidden;
-  &::before {
-    content: "";
-    @extend %colorShadow;
-    background-position: 30%;
-    height: 50vw;
-    width: 100%;
-    left: -20%;
-    filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
+  // position: relative;
+  // overflow: hidden;
+  // &::before {
+  //   content: "";
+  //   @extend %colorShadow;
+  //   background-position: 30%;
+  //   height: 50vw;
+  //   width: 100%;
+  //   left: -20%;
+  //   filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
+  // }
+
+  p {
+    max-width: 320px !important;
   }
 }
 
 .weoffer_container {
-  overflow: hidden;
-  position: relative;
-  &::before {
-    content: "";
-    @extend %colorShadow;
-    height: 100%;
-    width: 100%;
-    top: 7%;
-    right: -50%;
-    filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
+  // overflow: hidden;
+  // position: relative;
+  // &::before {
+  //   content: "";
+  //   @extend %colorShadow;
+  //   height: 100%;
+  //   width: 100%;
+  //   top: 7%;
+  //   right: -50%;
+  //   filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
+  // }
+  p {
+    max-width: 450px !important;
   }
 }
 
-.ourtechnology_container {
-  overflow: hidden;
-  position: relative;
-  &::before {
-    content: "";
-    @extend %colorShadow;
-    height: 90vh;
-    width: 200%;
-    left: 0%;
-    top: 0%;
-    filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
-  }
-}
+// .ourtechnology_container {
+//   overflow: hidden;
+//   position: relative;
+//   &::before {
+//     content: "";
+//     @extend %colorShadow;
+//     height: 90vh;
+//     width: 200%;
+//     left: 0%;
+//     top: 0%;
+//     filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
+//   }
+// }
 
-.experience_container {
-  overflow: hidden;
-  position: relative;
-  &::before {
-    content: "";
-    @extend %colorShadow;
-    background-position: 50% center;
-    height: 90vh;
-    width: 100vw;
-    right: -10%;
-    top: 0%;
-    filter: invert(37%) sepia(92%) saturate(1874%) hue-rotate(214deg) brightness(101%) contrast(99%);
-  }
-}
+// .experience_container {
+//   overflow: hidden;
+//   position: relative;
+//   &::before {
+//     content: "";
+//     @extend %colorShadow;
+//     background-position: 50% center;
+//     height: 90vh;
+//     width: 100vw;
+//     right: -10%;
+//     top: 0%;
+//     filter: invert(37%) sepia(92%) saturate(1874%) hue-rotate(214deg) brightness(101%) contrast(99%);
+//   }
+// }
 
-.dataoptimization_container {
-  overflow: hidden;
-  position: relative;
-  &::before {
-    content: "";
-    opacity: .5;
-    @extend %colorShadow;
-    background-position: 50% center;
-    height: 100vh;
-      width: 90vw;
-      top: -20%;
-      left: -30%;
-      filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
-  }
-}
+// .dataoptimization_container {
+//   overflow: hidden;
+//   position: relative;
+//   &::before {
+//     content: "";
+//     opacity: .5;
+//     @extend %colorShadow;
+//     background-position: 50% center;
+//     height: 100vh;
+//       width: 90vw;
+//       top: -20%;
+//       left: -30%;
+//       filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
+//   }
+// }

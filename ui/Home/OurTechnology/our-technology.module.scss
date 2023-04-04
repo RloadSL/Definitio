@@ -16,7 +16,7 @@
   
       @include devices.device(smScreen) {
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-between;
         //padding-top: 120px;
       }
     }
@@ -26,6 +26,15 @@
       position: relative;
       top: 0;
       width: 100%;
+
+      b {
+        font-weight: 500;
+        color: colors.$palette2;
+      }
+
+      p{
+        max-width: 350px !important;
+      }
 
       @include devices.device(smScreen) {
         width: 35%;

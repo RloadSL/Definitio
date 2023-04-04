@@ -83,7 +83,12 @@ const OurTechnology = ({ }: OurTechnologyProps) => {
               <FormattedMessage id='page.home.ourtechnology.h2' />
             </h2>
             <p>
-              <FormattedMessage id='page.home.ourtechnology.text' />
+              <FormattedMessage
+                id="page.home.ourtechnology.text"
+                values={{
+                  b: children => <b>{children}</b>,
+                }}
+              />
             </p>
           </article>
         </div>

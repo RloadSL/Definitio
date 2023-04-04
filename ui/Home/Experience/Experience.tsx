@@ -5,6 +5,10 @@ import { FormattedMessage } from 'react-intl'
 import style from './experience.module.scss'
 import ExperienceAnim from './ExperienceAnim'
 import gsap, { Power2 } from 'gsap';
+import Image from 'next/image';
+import cube1 from '../../../assets/img/cube.svg'
+
+
 
 
 interface ExperienceProps {
@@ -85,6 +89,12 @@ const Experience = ({ }: ExperienceProps) => {
 
   return (
     <section className={style.experience}>
+            <div className={`${style.cube1} cube1`}>
+      <Image src={cube1} alt={''} />
+      </div>
+      <div className={`${style.cube2} cube2`}>
+      <Image src={cube1} alt={''} />
+      </div>
       <div className={`${style.content} experience_animation`}>
         <div className={`${style.experience_text} experienceText_animation`}>
           <article>
@@ -92,7 +102,12 @@ const Experience = ({ }: ExperienceProps) => {
               <FormattedMessage id='page.home.experience.h2' />
             </h2>
             <p>
-              <FormattedMessage id='page.home.experience.text' />
+              <FormattedMessage
+                id="page.home.experience.text"
+                values={{
+                  b: children => <b>{children}</b>,
+                }}
+              />
             </p>
           </article>
         </div>

@@ -5,6 +5,8 @@ import { FormattedMessage } from 'react-intl'
 import HeroAnim from './HeroAnim'
 import style from './hero.module.scss'
 import gsap, { Power2 } from 'gsap';
+import Image from 'next/image';
+import cube1 from '../../../assets/img/cube.svg'
 
 
 interface HeroProps {
@@ -27,9 +29,40 @@ const Hero = ({ onClick }: HeroProps) => {
       duration: 1,
       opacity: 0,
     });
+    gsap.to('.cube1', {
+      y: -600,
+      duration: 6,
+      stagger: { each: 0.4, ease: Power2.easeInOut },
+      scrollTrigger: {
+        trigger: ".cube1",
+        // start: "top center",
+        // end: "bottom center",
+        scrub:1
+      },
+    });
+    gsap.to('.cube2', {
+      y: -100,
+      duration: 5,
+      stagger: { each: 0.4, ease: Power2.easeInOut },
+      scrollTrigger: {
+        trigger: ".cube2",
+        // start: "top center",
+        // end: "bottom center",
+        scrub:1
+      },
+    });
   }, []);
+
   return (
-    <main className={style.hero}>
+    <main className={`${style.hero} hero`}>
+      <div className={`${style.cube1} cube1`}>
+      <Image src={cube1} alt={''} />
+      </div>
+      <div className={`${style.cube2} cube2`}>
+      <Image src={cube1} alt={''} />
+      </div>
+                
+
       <div className={style.content}>
         <div className={style.hero_text}>
           <article>

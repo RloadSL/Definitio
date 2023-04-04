@@ -62,14 +62,18 @@ const Home: NextPage = () => {
 
   return (
     <div className={style.home}>
-      <SEOHead title='Definitio::Programmatic Mobile Advertising Agency' description='Here the SEO description of the page' />
+      <SEOHead title='Definitio::Programmatic Mobile Advertising Agency' description='Here the SEO description of the page' />    
 
-      <Hero onClick={onClick} />
+      <div className={style.hero_container}>
+<Hero onClick={onClick} />
+
+</div>
       {/* <div className={`${style.colorShadow} ${style.colorShadow_1}`}></div>
       <div className={`${style.colorShadow} ${style.colorShadow_2}`}></div>
       <div className={`${style.colorShadow} ${style.colorShadow_3}`}></div>
       <div className={`${style.colorShadow} ${style.colorShadow_4}`}></div>
       <div className={`${style.colorShadow} ${style.colorShadow_5}`}></div> */}
+      <div className={style.bg}>
       <div className={style.whoweare_container}>
         <WhoWeAre />
       </div>
@@ -86,8 +90,9 @@ const Home: NextPage = () => {
       </div>
       <div className={style.dataoptimization_container}>
         <DataOptimization />
-
       </div>
+      </div>
+      
 
       <BottomSection />
 

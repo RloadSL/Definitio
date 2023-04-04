@@ -24,22 +24,22 @@ const ContactForm = () => (
     {({ isSubmitting }) => (
       <Form>
         <InputFormikApp
-          labelID='Name and surname'
+          labelID='form.contact.label.nameSurname'
           type='text'
           name='fullname'
         />
         <InputFormikApp
-          labelID='Company'
+          labelID='form.contact.label.company'
           type='text'
           name='company'
         />
         <InputFormikApp
-          labelID='Phone'
+          labelID='form.contact.label.phone'
           type='text'
           name='phone'
         />
         <InputFormikApp
-          labelID='Email'
+          labelID='form.contact.label.email'
           type='email'
           name='email'
         />

@@ -78,7 +78,12 @@ const WhoWeAre = ({}: WhoWeAreProps) => {
               <FormattedMessage id='page.home.whoweare.h2' />
             </h2>
             <p>
-              <FormattedMessage id='page.home.whoweare.text' />
+              <FormattedMessage
+                id="page.home.whoweare.text"
+                values={{
+                  b: children => <span>{children}</span>
+                }}
+              />
             </p>
           </div>
         </div>
