@@ -6,6 +6,8 @@
 .dataoptimization {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  overflow: hidden;
+  position: relative;
     .content {
       @extend %maxContent;
       display: flex;
@@ -41,6 +43,10 @@
       margin: 3rem auto;
 
       @include devices.device(tablet) {
+        width: 80%;
+      }
+
+      @include devices.device(smScreen) {
         width: 45%;
       }
     }

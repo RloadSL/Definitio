@@ -6,6 +6,8 @@
 .ourtechnology {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  overflow: hidden;
+  position: relative;
   
     .content {
       @extend %maxContent;
@@ -26,6 +28,7 @@
       position: relative;
       top: 0;
       width: 100%;
+      text-align: center;
 
       b {
         font-weight: 500;
@@ -38,6 +41,7 @@
 
       @include devices.device(smScreen) {
         width: 35%;
+        text-align: left;
       }
     }
   

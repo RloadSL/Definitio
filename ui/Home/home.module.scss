@@ -96,8 +96,8 @@ background-size: cover;
 
 
 .whoweare_container {
-  // position: relative;
-  // overflow: hidden;
+  position: relative;
+  overflow: hidden;
   // &::before {
   //   content: "";
   //   @extend %colorShadow;
@@ -114,8 +114,8 @@ background-size: cover;
 }
 
 .weoffer_container {
-  // overflow: hidden;
-  // position: relative;
+  overflow: hidden;
+  position: relative;
   // &::before {
   //   content: "";
   //   @extend %colorShadow;
@@ -130,9 +130,9 @@ background-size: cover;
   }
 }
 
-// .ourtechnology_container {
-//   overflow: hidden;
-//   position: relative;
+.ourtechnology_container {
+overflow: hidden;
+position: relative;
 //   &::before {
 //     content: "";
 //     @extend %colorShadow;
@@ -142,11 +142,11 @@ background-size: cover;
 //     top: 0%;
 //     filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
 //   }
-// }
+ }
 
-// .experience_container {
-//   overflow: hidden;
-//   position: relative;
+.experience_container {
+overflow: hidden;
+position: relative;
 //   &::before {
 //     content: "";
 //     @extend %colorShadow;
@@ -157,11 +157,11 @@ background-size: cover;
 //     top: 0%;
 //     filter: invert(37%) sepia(92%) saturate(1874%) hue-rotate(214deg) brightness(101%) contrast(99%);
 //   }
-// }
+}
 
-// .dataoptimization_container {
-//   overflow: hidden;
-//   position: relative;
+.dataoptimization_container {
+overflow: hidden;
+position: relative;
 //   &::before {
 //     content: "";
 //     opacity: .5;
@@ -173,4 +173,4 @@ background-size: cover;
 //       left: -30%;
 //       filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
 //   }
-// }
+}
