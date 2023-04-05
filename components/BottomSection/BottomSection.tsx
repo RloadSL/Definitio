@@ -7,6 +7,12 @@ import style from './bottom-section.module.scss'
 interface BottomSectionProps {
 }
 
+/**
+ * Component that includes the bottom section of the web with the contact form and the footer. It will appear in all pages
+ * @param param0 
+ * @returns 
+ */
+
 const BottomSection = ({ }: BottomSectionProps) => {
   return (
     <div className={style.bottomSection}>

@@ -1,1 +1,3 @@
-export { default } from './HeroAnim'
+import HeroAnim from "./HeroAnim";
+
+export default HeroAnim

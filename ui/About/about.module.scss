@@ -1,1 +1,64 @@
-.about {}
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.about {
+  h1 {
+    @extend %mainTitle;
+    font-size: clamp(4.5vw, 13vw, 5.5rem);
+    line-height: 1rem;
+  }
+  .content {
+    @extend %maxContent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+
+    @include devices.device(smScreen) {
+      text-align: left;
+      padding-top: 15rem;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  &_info {
+    margin-bottom: 10rem;
+
+    @include devices.device(smScreen) {
+      padding-left: 3rem;
+    }
+
+    &__text {
+      width: 90%;
+      
+      @include devices.device(smScreen) {
+        margin-right: 13rem;
+      }
+    }
+
+    p {
+
+      @include devices.device(smScreen) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        max-width: 600px;
+
+      }
+      @include devices.device(xlgScreen) {
+        font-size: 1.1rem;
+        max-width: 650px;
+
+      }
+    }
+  }
+
+  &_decoration {
+    @include devices.device(smScreen) {
+      width: 50%;
+    }
+
+    @include devices.device(xlgScreen) {
+      width: 40%;
+    }
+  }
+}

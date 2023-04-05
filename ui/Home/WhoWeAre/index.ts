@@ -1,1 +1,3 @@
-export { default } from './WhoWeAre'
+import WhoWeAre from "./WhoWeAre";
+
+export default WhoWeAre

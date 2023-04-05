@@ -2,58 +2,44 @@
 @use "../../../assets/styles/partials/variables/colors" as colors;
 @use "../../../assets/styles/partials/placeholders";
 
-
 .weoffer {
   padding-top: 4rem;
   padding-bottom: 4rem;
   overflow: hidden;
   position: relative;
 
-    .content {
-      @extend %maxContent;
-      padding-left: 1rem;
-      padding-right: 1rem;
+  .content {
+    @extend %maxContent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-    }
-  
-    p {
-      @include devices.device(smScreen) {
-        max-width: 60%;
-      }
-    }
-  
-    &_text {
-      opacity: 1;
-      position: relative;
-      top: 0;
-      text-align: center;
-  
-      @include devices.device(smScreen) {
-        width: 35%;
-        margin-left: 2rem;
-        text-align: left;
-      }
-    }
-  
-    &_image {
-      margin: 4rem auto 3rem auto;
-      width: 90%;  
-      
-      @include devices.device(smScreen) {
-        width: 50%;  
-        margin: 0px
-      }
-    }
+  &_text {
+    opacity: 1;
+    position: relative;
+    top: 0;
+    text-align: center;
 
-    .titleButton {
-      @extend %titleButton;
-      margin: auto;
-      margin-bottom: 2rem;
-      @include devices.device(smScreen) {
-        margin: 0;
-        margin-bottom: 2rem;
-      }
+    @include devices.device(smScreen) {
+      width: 35%;
+      margin-left: 2rem;
+      text-align: left;
     }
+  }
+
+  &_image {
+    margin: 4rem auto 3rem auto;
+    width: 90%;
+
+    @include devices.device(smScreen) {
+      width: 50%;
+      margin: 0px;
+    }
+  }
+
+  .titleButton {
+    @extend %titleButton;
+  }
 }
 
 .cube1 {
@@ -61,18 +47,16 @@
   right: 20%;
   bottom: 10%;
   animation: float 5.5s ease-in-out infinite;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
   transform: rotate(30deg);
-
 }
 
 .cube2 {
   position: absolute;
   right: 50%;
   top: 0%;
-  transform: scale(.5) rotate(90deg);
+  transform: scale(0.5) rotate(90deg);
   animation: float2 5.5s ease-in-out infinite;
-
 }
 
 @keyframes float {
@@ -98,4 +82,3 @@
     transform: translatey(0px);
   }
 }
-

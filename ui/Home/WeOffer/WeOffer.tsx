@@ -1,100 +1,95 @@
-import ButtonApp from '@/components/ButtonApp'
-import useComponentUtils from '@/hooks/component.hooks'
-import React, { useEffect, useRef } from 'react'
-import { FormattedMessage } from 'react-intl'
-import HeroAnim from './WeOfferAnim'
-import style from './we-offer.module.scss'
-import WeOfferAnim from './WeOfferAnim'
-import gsap, { Power2 } from 'gsap';
-import Image from 'next/image';
-import cube1 from '../../../assets/img/cube.svg'
+import React, { useEffect } from "react";
+import { FormattedMessage } from "react-intl";
+import style from "./we-offer.module.scss";
+import WeOfferAnim from "./WeOfferAnim";
+import gsap, { Power2 } from "gsap";
+import Image from "next/image";
+import cube1 from "../../../assets/img/cube.svg";
 
+interface WeOfferProps {}
 
+/**
+ * We Offer hero section component
+ * @returns
+ */
 
-interface WeOfferProps {
-}
+const WeOffer = ({}: WeOfferProps) => {
+  //configuration for scroll trigger
+  const scrollTriggerConfig = {
+    trigger: ".weoffer",
+    scrub: 1,
+    start: "10% center",
+    end: "20% center"
+  };
 
-const WeOffer = ({ }: WeOfferProps) => {
+  const getDefaultConfig = () => {
+    return scrollTriggerConfig;
+  };
+
+  const getCustomConfig = (options?: any) => {
+    let customConfig = getDefaultConfig();
+    return { ...customConfig, options };
+  };
 
   useEffect(() => {
-    gsap.from('.boy', {
+    gsap.from(".boy", {
       y: -20,
       ease: Power2.easeInOut,
       duration: 1.5,
       opacity: 0,
-      scrollTrigger: {
-        trigger: ".weoffer",
-        scrub: 1,
-        start: "top center",
-        end: "top center",
-      },
+      scrollTrigger: getCustomConfig()
     });
-    gsap.from('.window', {
+    gsap.from(".window", {
       y: -80,
       ease: Power2.easeInOut,
       duration: 2,
       opacity: 0,
-      scrollTrigger: {
-        trigger: ".animation",
-        scrub: 1,
-        start: "50px center",
-        end: "300px center",
-      },
+      scrollTrigger: getCustomConfig()
     });
-    gsap.from('.shield', {
+    gsap.from(".shield", {
       y: -120,
       ease: Power2.easeInOut,
       duration: 2,
       opacity: 0,
-      scrollTrigger: {
-        trigger: ".weoffer",
-        scrub: 1,
-        start: "top center",
-        end: "400px center",
-      },
+      scrollTrigger: getCustomConfig()
     });
-    gsap.from('.details', {
+    gsap.from(".details", {
       y: 120,
       ease: Power2.easeInOut,
       duration: 2,
       opacity: 0,
-      scrollTrigger: {
-        trigger: ".animation",
-        scrub: 1,
-        start: "50px 50%",
-        end: "400px 90%",
-      },
+      scrollTrigger: getCustomConfig()
     });
-    gsap.from('.weofferText_animation', {
+    gsap.from(".weofferText_animation", {
       x: -80,
       opacity: 0,
       scrollTrigger: {
         trigger: ".weoffer",
         start: "top center",
-        end: "bottom center",
-      },
+        end: "bottom center"
+      }
     });
-  }, [])
+  }, []);
 
   return (
     <section className={`${style.weoffer} weoffer`}>
-            <div className={`${style.cube1} cube1`}>
-      <Image src={cube1} alt={''} />
+      <div className={`${style.cube1} cube1`}>
+        <Image src={cube1} alt={""} />
       </div>
       <div className={`${style.cube2} cube2`}>
-      <Image src={cube1} alt={''} />
+        <Image src={cube1} alt={""} />
       </div>
       <div className={`${style.content} animation`}>
         <div className={`${style.weoffer_text} weofferText_animation`}>
           <article>
             <h2 className={style.titleButton}>
-              <FormattedMessage id='page.home.weoffer.h2' />
+              <FormattedMessage id="page.home.weoffer.h2" />
             </h2>
             <p>
               <FormattedMessage
                 id="page.home.weoffer.text"
                 values={{
-                  b: children => <b>{children}</b>,
+                  b: (children) => <b>{children}</b>
                   // p: children => <p>{children}</p>
                 }}
               />
@@ -104,7 +99,7 @@ const WeOffer = ({ }: WeOfferProps) => {
               <FormattedMessage
                 id="page.home.weoffer.text2"
                 values={{
-                  b: children => <b>{children}</b>,
+                  b: (children) => <b>{children}</b>
                   // p: children => <p>{children}</p>
                 }}
               />
@@ -116,7 +111,7 @@ const WeOffer = ({ }: WeOfferProps) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default WeOffer
+export default WeOffer;

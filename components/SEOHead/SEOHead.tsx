@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import React from 'react'
+import Head from "next/head";
+import React from "react";
 
 interface SEOHeaderProps {
-  title: string,
-  description: string
+  title: string;
+  description: string;
 }
 
 /**
@@ -12,13 +12,13 @@ SEO component that allows you to define both the title and the description of th
  * @param description Description of the page
  */
 
-const SEOHeader = ({title,description}: SEOHeaderProps) => {
+const SEOHeader = ({ title, description }: SEOHeaderProps) => {
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
     </Head>
-  )
-}
+  );
+};
 
 export default SEOHeader;

@@ -1,5 +1,8 @@
 @use "../../../../assets/styles/partials/mixins/devices" as devices;
 @use "../../../../assets/styles/partials/variables/colors" as colors;
+@use "../../../../assets/styles/partials/mixins/layout" as layout;
+
+@include layout.rotateAnimation;
 
 .wrapper {
   position: relative;
@@ -22,90 +25,65 @@
     animation: headRotate 8s infinite;
     animation-direction: alternate;
     transform-origin: 50% 100%;
-
-    // &__eyes {
-    //   width: 10px;
-    //   background-color: red;
-    //   border-radius: 100%;
-    //   animation: blink 1s infinite;
-    //   position: absolute;
-
-    // }
   }
 }
 
-
 .manBg {
-  // position: absolute;
-  // width: 100%;
-  // top: 0;
-
-  &_circle{
+  &_circle {
     position: absolute;
     width: 85%;
     bottom: 0;
     left: 8%;
     animation: rotate 40s linear infinite;
-  } 
+  }
 
-  &_mobile{
+  &_mobile {
     position: absolute;
     width: 40%;
     top: 10%;
-  } 
+  }
 
-  &_graphic{
+  &_graphic {
     position: absolute;
     width: 40%;
     top: 45%;
     left: 60%;
   }
 
-  &_game{
+  &_game {
     position: absolute;
     width: 13%;
     top: 5%;
     left: 36%;
-  } 
+  }
 
-  &_line{
+  &_line {
     position: absolute;
     width: 20%;
     top: 0%;
     left: 80%;
-  } 
+  }
 
-  &_list{
+  &_list {
     position: absolute;
     width: 30%;
     top: 20%;
     left: 64%;
-  } 
+  }
 
-  &_bubble{
+  &_bubble {
     position: absolute;
     width: 10%;
     top: 0%;
     left: 58%;
-  } 
+  }
 }
-
 
 @keyframes headRotate {
   0% {
-    transform: rotate(0deg)
-  }
-  100% {
-    transform: rotate(15deg)
-  }
-}
-
-@keyframes rotate {
-  from {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: rotate(15deg);
   }
 }
-

@@ -1,3 +1,3 @@
-import About from "@/ui/About";
+import About from "@/ui/About/About";
 
 export default About

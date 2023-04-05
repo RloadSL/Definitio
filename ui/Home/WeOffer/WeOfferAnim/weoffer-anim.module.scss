@@ -1,5 +1,8 @@
 @use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/mixins/layout" as layout;
 @use "../../../../assets/styles/partials/variables/colors" as colors;
+
+@include layout.rotateAnimation;
 
 .wrapper {
   position: relative;
@@ -13,24 +16,23 @@
   width: 52%;
   left: 15%;
   bottom: 0;
-
 }
 
 .boyBg {
-  &_circle{
+  &_circle {
     position: absolute;
     width: 65%;
     bottom: 2%;
     left: 12%;
     animation: rotate 40s linear infinite;
-  } 
- 
-  &_window{
+  }
+
+  &_window {
     position: absolute;
     width: 45%;
     left: 55%;
     top: 10%;
-  } 
+  }
 
   &_shield {
     position: absolute;
@@ -46,13 +48,3 @@
     left: -5%;
   }
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-

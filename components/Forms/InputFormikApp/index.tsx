@@ -1,1 +1,3 @@
-export {default} from "./InputFormikApp";
+import InputFormikApp from "./InputFormikApp";
+
+export default InputFormikApp

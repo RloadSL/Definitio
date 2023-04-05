@@ -5,7 +5,7 @@ import { IntlProvider } from 'react-intl'
 import es from '../lang/es.json'
 import en from '../lang/en.json'
 import '../assets/styles/layout.scss'
-import Navigation from '@/components/Navigation'
+import Header from '@/components/Header'
 import { useEffect } from 'react'
 import gsap from "gsap";
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="author" content="Rload Studio" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Navigation/>
+      <Header/>
       <Component {...pageProps} dir={getDirection(locale)}/>
     </IntlProvider>
   )

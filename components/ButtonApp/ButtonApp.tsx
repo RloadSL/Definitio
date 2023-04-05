@@ -7,7 +7,7 @@ interface ButtonAppProps {
   onClick: Function,
 }
 
-/** Button component for aplication
+/** Button component for web
  * @param labelID ID for JSON translations
  * @param onClick onClick function
  * @returns 

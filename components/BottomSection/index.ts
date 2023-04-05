@@ -1,1 +1,3 @@
-export { default } from './BottomSection'
+import BottomSection from "./BottomSection";
+
+export default BottomSection

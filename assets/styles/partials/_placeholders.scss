@@ -1,12 +1,12 @@
 @use "./variables/colors" as colors;
 @use "./mixins/devices" as devices;
 
-%mainLayout{
+%mainLayout {
   max-width: 1800px;
   width: 100%;
   margin: auto;
   font-size: 1rem;
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 %mainTitle {
@@ -18,7 +18,7 @@
 %titleButton {
   color: colors.$palette2;
   font-size: 1.2rem;
-  margin-top: 0px;
+  margin: 0px auto 2rem auto;
   font-weight: 500;
   text-transform: uppercase;
   border: 1px solid colors.$palette2;
@@ -33,12 +33,13 @@
     padding: 1rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    width: fit-content;
+  }
 
-
+  @include devices.device(smScreen) {
+    margin: 0;
+    margin: 0px 0px 2rem 0px;
   }
 }
-
 
 %maxContent {
   width: 100%;
@@ -61,8 +62,3 @@
     width: 90%;
   }
 }
-
-
-
-
-

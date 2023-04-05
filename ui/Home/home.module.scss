@@ -3,40 +3,20 @@
 @use "../../assets/styles/partials/mixins/layout" as layout;
 @use "../../assets/styles/partials/variables/colors" as colors;
 
+%containerSection {
+  position: relative;
+  overflow: hidden;
+}
+
 .home {
   position: relative;
-
-  .bg {
-background-image: url(../../assets/img/bg.jpg);
-background-size: cover;
-  }
 
   section {
     p {
       font-size: 1.8rem;
       line-height: 2.5rem;
-
-
-      // @include devices.device(tablet) {
-      //   font-size: 1.6rem;
-      //   line-height: 2.3rem;
-      // }
-
-      // @include devices.device(lgScreen) {
-      //   font-size: 1.8rem;
-      //   line-height: 2.5rem;
-      // }
     }
   }
-
-
-  // h1 {
-  //   @include layout.mainTitle;
-  //   span {
-  //     color: colors.$palette2;
-  //     font-size: 6.5rem;
-  //   }
-  // }
 
   section,
   main {
@@ -44,7 +24,6 @@ background-size: cover;
     align-items: center;
 
     p {
-      max-width: 500px;
       margin-left: auto;
       margin-right: auto;
 
@@ -68,109 +47,46 @@ background-size: cover;
 
 .hero_container {
   position: relative;
+
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 100px;
     height: 200px;
     background-image: url(../../assets/img/circles.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
     bottom: 0%;
     right: 42%;
-    background-size: contain;
     z-index: 1;
-    background-repeat: no-repeat;
-
   }
 }
 
-
-// %colorShadow {
-//   background-image: url(../../assets/img/ellipse_bg.svg);
-//   background-size: contain;
-//   position: absolute;
-//   z-index: 0;
-//   opacity: 0.8;
-//   background-repeat: no-repeat;
-// }
-
-
 .whoweare_container {
-  position: relative;
-  overflow: hidden;
-  // &::before {
-  //   content: "";
-  //   @extend %colorShadow;
-  //   background-position: 30%;
-  //   height: 50vw;
-  //   width: 100%;
-  //   left: -20%;
-  //   filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
-  // }
+  @extend %containerSection;
 
   p {
-    max-width: 320px !important;
+    max-width: 320px;
   }
 }
 
 .weoffer_container {
-  overflow: hidden;
-  position: relative;
-  // &::before {
-  //   content: "";
-  //   @extend %colorShadow;
-  //   height: 100%;
-  //   width: 100%;
-  //   top: 7%;
-  //   right: -50%;
-  //   filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
-  // }
+  @extend %containerSection;
+
   p {
-    max-width: 450px !important;
+    max-width: 450px;
   }
 }
 
 .ourtechnology_container {
-overflow: hidden;
-position: relative;
-//   &::before {
-//     content: "";
-//     @extend %colorShadow;
-//     height: 90vh;
-//     width: 200%;
-//     left: 0%;
-//     top: 0%;
-//     filter: invert(79%) sepia(37%) saturate(346%) hue-rotate(160deg) brightness(94%) contrast(97%);
-//   }
- }
+  @extend %containerSection;
+}
 
 .experience_container {
-overflow: hidden;
-position: relative;
-//   &::before {
-//     content: "";
-//     @extend %colorShadow;
-//     background-position: 50% center;
-//     height: 90vh;
-//     width: 100vw;
-//     right: -10%;
-//     top: 0%;
-//     filter: invert(37%) sepia(92%) saturate(1874%) hue-rotate(214deg) brightness(101%) contrast(99%);
-//   }
+  @extend %containerSection;
 }
 
 .dataoptimization_container {
-overflow: hidden;
-position: relative;
-//   &::before {
-//     content: "";
-//     opacity: .5;
-//     @extend %colorShadow;
-//     background-position: 50% center;
-//     height: 100vh;
-//       width: 90vw;
-//       top: -20%;
-//       left: -30%;
-//       filter: invert(91%) sepia(20%) saturate(6440%) hue-rotate(5deg) brightness(96%) contrast(88%);
-//   }
+  @extend %containerSection;
 }

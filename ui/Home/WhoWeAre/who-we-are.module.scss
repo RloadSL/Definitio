@@ -11,10 +11,6 @@
   overflow: hidden;
   position: relative;
 
-  @include devices.device(tablet) {
-    // padding-top: 120px;
-  }
-
   .content {
     @extend %maxContent;
     display: flex;
@@ -48,12 +44,10 @@
       font-weight: 500;
     }
 
-
     @include devices.device(smScreen) {
       width: 35%;
       text-align: left;
       margin-bottom: 0;
-
     }
   }
 
@@ -64,7 +58,6 @@
     @include devices.device(smScreen) {
       margin: 0;
       margin-bottom: 2rem;
-
     }
   }
 }

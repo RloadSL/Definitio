@@ -3,7 +3,6 @@
 @use "../../../assets/styles/partials/placeholders";
 @use "../../../assets/styles/partials/mixins/layout" as layout;
 
-
 .hero {
   background: url(../../../assets/img/home_bgtop.jpg) no-repeat;
   background-size: cover;
@@ -12,7 +11,7 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 50px;
     height: 50px;
@@ -24,22 +23,12 @@
     z-index: 0;
     background-repeat: no-repeat;
     animation: float2 10s ease-in-out infinite;
-
-
   }
 
   @include devices.device(tablet) {
     padding-top: 9rem;
     padding-bottom: 5rem;
   }
-
-    // h1 {
-  //   @include layout.mainTitle;
-  //   span {
-  //     color: colors.$palette2;
-  //     font-size: 6.5rem;
-  //   }
-  // }
 
   h1 {
     @include layout.mainTitle;
@@ -50,13 +39,12 @@
     justify-content: center;
     margin-bottom: 2rem;
     span {
-           color: colors.$palette2;
-          }
+      color: colors.$palette2;
+    }
     div {
       margin-left: 1rem;
       @include devices.device(smScreen) {
         margin-left: 0;
-
       }
     }
     @include devices.device(smScreen) {
@@ -89,12 +77,10 @@
   &_text {
     display: flex;
     flex-direction: column;
-    // align-items: flex-end;
     width: 100%;
 
     @include devices.device(smScreen) {
       width: 50%;
-      // padding-left: 4rem;
       display: block;
     }
   }
@@ -105,7 +91,6 @@
 
     @include devices.device(tablet) {
       width: 65%;
-      //margin: 0%;
     }
     @include devices.device(smScreen) {
       margin: 0 auto 3rem auto;
@@ -124,7 +109,7 @@
   position: absolute;
   right: 8%;
   top: 30%;
-  transform: scale(.5);
+  transform: scale(0.5);
 }
 
 @keyframes float2 {

@@ -1,1 +1,3 @@
-export { default } from './ButtonApp'
+import ButtonApp from "./ButtonApp";
+
+export default ButtonApp
