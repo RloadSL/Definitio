@@ -1,12 +1,16 @@
-@use '../../../assets/styles/partials/placeholders' as placeholders;
-@use '../../../assets/styles/partials/mixins/devices' as devices;
-@use '../../../assets/styles/partials/mixins/layout' as layout;
-@use '../../../assets/styles/partials/variables/colors' as colors;
+@use "../../../assets/styles/partials/placeholders" as placeholders;
+@use "../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../assets/styles/partials/variables/colors" as colors;
 
 .wrapper {
   position: relative;
-  width: 100%;
+  width: 95%;
   height: auto;
+
+  @include devices.device(tablet) {
+    width: 100%;
+  }
 
   & > div {
     position: absolute;
@@ -49,4 +53,3 @@
   right: 8%;
   bottom: 10%;
 }
-

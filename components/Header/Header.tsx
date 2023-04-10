@@ -73,7 +73,7 @@ const Header = () => {
             {menuLabelIDs.map((item, index: number) => {
               return (
                 <li className={`${style.navigation_menu__item} li-menu`} key={index}>
-                  <Link href={`/${item}`} className={style[item]}>
+                  <Link href={`/${item}`} className={style[item]} onClick={toggleMobileNav}>
                     <span>
                       <FormattedMessage id={`topmenu.item.label.${item}`} />
                     </span>
