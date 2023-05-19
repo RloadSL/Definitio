@@ -6,11 +6,10 @@ import style from "./about.module.scss";
 import { FormattedMessage } from "react-intl";
 import ButtonApp from "@/components/ButtonApp";
 import AboutDecoration from "./AboutDecoration";
-import SliderApp from "@/components/SliderApp";
 import gsap, { Power2 } from "gsap";
 import Image from "next/image";
 import cube1 from "../../assets/img/cube.svg"
-
+import SliderApp from "./SliderApp";
 
 /**
  * About page structure component. Includes the SEO header and each of the sections that build the UI of the page
@@ -69,7 +68,7 @@ const About: NextPage = () => {
           </div>
         </div>
         <div className={style.about_slider}>
-          <SliderApp/>
+          <SliderApp />
         </div>
       </div>
       <BottomSection />

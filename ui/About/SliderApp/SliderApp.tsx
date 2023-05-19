@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import style from "./slider-app.module.scss";
 import "swiper/swiper-bundle.css";
-import image1 from "../../assets/img/slider/01.jpg";
-import image2 from "../../assets/img/slider/02.jpg";
-import image3 from "../../assets/img/slider/03.jpg";
-import image4 from "../../assets/img/slider/04.jpg";
+import image1 from "../../../assets/img/about/01.jpg";
+import image2 from "../../../assets/img/about/02.jpg";
+import image3 from "../../../assets/img/about/03.jpg";
+import image4 from "../../../assets/img/about/04.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 

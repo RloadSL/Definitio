@@ -4,12 +4,8 @@ import { useRouter } from 'next/router'
 import { IntlProvider } from 'react-intl'
 import es from '../lang/es.json'
 import en from '../lang/en.json'
-import '../assets/styles/layout.scss'
+import '../assets/styles/globals.scss'
 import Header from '@/components/Header'
-import { useEffect } from 'react'
-import gsap from "gsap";
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
-// import SplitText from 'gsap/dist/SplitText';
 
 
 const messages: any = {

@@ -12,6 +12,10 @@
   "btn.label.accept": "Accept",
   "btn.label.cancel": "Cancel",
   "btn.label.contact": "Contact",
+  "btn.label.getStarted": "Let’s get it started",  
+  "btn.label.getInTouch": "Get in touch",
+
+
 
   "form.contact.label.nameSurname": "Name & surname",
   "form.contact.label.company": "Company",
@@ -35,6 +39,29 @@
 
   "page.about.h1": "About Us",
   "page.about.text": "<p>We believe in the power of technology, modern engineering data-driven solutions, that enables to create state-of-the-art data products.</p><p>We aspire to build a transparent, free-of-fraud, advertising experience based on machine learning tools and innovative approaches for faster reaction times and money-waste prevention.</p><p>We do believe in the power of people. Our tech-savvy team made of resourceful engineers, researchers and marketers along with the partnerships with the Tier-1 SSP and MMP players will ensure you to succeed and maximize your KPIs.</p><p>We will work together to customize the services that better match with your business needs and goals.</p>",
+
+  "page.services.hero.h1":"<span>Matching</span> clients with the most Engaged paying Users",
+  "page.services.hero.text":"We help brands, agencies and app developers to understand, identify, attract, acquire and convert the right users at the right time.",
+  "page.services.ourtechnology.text":"<p>Through the use of proprietary bidder and Machine Learning algorithms, we offer transparent, highly targeted performance-driven UA and re-engagement solutions at scale.</p><p>Our approach involves using full-funnel data to optimize our algorithms towards improved user retention and in-app sales.</p>",
+  "page.services.ourtechnology.tab1.title":"Continuous self-optimization",
+  "page.services.ourtechnology.tab1.text":"Our DSP is tailored, trained and optimized to meet the unique demands of mobile UA and retention KPIs. Our ML based platform analyzes over 70 attributes — including data from our DMP—optimizing for Lifetime Value (LTV) and installs, not clicks. Thanks to our custom predictive modelling, we ensure learning is continuous and that trends are recorded.",
+  "page.services.ourtechnology.tab2.title":"Efficient Performance at scale",
+  "page.services.ourtechnology.tab2.text":"Efficient Performance at scale Leveraging our broad daily reach, our outcome-driven models can efficiently and effectively scale performance",
+  "page.services.ourtechnology.tab3.title":"Built-in Fraud Detection",
+  "page.services.ourtechnology.tab3.text":"Built-In Fraud Detection. We use dynamic fraud filters to ensure no ad-budget is wasted.",
+  "page.services.productssolutions.title":"Our Products & Solutions",
+  "page.services.productssolutions.text":"<p class='bigger'>We provide full campaign management service to ensure the best performance.</p><p>Leveraging Definitio’s state-of-the-art infrastructure and mobile intelligence, we will help you determine new paths to identify, attract, and convert the highest-value user segments at the right time</p>",
+  "page.services.productssolutions.card1.title":"User adquisition",
+  "page.services.productssolutions.card1.text":"Identify, attract and enrich your users’ profiles with the highest likelihood to convert",
+  "page.services.productssolutions.card2.title":"Reporting & analytics",
+  "page.services.productssolutions.card2.text":"Obtain deep understanding of your campaigns’ KPIs and get to the next level of your market strategy.",
+  "page.services.productssolutions.card3.title":"Re-Targeting",
+  "page.services.productssolutions.card3.text":"Turn dormant and churned users into active audience through customized and effective dynamic levers.",
+  "page.services.productssolutions.card4.title":"Audience curation",
+  "page.services.productssolutions.card4.text":"Target users at the household level through user-centric features, such as geofencing and perceived user personas.",
+  "page.services.brandSafety.title":"Brand Safety-centric approach",
+  "page.services.brandSafety.text":"Because we strive to be the most reliable service for your agency, we work only with trusted partners to ensure high-quality traffic. We guarantee:",
+  "page.services.brandSafety.list":"<li>Premium placements within trustworthy SSPs only</li><li>Privacy-centric approach</li><li>Fraud prevention. Our ML models are focusing on anomaly detection both pre-bid and post-bid to prevent any fraudulent activity</li><li>All user data is encrypted</li>",
 
   "section.contact.title": "Contact Us"
 }

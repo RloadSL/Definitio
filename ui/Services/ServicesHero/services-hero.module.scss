@@ -1,0 +1,125 @@
+@use "../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../assets/styles/partials/variables/colors" as colors;
+@use "../../../assets/styles/partials/placeholders";
+@use "../../../assets/styles/partials/mixins/layout" as layout;
+
+.hero {
+  background: url(../../../assets/img/home_bgtop.jpg) no-repeat;
+  background-size: cover;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../../../assets/img/cube.svg);
+    position: absolute;
+    top: 10%;
+    right: 42%;
+    background-size: contain;
+    z-index: 0;
+    background-repeat: no-repeat;
+    animation: float2 10s ease-in-out infinite;
+  }
+
+  @include devices.device(tablet) {
+    padding-top: 9rem;
+    padding-bottom: 5rem;
+  }
+
+  h1 {
+    @include layout.mainTitle;
+    font-size: clamp(4.5vw, 13vw, 5.5rem);
+    line-height: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+    span {
+      color: colors.$palette2;
+    }
+    div {
+      margin-left: 1rem;
+      @include devices.device(smScreen) {
+        margin-left: 0;
+      }
+    }
+    @include devices.device(smScreen) {
+      display: block;
+    }
+  }
+
+  .content {
+    @extend %maxContent;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+
+    @include devices.device(smScreen) {
+      text-align: left;
+    }
+  }
+
+  p {
+    margin: auto;
+    margin-bottom: 2rem;
+    @include devices.device(smScreen) {
+      max-width: 60%;
+      margin-left: 0;
+    }
+  }
+
+  &_text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include devices.device(smScreen) {
+      width: 50%;
+      display: block;
+    }
+  }
+
+  &_image {
+    margin: 2rem auto 3rem auto;
+    width: 80%;
+
+    @include devices.device(tablet) {
+      width: 65%;
+    }
+    @include devices.device(smScreen) {
+      margin: 0 auto 3rem auto;
+      width: 42%;
+    }
+  }
+}
+
+.cube1 {
+  position: absolute;
+  right: 12%;
+  bottom: 10%;
+}
+
+.cube2 {
+  position: absolute;
+  right: 8%;
+  top: 30%;
+  transform: scale(0.5);
+}
+
+@keyframes float2 {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(100px) rotate(90deg);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

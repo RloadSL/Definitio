@@ -11,29 +11,6 @@ interface OurTechnologyProps {
 
 const OurTechnology = ({ }: OurTechnologyProps) => {
   useEffect(() => {
-    gsap.from('.factory', {
-      x: -20,
-      ease: Power2.easeInOut,
-      duration: 1.5,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: ".ourtechnology",
-        scrub: 1,
-        start: "top center",
-        end: "top center",
-      },
-    });
-    gsap.from('.technology_shield', {
-      ease: Power2.easeInOut,
-      duration: 1,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: ".ourtechnology_animation",
-        scrub: 1,
-        start: "50px center",
-        end: "300px center",
-      },
-    });
     gsap.from('.ourtechnologyText_animation', {
       x: 80,
       opacity: 0,
@@ -43,32 +20,6 @@ const OurTechnology = ({ }: OurTechnologyProps) => {
         end: "bottom center",
       },
     });
-    // gsap.from('.shield', {
-    //   y: -120,
-    //   ease: Power2.easeInOut,
-    //   duration: 2,
-    //   opacity: 0,
-    //   scrollTrigger: {
-    //     trigger: ".animation",
-    //     scrub: 1,
-    //     markers: true,
-    //     start: "50px center",
-    //     end: "400px center",
-    //   },
-    // });
-    // gsap.from('.details', {
-    //   y: 120,
-    //   ease: Power2.easeInOut,
-    //   duration: 2,
-    //   opacity: 0,
-    //   scrollTrigger: {
-    //     trigger: ".animation",
-    //     scrub: 1,
-    //     markers: true,
-    //     start: "50px 50%",
-    //     end: "400px 90%",
-    //   },
-    // });
   }, [])
 
   return (

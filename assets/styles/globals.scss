@@ -1,0 +1,141 @@
+@forward "./reset";
+@use "./partials/variables/colors" as colors;
+@use "./partials/fonts";
+@use "./partials/mixins/devices" as devices;
+@use "./partials/placeholders";
+
+$themeFont: "Bai Jamjuree";
+
+* {
+	font-family: $themeFont;
+}
+
+html {
+	font-size: 14px;
+
+	// @include devices.device(lgScreen) {
+	// 	font-size: 14px;
+	// }
+
+	@include devices.device(lgScreen) {
+		font-size: 18px;
+	}
+}
+
+$headings: h1 h2 h3 h4 h5 h6;
+
+@each $heading in $headings {
+	#{$heading} {
+		font-weight: 500;
+	}
+}
+
+p {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	color: black;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+canvas {
+	width: 100%;
+	height: auto;
+}
+
+.hidden {
+	display: none;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.form-container {
+	width: 100%;
+}
+
+.accordion-1,
+.accordion-2,
+.accordion-3 {
+	&_header {
+		color: colors.$palette2;
+
+		&-text {
+			display: flex;
+			align-items: center;
+			&::before {
+				@extend %beforeAfter;
+				width: 50px;
+				height: 50px;
+				margin-right: 15px;
+				background-size: contain;
+			}
+		}
+
+		&::after {
+			filter: invert(46%) sepia(31%) saturate(6763%) hue-rotate(213deg) brightness(101%) contrast(99%);
+		}
+	}
+}
+
+@for $i from 1 through 3 {
+  .accordion-#{$i} {
+		&_header-text {
+			&::before {
+				background-image: url('../img/services/acc_#{$i}.svg');
+			}
+		}
+  }
+}
+
+
+.titleButton {
+	@extend %titleButton;
+	margin: auto;
+	margin-bottom: 2rem;
+	@include devices.device(smScreen) {
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+}
+
+
+.cube1,
+.cube2 {
+	display: none;
+
+	@include devices.device(tablet) {
+		display: block;
+	}
+}
+
+.page_background {
+	background-image: url(../../assets/img/bg.jpg);
+	background-size: cover;
+}
+
+.swiper-slide {
+	text-align: center;
+	width: auto !important;
+
+	img {
+		height: 200px;
+		width: auto;
+
+		@include devices.device(smScreen) {
+			height: 300px;
+		}
+
+		@include devices.device(mdScreen) {
+			height: 250px;
+		}
+
+		@include devices.device(lgScreen) {
+			height: 400px;
+		}
+	}
+}

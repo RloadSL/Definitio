@@ -1,0 +1,89 @@
+@use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/variables/colors" as colors;
+@use "../../../../assets/styles/partials/mixins/layout" as layout;
+
+@include layout.rotateAnimation;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.man {
+  position: absolute;
+  bottom: 0%;
+  z-index: 100;
+  width: 58%;
+  left: 15%;
+
+  &_head {
+    width: 35%;
+    position: absolute;
+    top: -45%;
+    left: 31%;
+    animation: headRotate 8s infinite;
+    animation-direction: alternate;
+    transform-origin: 50% 100%;
+  }
+}
+
+.manBg {
+  &_circle {
+    position: absolute;
+    width: 85%;
+    bottom: 0;
+    left: 8%;
+    animation: rotate 40s linear infinite;
+  }
+
+  &_mobile {
+    position: absolute;
+    width: 40%;
+    top: 10%;
+  }
+
+  &_graphic {
+    position: absolute;
+    width: 40%;
+    top: 45%;
+    left: 60%;
+  }
+
+  &_game {
+    position: absolute;
+    width: 13%;
+    top: 5%;
+    left: 36%;
+  }
+
+  &_line {
+    position: absolute;
+    width: 20%;
+    top: 0%;
+    left: 80%;
+  }
+
+  &_list {
+    position: absolute;
+    width: 30%;
+    top: 20%;
+    left: 64%;
+  }
+
+  &_bubble {
+    position: absolute;
+    width: 10%;
+    top: 0%;
+    left: 58%;
+  }
+}
+
+@keyframes headRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
