@@ -1,67 +1,60 @@
 import React, { useEffect } from "react";
 import style from "./hero-anim.module.scss";
 import Image from "next/image";
-import manBody from "../../../../assets/img/home/hero/man_body.svg";
-import manHead from "../../../../assets/img/home/hero/man_head.svg";
-import circle from "../../../../assets/img/home/hero/circle.svg";
-import mobile from "../../../../assets/img/home/hero/mobile.svg";
-import graphic from "../../../../assets/img/home/hero/graphic.svg";
-import game from "../../../../assets/img/home/hero/game.svg";
-import line from "../../../../assets/img/home/hero/line.svg";
-import list from "../../../../assets/img/home/hero/list.svg";
-import bubble from "../../../../assets/img/home/hero/bubble.svg";
+import girl from "../../../../assets/img/services/hero/girl.svg";
+import boy from "../../../../assets/img/services/hero/boy.svg";
+import yellowCircle from "../../../../assets/img/services/hero/yellowCircle.svg";
+import yellowCube from "../../../../assets/img/services/hero/yellowCube.svg";
+import blueCircle from "../../../../assets/img/services/hero/blueSpot.svg";
+import bubble1 from "../../../../assets/img/services/hero/bubble1.svg";
+import bubble2 from "../../../../assets/img/services/hero/bubble2.svg";
+import circle from "../../../../assets/img/circle.svg";
 import useComponentAnimations from "@/hooks/animations.hooks";
 
 /**
  * Component to handle the animated graphics of the section
- * @returns 
+ * @returns
  */
 
 const HeroAnim = () => {
   const { fadeInAnim } = useComponentAnimations();
 
   useEffect(() => {
-    fadeInAnim(".man", 0.8, 0);
-    fadeInAnim(".mobile", 1, -50);
-    fadeInAnim(".graphic", 1.2, -30);
-    fadeInAnim(".game", 1.2, -50);
-    fadeInAnim(".bubble", 1.2, -50);
-    fadeInAnim(".list", 1.5, -70);
-    fadeInAnim(".line", 1.5, -70);
+    fadeInAnim(".boy", 0.8, 20);
+    fadeInAnim(".girl", 1, -50);
+    fadeInAnim(".bubble1", 1.2, -30);
+    fadeInAnim(".bubble2", 1.2, -50);
+    fadeInAnim(".yellowCircle", 1.2, -50);
+    fadeInAnim(".yellowCube", 1.5, -70);
+    fadeInAnim(".blueCircle", 1.5, -70);
   }, []);
 
   return (
     <div className={style.wrapper}>
-      <canvas width={725} height={655} />
-      <div className={`${style.man} man`}>
-        <div className={style.man_head}>
-          <div className={style.man_head__eyes}></div>
-          <Image src={manHead} alt={""} />
-        </div>
-        <div className={style.man_body}>
-          <Image src={manBody} alt={""} />
-        </div>
+      <canvas width={940} height={660} />
+      <div className={`${style.boy} boy`}>
+        <Image src={boy} alt={""} />
       </div>
-      <div className={style.manBg_circle}>
+      <div className={`${style.girl} girl`}>
+        <Image src={girl} alt={""} />
+      </div>
+      <div className={style.yellowCircle}>
+        <Image src={yellowCircle} alt={""} />
+      </div>
+      <div className={`${style.yellowCube} yellowCube`}>
+        <Image src={yellowCube} alt={""} />
+      </div>
+      <div className={`${style.blueCircle} blueCircle`}>
+        <Image src={blueCircle} alt={""} />
+      </div>
+      <div className={`${style.bubble1} bubble1`}>
+        <Image src={bubble1} alt={""} />
+      </div>
+      <div className={`${style.bubble2} bubble2`}>
+        <Image src={bubble2} alt={""} />
+      </div>
+      <div className={`${style.circle} circle`}>
         <Image src={circle} alt={""} />
-      </div>
-      <div className={`${style.manBg_mobile} mobile`}>
-        <Image src={mobile} alt={""} />
-      </div>
-      <div className={`${style.manBg_graphic} graphic`}>
-        <Image src={graphic} alt={""} />
-      </div>
-      <div className={`${style.manBg_game} game`}>
-        <Image src={game} alt={""} />
-      </div>
-      <div className={`${style.manBg_line} line`}>
-        <Image src={line} alt={""} />
-      </div>
-      <div className={`${style.manBg_list} list`}>
-        <Image src={list} alt={""} />
-      </div>
-      <div className={`${style.manBg_bubble} bubble`}>
-        <Image src={bubble} alt={""} />
       </div>
     </div>
   );

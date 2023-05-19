@@ -8,82 +8,70 @@
   position: relative;
   width: 100%;
   height: auto;
+  // border: 1px solid red;
 }
 
-.man {
+.boy {
   position: absolute;
   bottom: 0%;
   z-index: 100;
-  width: 58%;
-  left: 15%;
-
-  &_head {
-    width: 35%;
-    position: absolute;
-    top: -45%;
-    left: 31%;
-    animation: headRotate 8s infinite;
-    animation-direction: alternate;
-    transform-origin: 50% 100%;
-  }
+  width: 50%;
 }
 
-.manBg {
-  &_circle {
-    position: absolute;
-    width: 85%;
-    bottom: 0;
-    left: 8%;
-    animation: rotate 40s linear infinite;
-  }
-
-  &_mobile {
-    position: absolute;
-    width: 40%;
-    top: 10%;
-  }
-
-  &_graphic {
-    position: absolute;
-    width: 40%;
-    top: 45%;
-    left: 60%;
-  }
-
-  &_game {
-    position: absolute;
-    width: 13%;
-    top: 5%;
-    left: 36%;
-  }
-
-  &_line {
-    position: absolute;
-    width: 20%;
-    top: 0%;
-    left: 80%;
-  }
-
-  &_list {
-    position: absolute;
-    width: 30%;
-    top: 20%;
-    left: 64%;
-  }
-
-  &_bubble {
-    position: absolute;
-    width: 10%;
-    top: 0%;
-    left: 58%;
-  }
+.girl {
+  position: absolute;
+  top: 12%;
+  z-index: 100;
+  width: 35%;
+  right: 5%;
 }
 
-@keyframes headRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(15deg);
-  }
+.bubble1 {
+  position: absolute;
+  top: 0%;
+  z-index: 100;
+  width: 18%;
+  right: 0;
+
+}
+
+.bubble2 {
+  position: absolute;
+  top: 30%;
+  z-index: 100;
+  width: 18%;
+  left: 32%;
+
+}
+
+.yellowCircle {
+  position: absolute;
+  top: 40%;
+  z-index: 95;
+  width: 20%;
+  left: 35%;
+
+}
+.yellowCube {
+  position: absolute;
+  top: 12%;
+  z-index: 100;
+  width: 12%;
+  left: 20%;
+}
+
+.blueCircle {
+  position: absolute;
+  top: 22%;
+  z-index: 100;
+  width: 10%;
+  right: 0%;
+}
+
+.circle{
+  position: absolute;
+  z-index: 90;
+  width: 60%;
+  left: 24%;
+  top: 0;
 }

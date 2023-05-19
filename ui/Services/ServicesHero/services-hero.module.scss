@@ -40,6 +40,7 @@
     margin-bottom: 2rem;
     span {
       color: colors.$palette2;
+      display: block;
     }
     div {
       margin-left: 1rem;
@@ -94,7 +95,7 @@
     }
     @include devices.device(smScreen) {
       margin: 0 auto 3rem auto;
-      width: 42%;
+      width: 50%;
     }
   }
 }
