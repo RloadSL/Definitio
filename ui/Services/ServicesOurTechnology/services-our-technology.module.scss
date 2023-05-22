@@ -1,7 +1,9 @@
 @use "../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../assets/styles/partials/mixins/layout" as layout;
 @use "../../../assets/styles/partials/variables/colors" as colors;
 @use "../../../assets/styles/partials/placeholders";
 
+@include layout.float;
 
 .ourTechnology {
   padding-top: 4rem;
@@ -59,5 +61,22 @@
       font-size: 1.3rem !important;
       line-height: 2rem !important;
     }
+}
+
+.cube1 {
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  animation: float 5.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+  transform: rotate(30deg);
+}
+
+.cube2 {
+  position: absolute;
+  right: 50%;
+  top: 25%;
+  transform: scale(0.5) rotate(50deg);
+  animation: float 8s ease-in-out infinite;
 }
 

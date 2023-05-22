@@ -6,9 +6,26 @@
 @include layout.float;
 
 .services {
-  background: url(../../assets/img/about/about_bg.png) no-repeat;
-  background-size: cover;
+  // background: url(../../assets/img/about/about_bg.png) no-repeat;
+  // background-size: cover;
   position: relative;
+
+&_hero {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 200px;
+    background-image: url(../../assets/img/circles.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0%;
+    right: 35%;
+    z-index: 1;
+  }
+}
 
   h1 {
     @include layout.mainTitle;

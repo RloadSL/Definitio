@@ -2,12 +2,12 @@ import ButtonApp from "@/components/ButtonApp";
 import useComponentUtils from "@/hooks/component.hooks";
 import React, { useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";
-
+import cube1 from "../../../assets/img/cube.svg";
 import style from "./services-our-technology.module.scss";
 import gsap, { Power2 } from "gsap";
 import RLDAccordion from "@/components/RLDAccordion";
 import ServicesOurTechnologyAnim from "./ServicesOurTechnologyAnim";
-
+import Image from "next/image";
 
 interface ServicesOurTechnologyProps {}
 
@@ -25,6 +25,12 @@ const ServicesOurTechnology = ({}: ServicesOurTechnologyProps) => {
   }, []);
   return (
     <section className={`${style.ourTechnology} ourTechnology`}>
+      <div className={`${style.cube1}`}>
+        <Image src={cube1} alt={""} />
+      </div>
+      <div className={`${style.cube2}`}>
+        <Image src={cube1} alt={""} />
+      </div>
       <div className={`${style.content} ourTechnology_animation`}>
         <div className={style.ourTechnology_image}>
           <ServicesOurTechnologyAnim />

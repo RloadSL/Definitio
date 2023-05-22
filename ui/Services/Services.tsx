@@ -24,7 +24,7 @@ const Services: NextPage = () => {
       <div className={style.services_hero}>
         <Hero onClick={onClick} />
       </div>
-      <div className="page_background">
+      <div className="page_background2">
         <div className={style.services_ourtechnology}>
           <ServicesOurTechnology />
         </div>
