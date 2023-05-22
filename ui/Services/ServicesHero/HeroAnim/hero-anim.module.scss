@@ -2,7 +2,7 @@
 @use "../../../../assets/styles/partials/variables/colors" as colors;
 @use "../../../../assets/styles/partials/mixins/layout" as layout;
 
-@include layout.rotateAnimation;
+@include layout.rotate;
 
 .wrapper {
   position: relative;
@@ -74,4 +74,6 @@
   width: 60%;
   left: 24%;
   top: 0;
+  animation: rotate 40s linear infinite;
+
 }

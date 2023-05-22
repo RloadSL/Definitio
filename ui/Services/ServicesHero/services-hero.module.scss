@@ -9,6 +9,7 @@
   padding-top: 6rem;
   padding-bottom: 5rem;
   position: relative;
+  min-height: 100vh;
 
   &::before {
     content: "";
@@ -26,7 +27,7 @@
   }
 
   @include devices.device(tablet) {
-    padding-top: 9rem;
+    padding-top: 14rem;
     padding-bottom: 5rem;
   }
 

@@ -61,6 +61,8 @@ canvas {
 .accordion-1,
 .accordion-2,
 .accordion-3 {
+	padding: 1.5rem !important;
+
 	&_header {
 		color: colors.$palette2;
 
@@ -79,6 +81,10 @@ canvas {
 		&::after {
 			filter: invert(46%) sepia(31%) saturate(6763%) hue-rotate(213deg) brightness(101%) contrast(99%);
 		}
+	}
+
+	&_content {
+		margin-left: 65px;
 	}
 }
 

@@ -8,7 +8,7 @@ import yellowCube from "../../../../assets/img/services/hero/yellowCube.svg";
 import blueCircle from "../../../../assets/img/services/hero/blueSpot.svg";
 import bubble1 from "../../../../assets/img/services/hero/bubble1.svg";
 import bubble2 from "../../../../assets/img/services/hero/bubble2.svg";
-import circle from "../../../../assets/img/circle.svg";
+import circle from "../../../../assets/img/circle_b.svg";
 import useComponentAnimations from "@/hooks/animations.hooks";
 
 /**

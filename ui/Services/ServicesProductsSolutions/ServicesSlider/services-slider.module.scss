@@ -15,15 +15,27 @@
     img {
       border-radius: 20px;
     }
+  }
 
-    .slide_card1,.slide_card2,.slide_card3,.slide_card4 {
+  @for $i from 1 through 4 {
+    .slide_card#{$i} {
       background: white;
-      width: 400px;
+      width: 500px;
+      height: 450px;
       padding: 20px;
       border-radius: 20px;
       display: flex;
       flex-direction: column;
-      
+
+      @include devices.device(tablet) {
+        width: 400px;
+        height: 350px;
+      }
+
+      @include devices.device(lgScreen) {
+        width: 500px;
+        height: 450px;
+      }
       h3 {
         color: colors.$palette1;
         font-size: 1.4rem;
@@ -31,23 +43,13 @@
           @extend %beforeAfter;
           height: 100px;
           margin-bottom: 20px;
-        }
-      }
-
-      p {
-        margin: 0;
-      }
-    }
-  }
-
-  @for $i from 1 through 4 {
-    .slide_card#{$i} {
-      h3 {
-        &::before {
           background: url('../../../../assets/img/services/card_#{$i}.svg') no-repeat;
           background-position: center;
           background-size: contain;
         }
+      }
+      p {
+        margin: 0;
       }
     }
   }

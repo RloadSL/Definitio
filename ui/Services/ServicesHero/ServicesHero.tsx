@@ -1,4 +1,3 @@
-import ButtonApp from "@/components/ButtonApp";
 import useComponentAnimations from "@/hooks/animations.hooks";
 import React, { useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";
@@ -13,18 +12,18 @@ interface ServicesHeroProps {
 }
 
 /**
- * Home hero section component
+ * Services hero section component
  * @returns
  */
 
 const ServicesHero = ({ onClick }: ServicesHeroProps) => {
   const { homeAnim } = useComponentAnimations();
 
-  const homeRef = useRef<null | HTMLDivElement>(null);
+  const decoration = useRef<null | HTMLDivElement>(null);
   const textTitle = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
-    homeAnim(homeRef, textTitle);
+    homeAnim(decoration, textTitle);
     gsap.from(".heroText_animation", {
       x: -80,
       ease: Power2.easeInOut,
@@ -52,7 +51,7 @@ const ServicesHero = ({ onClick }: ServicesHeroProps) => {
   }, []);
 
   return (
-    <main className={`${style.hero} hero`}>
+    <div className={`${style.hero} hero`}>
       <div className={`${style.cube1} cube1`}>
         <Image src={cube1} alt={""} />
       </div>
@@ -81,7 +80,7 @@ const ServicesHero = ({ onClick }: ServicesHeroProps) => {
           <HeroAnim />
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

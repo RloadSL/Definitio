@@ -2,9 +2,9 @@ import ButtonApp from "@/components/ButtonApp";
 import useComponentUtils from "@/hooks/component.hooks";
 import React, { useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";
-import OurTechnologyAnim from "./DataOptimizationAnim";
 import style from "./services-brand-safety.module.scss";
 import gsap, { Power2 } from "gsap";
+import ServicesBrandSafetyAnim from "./ServicesBrandSafetyAnim";
 
 const ServicesBrandSafety = () => {
   // useEffect(() => {
@@ -89,12 +89,12 @@ const ServicesBrandSafety = () => {
   //   });
   // }, []);
   return (
-    <section className={`${style.brandSafety} ourTechnology`}>
-      <div className={`${style.content} ourTechnology_animation`}>
+    <section className={`${style.brandSafety} brandSafety`}>
+      <div className={`${style.content} brandSafety_animation`}>
         <div className={style.brandSafety_image}>
-          <OurTechnologyAnim />
+          <ServicesBrandSafetyAnim/>
         </div>
-        <div className={`${style.brandSafety_text} ourTechnologyText_animation`}>
+        <div className={`${style.brandSafety_text} brandSafetyText_animation`}>
           <article>
             <h2 className="titleButton">
               <FormattedMessage id="page.services.brandSafety.title" />

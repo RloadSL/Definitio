@@ -8,17 +8,24 @@
   padding-bottom: 4rem;
   overflow: hidden;
   position: relative;
+
     .content {
       // @extend %maxContent;
       display: flex;
-      flex-direction: column-reverse;
-      padding-left: 1rem;
+      flex-direction: column;
       // padding-right: 1rem;
+
+      @include devices.device(tablet) {
+        max-width: 80%;
+        margin: auto;
+      }
   
       @include devices.device(smScreen) {
         flex-direction: row;
         justify-content: flex-end;
         padding-top: 120px;
+        margin: 0;
+        max-width: 100%;
       }
     }
   
@@ -29,7 +36,17 @@
       text-align: center;
 
       @include devices.device(smScreen) {
-        width: 60%;
+        width: 36%;
+        text-align: left;
+      }
+
+      @include devices.device(lgScreen) {
+        width: 36%;
+        text-align: left;
+      }
+
+      @include devices.device(xlgScreen) {
+        width: 28%;
         text-align: left;
       }
 
@@ -41,22 +58,17 @@
       }
     }
   
-    &_image {
-      width: 90%;
-      margin: 3rem auto;
+    &_slider {
+      width: 100%;
+      // margin: 3rem auto;
 
-      @include devices.device(tablet) {
-        width: 80%;
-      }
+      // @include devices.device(tablet) {
+      //   width: 80%;
+      // }
 
       @include devices.device(smScreen) {
-        width: 45%;
+        width: 50%;
       }
-    }
-
-    .accordion_text {
-      font-size: 1.3rem !important;
-      line-height: 2rem !important;
     }
 }
 
