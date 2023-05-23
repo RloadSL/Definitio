@@ -12,6 +12,8 @@ import Image from "next/image";
 interface ServicesOurTechnologyProps {}
 
 const ServicesOurTechnology = ({}: ServicesOurTechnologyProps) => {
+  const onClick = () => console.log("click");
+
   useEffect(() => {
     gsap.from(".ourTechnologyText_animation", {
       x: 80,
@@ -73,6 +75,13 @@ const ServicesOurTechnology = ({}: ServicesOurTechnologyProps) => {
               <FormattedMessage id="page.services.ourtechnology.tab3.text" />
             </p>
           </RLDAccordion>
+          <div className={style.buttonBlock}>
+            <ButtonApp
+              customClass="button button-primary"
+              labelID="btn.label.getStarted"
+              onClick={onClick}
+            />
+          </div>
         </div>
       </div>
     </section>

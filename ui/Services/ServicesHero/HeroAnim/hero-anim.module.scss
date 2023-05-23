@@ -18,6 +18,14 @@
   width: 50%;
 }
 
+.arms {
+  position: absolute;
+  bottom: 23.5%;
+  z-index: 110;
+  width: 8%;
+  left: 38%;
+}
+
 .girl {
   position: absolute;
   top: 12%;
@@ -37,17 +45,17 @@
 
 .bubble2 {
   position: absolute;
-  top: 30%;
+  top: 28%;
   z-index: 100;
   width: 18%;
-  left: 32%;
+  left: 36%;
 
 }
 
 .yellowCircle {
   position: absolute;
   top: 40%;
-  z-index: 95;
+  z-index: 100;
   width: 20%;
   left: 35%;
 
@@ -71,8 +79,8 @@
 .circle{
   position: absolute;
   z-index: 90;
-  width: 60%;
-  left: 24%;
+  width: 72%;
+  left: 22%;
   top: 0;
   animation: rotate 40s linear infinite;
 

@@ -9,8 +9,9 @@ import ServicesSlider from "./ServicesSlider";
 interface ServicesProductsSolutionsProps {}
 
 const ServicesProductsSolutions = ({}: ServicesProductsSolutionsProps) => {
+  const onClick = () => console.log("click");
+
   useEffect(() => {
-    
     gsap.from(".productSolutions_text", {
       x: -80,
       opacity: 0,
@@ -25,7 +26,7 @@ const ServicesProductsSolutions = ({}: ServicesProductsSolutionsProps) => {
     <section className={`${style.productSolutions} productSolutions`}>
       <div className={`${style.content} productSolutions_animation`}>
         <div className={`${style.productSolutions_text} productSolutions_text`}>
-        <article>
+          <article>
             <h2 className="titleButton">
               <FormattedMessage id="page.services.productssolutions.title" />
             </h2>
@@ -38,11 +39,19 @@ const ServicesProductsSolutions = ({}: ServicesProductsSolutionsProps) => {
               />
             </div>
           </article>
-          </div>
+          <div className={style.buttonBlock}>
+          <ButtonApp
+            customClass="button button-primary"
+            labelID="btn.label.getInTouch"
+            onClick={onClick}
+          />
+        </div>
+        </div>
 
         <div className={`${style.productSolutions_slider} ourTechnologyText_animation`}>
-          <ServicesSlider/>
+          <ServicesSlider />
         </div>
+
       </div>
     </section>
   );

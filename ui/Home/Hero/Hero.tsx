@@ -74,7 +74,7 @@ const Hero = ({ onClick }: HeroProps) => {
               <p>
                 <FormattedMessage id="page.home.hero.text" />
               </p>
-              <ButtonApp labelID="page.home.hero.button" onClick={onClick} />
+              <ButtonApp customClass="button button-line" labelID="page.home.hero.button" onClick={onClick} />
             </div>
           </article>
         </div>

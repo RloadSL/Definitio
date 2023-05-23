@@ -26,6 +26,7 @@ const ServicesSlider = ({}: ServicesSliderProps) => {
       </div>
       <div className={style.slider_content}>
         <Swiper
+          className="services-slider"
           spaceBetween={20}
           // centeredSlides={false}
           // loopedSlides={8}

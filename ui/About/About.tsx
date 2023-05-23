@@ -60,7 +60,7 @@ const About: NextPage = () => {
                   }}
                 />
               </div>
-              <ButtonApp labelID="btn.label.contact" onClick={onClick} />
+              <ButtonApp customClass="button button-line" labelID="btn.label.contact" onClick={onClick} />
             </article>
           </div>
           <div className={style.about_decoration}>

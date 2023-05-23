@@ -3,6 +3,7 @@ import style from "./hero-anim.module.scss";
 import Image from "next/image";
 import girl from "../../../../assets/img/services/hero/girl.svg";
 import boy from "../../../../assets/img/services/hero/boy.svg";
+import arms from "../../../../assets/img/services/hero/arms.svg";
 import yellowCircle from "../../../../assets/img/services/hero/yellowCircle.svg";
 import yellowCube from "../../../../assets/img/services/hero/yellowCube.svg";
 import blueCircle from "../../../../assets/img/services/hero/blueSpot.svg";
@@ -20,7 +21,7 @@ const HeroAnim = () => {
   const { fadeInAnim } = useComponentAnimations();
 
   useEffect(() => {
-    fadeInAnim(".boy", 0.8, 20);
+    fadeInAnim(".boy, .arms", 0.8, 20);
     fadeInAnim(".girl", 1, -50);
     fadeInAnim(".bubble1", 1.2, -30);
     fadeInAnim(".bubble2", 1.2, -50);
@@ -34,6 +35,9 @@ const HeroAnim = () => {
       <canvas width={940} height={660} />
       <div className={`${style.boy} boy`}>
         <Image src={boy} alt={""} />
+      </div>
+      <div className={`${style.arms} arms`}>
+        <Image src={arms} alt={""} />
       </div>
       <div className={`${style.girl} girl`}>
         <Image src={girl} alt={""} />

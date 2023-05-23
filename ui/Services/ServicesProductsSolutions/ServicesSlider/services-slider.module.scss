@@ -1,16 +1,26 @@
-@use '../../../../assets/styles/partials/placeholders' as placeholders;
-@use '../../../../assets/styles/partials/mixins/devices' as devices;
-@use '../../../../assets/styles/partials/mixins/layout' as layout;
-@use '../../../../assets/styles/partials/variables/colors' as colors;
+@use "../../../../assets/styles/partials/placeholders" as placeholders;
+@use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../../assets/styles/partials/variables/colors" as colors;
 
-.slider{
-  display: flex;
-  justify-content: flex-end;
+.slider {
+  padding: 1rem;
   position: relative;
 
+  @include devices.device(tablet) {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
   &_content {
-    width: 80%;
+    width: 100%;
     overflow: hidden;
+
+    @include devices.device(tablet) {
+      width: 80%;
+
+    }
 
     img {
       border-radius: 20px;
@@ -20,8 +30,10 @@
   @for $i from 1 through 4 {
     .slide_card#{$i} {
       background: white;
-      width: 500px;
-      height: 450px;
+      // max-width: 400px;
+      width: 100%;
+      min-height: 350px;
+      height: auto;
       padding: 20px;
       border-radius: 20px;
       display: flex;
@@ -43,7 +55,7 @@
           @extend %beforeAfter;
           height: 100px;
           margin-bottom: 20px;
-          background: url('../../../../assets/img/services/card_#{$i}.svg') no-repeat;
+          background: url("../../../../assets/img/services/card_#{$i}.svg") no-repeat;
           background-position: center;
           background-size: contain;
         }
@@ -54,18 +66,20 @@
     }
   }
 
-
   &_navigation {
     padding: 2rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
 
+    
+    @include devices.device(tablet) {
+      flex-direction: column;
+    }
 
     &__prev {
       transform: rotate(180deg);
     }
-    
+
     button {
       display: block;
       width: 50px;
