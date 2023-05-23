@@ -1,18 +1,18 @@
 import Head from "next/head";
 import React from "react";
 
-interface SEOHeaderProps {
+interface RLDSEOTagsProps {
   title: string;
   description: string;
 }
 
 /**
-SEO component that allows you to define both the title and the description of the page, you can add the necessary props for the needed meta tags 
+Rload SEO component that allows you to define both the title and the description of the page, you can add the necessary props for the needed meta tags 
  * @param title Title of the page
  * @param description Description of the page
  */
 
-const SEOHeader = ({ title, description }: SEOHeaderProps) => {
+const RLDSEOTags = ({ title, description }: RLDSEOTagsProps) => {
   return (
     <Head>
       <title>{title}</title>
@@ -21,4 +21,4 @@ const SEOHeader = ({ title, description }: SEOHeaderProps) => {
   );
 };
 
-export default SEOHeader;
+export default RLDSEOTags;

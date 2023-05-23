@@ -2,7 +2,7 @@
 
 #### Definitio
 
-Website coporativo para Definitio creado con **Next.js, Typescript y Sass.** 
+Website corporativo para Definitio creado con **Next.js, Typescript y Sass.** 
 Las animaciones se han manejado con la librería **Gsap**
 Los formulario utlizan** Formik y Yup** para validación
 Las traducciones se han implementado a través de** React-intl**
@@ -65,20 +65,23 @@ Layout de los componentes de enrutado
 
 ## Estructura principal de un componente
 
-Debido a la complejidad de las animaciones y a la estructura de los bloques gráficos , estos se han maquetado siguiendo esta estructura:
-**
-/componentPageFolder
-------/subcomponentSectionFolder
-----------/subcomponentGraphicFolder**
+Debido a la complejidad de las animaciones y a la estructura completamente única de los bloques gráficos y de texto, estos se han maquetado siguiendo esta estructura para facilitar la edición futura:
+
+-/PageFolder (parent component)
+---/SectionFolder (private component)
+-----/SectionAnimationFolder (private component)
 
 
-##### Ejemplo de componente
+##### Ejemplo de componentes
 
 Home (page)
-------Hero (section)
-----------HeroAnim (graphics)
+------HomeHero (section)
+----------HeroAnim (graphics animation)
 
 Cada componente incluye su archivo index de exportación y sus estilos respectivos
+El **componente principal** unicamente renderiza los componentes de cada sección de contenidos.
+El **componente de sección** incluye el **componente de gráficos animados y los textos** de esa sección. Los textos de la sección se animan desde este componente.
+El **componente de gráficos** únicamente renderiza la maquetación de las imágenes y las animaciones de estas
 
 ## NEXT js Learn More
 

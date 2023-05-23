@@ -8,11 +8,9 @@ import useComponentUtils from "@/hooks/component.hooks";
 import useComponentAnimations from "@/hooks/animations.hooks";
 import { useEffect, useState } from "react";
 import HamburguerButton from "./HamburguerButton";
-import gsap, { Power2 } from "gsap";
 
 /**
  * Component that includes the header with the menu
- * @returns 
  */
 
 const Header = () => {
@@ -35,15 +33,6 @@ const Header = () => {
       setScroll(window.scrollY > 100);
     });
   }, []);
-
-  // const animateLogoOnScroll = () => {
-  //   gsap.from('.logo', {
-  //     x: -20,
-  //     ease: Power2.easeInOut,
-  //     duration: 1.5,
-  //     opacity: 0,
-  //   });
-  // }
 
   return (
     <div

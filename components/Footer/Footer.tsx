@@ -6,8 +6,6 @@ import Link from "next/link";
 
 /**
  * Footer component of our website, includes social networks and links to legal texts
- * @param param0 
- * @returns 
  */
 
 const Footer = () => {

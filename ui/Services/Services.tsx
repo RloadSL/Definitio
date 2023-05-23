@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import BottomSection from "@/components/BottomSection";
-import SEOHead from "@/components/SEOHead";
+import SEOHead from "@/components/RLDSEOTags";
 import { NextPage } from "next";
 import style from "./services.module.scss";
 import ServicesOurTechnology from "./ServicesOurTechnology";
@@ -9,8 +9,7 @@ import ServicesBrandSafety from "./ServicesBrandSafety";
 import Hero from "./ServicesHero";
 
 /**
- * Services page structure component. Includes the SEO header and each of the sections that build the UI of the page
- * @returns
+ * Services page structure component.
  */
 
 const Services: NextPage = () => {

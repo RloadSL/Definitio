@@ -5,16 +5,15 @@ import { FormattedMessage } from "react-intl";
 interface RLDAccordionProps {
   titleID: string;
   children: JSX.Element;
-  accordionClass: string;
+  customClass?: string;
 }
 
 /** Accordion component, this component only renders one accordion Item, if you want to 
  * @param titleID ID for JSON translations
- * @param accordionClass Global class for custom css
- * @returns 
+ * @param customClass Global class for custom css
  */
 
-const RLDAccordion = ({ titleID, accordionClass, children }: RLDAccordionProps) => {
+const RLDAccordion = ({ titleID, customClass, children }: RLDAccordionProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen((prev) => !isOpen);
@@ -22,16 +21,16 @@ const RLDAccordion = ({ titleID, accordionClass, children }: RLDAccordionProps) 
 
   return (
     <div
-      className={`${style.RLDAccordion} ${accordionClass} ${isOpen && style.active} ${isOpen && 'item-active'}`}
+      className={`${style.RLDAccordion} ${customClass} ${isOpen && style.active} ${isOpen && 'item-active'}`}
       onClick={toggle}
       aria-expanded={isOpen}
     >
-      <div className={`${style.RLDAccordion_title} ${accordionClass}_header`}>
-        <span className={`${accordionClass}_header-text`}>
+      <div className={`${style.RLDAccordion_title} ${customClass}_header`}>
+        <span className={`${customClass}_header-text`}>
           <FormattedMessage id={titleID}/>
         </span>
       </div>
-      <div className={`${style.RLDAccordion_content} ${accordionClass}_content`}>{children}</div>
+      <div className={`${style.RLDAccordion_content} ${customClass}_content`}>{children}</div>
     </div>
   );
 };

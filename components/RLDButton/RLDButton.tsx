@@ -1,21 +1,21 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import style from './button-app.module.scss'
+import style from './rld-button.module.scss'
 
-interface ButtonAppProps {
+interface RLDButtonProps {
   labelID?: string,
   onClick: Function,
   customClass?: string
 }
 
-/** Button component for web
+/** Rload Button component for webs
  * @param labelID ID for JSON translations
  * @param onClick onClick function
  * @param customClass Custom Class for the application button
  * @returns 
  */
 
-const ButtonApp = ({labelID, onClick, customClass}: ButtonAppProps) => {
+const RLDButton = ({labelID, onClick, customClass}: RLDButtonProps) => {
   return (
     <button className={`${style.button} ${customClass}`} onClick={() => { onClick() }}>
       <span>
@@ -25,4 +25,4 @@ const ButtonApp = ({labelID, onClick, customClass}: ButtonAppProps) => {
   )
 }
 
-export default ButtonApp
+export default RLDButton

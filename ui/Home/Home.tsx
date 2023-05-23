@@ -1,6 +1,5 @@
-import SEOHead from "@/components/SEOHead";
 import { NextPage } from "next";
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React from "react";
 import style from "./home.module.scss";
 import Hero from "./Hero";
 import WhoWeAre from "./WhoWeAre";
@@ -9,10 +8,10 @@ import OurTechnology from "./OurTechnology";
 import Experience from "./Experience";
 import DataOptimization from "./DataOptimization";
 import BottomSection from "@/components/BottomSection";
+import RLDSEOTags from "@/components/RLDSEOTags";
 
 /**
- * Home page structure component. Includes the SEO header and each of the sections that build the UI of the page
- * @returns 
+ * Home page structure component
  */
 
 const Home: NextPage = () => {
@@ -22,7 +21,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={style.home}>
-      <SEOHead
+      <RLDSEOTags
         title="Definitio::Programmatic Mobile Advertising Agency"
         description="Here the SEO description of the page"
       />

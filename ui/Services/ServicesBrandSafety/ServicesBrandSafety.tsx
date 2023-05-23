@@ -1,6 +1,4 @@
-import ButtonApp from "@/components/ButtonApp";
-import useComponentUtils from "@/hooks/component.hooks";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import style from "./services-brand-safety.module.scss";
 import gsap, { Power2 } from "gsap";

@@ -2,11 +2,11 @@ import { FieldHookConfig, useField } from "formik";
 import Image from "next/image";
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { FormattedMessage } from "react-intl";
-import style from "./inputFormikApp.module.scss";
+import style from "./rld-input-formik.module.scss";
 
 type TYPEINPUT = "email" | "password" | "number" | "text";
 
-export interface INPUTBLOCKPROPS {
+interface RLDInputFormikProps {
   labelID: any;
   onChange?: Function;
   onBlur?: Function;
@@ -38,10 +38,9 @@ export interface INPUTBLOCKPROPS {
  * @param helper Texto de ayuda
  * @param value Valor del input;
  * @param disabled Prop para deshabilitar el input en caso necesario
- * @returns
  */
 
-const InputFormikApp = ({
+const RLDInputFormik = ({
   labelID,
   icon,
   error,
@@ -55,7 +54,7 @@ const InputFormikApp = ({
   maxLength,
   helper,
   value
-}: INPUTBLOCKPROPS) => {
+}: RLDInputFormikProps) => {
   const [field, meta] = useField({ name });
   const [isFloating, setIsFloating] = useState("");
 
@@ -116,4 +115,4 @@ const InputFormikApp = ({
   );
 };
 
-export default InputFormikApp;
+export default RLDInputFormik;

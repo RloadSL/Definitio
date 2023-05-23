@@ -1,4 +1,4 @@
-import ButtonApp from "@/components/ButtonApp";
+import ButtonApp from "@/components/RLDButton";
 import useComponentUtils from "@/hooks/component.hooks";
 import React, { useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";

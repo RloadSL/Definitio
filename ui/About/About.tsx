@@ -1,19 +1,18 @@
 import React, { useEffect } from "react";
 import BottomSection from "@/components/BottomSection";
-import SEOHead from "@/components/SEOHead";
 import { NextPage } from "next";
 import style from "./about.module.scss";
 import { FormattedMessage } from "react-intl";
-import ButtonApp from "@/components/ButtonApp";
-import AboutDecoration from "./AboutDecoration";
+import ButtonApp from "@/components/RLDButton";
 import gsap, { Power2 } from "gsap";
 import Image from "next/image";
-import cube1 from "../../assets/img/cube.svg"
-import SliderApp from "./SliderApp";
+import cube1 from "../../assets/img/cube.svg";
+import RLDSEOTags from "@/components/RLDSEOTags";
+import AboutSlider from "./AboutSlider";
+import AboutAnim from "./AboutAnim";
 
 /**
- * About page structure component. Includes the SEO header and each of the sections that build the UI of the page
- * @returns
+ * About page structure component.
  */
 
 const About: NextPage = () => {
@@ -31,14 +30,14 @@ const About: NextPage = () => {
     gsap.from(".text", {
       y: -40,
       ease: Power2.easeInOut,
-      duration: .6,
+      duration: 0.6,
       opacity: 0
     });
   }, []);
 
   return (
     <div className={`${style.about} about`}>
-      <SEOHead title="About" description="" />
+      <RLDSEOTags title="About" description="" />
       <div className={`${style.cube1} cube1`}>
         <Image src={cube1} alt={""} />
       </div>
@@ -60,15 +59,19 @@ const About: NextPage = () => {
                   }}
                 />
               </div>
-              <ButtonApp customClass="button button-line" labelID="btn.label.contact" onClick={onClick} />
+              <ButtonApp
+                customClass="button button-line"
+                labelID="btn.label.contact"
+                onClick={onClick}
+              />
             </article>
           </div>
           <div className={style.about_decoration}>
-            <AboutDecoration />
+            <AboutAnim />
           </div>
         </div>
         <div className={style.about_slider}>
-          <SliderApp />
+          <AboutSlider />
         </div>
       </div>
       <BottomSection />

@@ -1,4 +1,4 @@
-import ButtonApp from "@/components/ButtonApp";
+import ButtonApp from "@/components/RLDButton";
 import useComponentUtils from "@/hooks/component.hooks";
 import React, { useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";
@@ -53,7 +53,7 @@ const ServicesOurTechnology = ({}: ServicesOurTechnologyProps) => {
           </article>
           <RLDAccordion
             titleID="page.services.ourtechnology.tab1.title"
-            accordionClass="accordion-1"
+            customClass="accordion-1"
           >
             <p className={style.accordion_text}>
               <FormattedMessage id="page.services.ourtechnology.tab1.text" />
@@ -61,7 +61,7 @@ const ServicesOurTechnology = ({}: ServicesOurTechnologyProps) => {
           </RLDAccordion>
           <RLDAccordion
             titleID="page.services.ourtechnology.tab2.title"
-            accordionClass="accordion-2"
+            customClass="accordion-2"
           >
             <p className={style.accordion_text}>
               <FormattedMessage id="page.services.ourtechnology.tab2.text" />
@@ -69,7 +69,7 @@ const ServicesOurTechnology = ({}: ServicesOurTechnologyProps) => {
           </RLDAccordion>
           <RLDAccordion
             titleID="page.services.ourtechnology.tab3.title"
-            accordionClass="accordion-3"
+            customClass="accordion-3"
           >
             <p className={style.accordion_text}>
               <FormattedMessage id="page.services.ourtechnology.tab3.text" />

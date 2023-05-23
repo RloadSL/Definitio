@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./slider-app.module.scss";
+import style from "./about-slider.module.scss";
 import "swiper/swiper-bundle.css";
 import image1 from "../../../assets/img/about/01.jpg";
 import image2 from "../../../assets/img/about/02.jpg";
@@ -8,9 +8,8 @@ import image4 from "../../../assets/img/about/04.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
-interface SliderAppProps {}
 
-const SliderApp = ({}: SliderAppProps) => {
+const AboutSlider = () => {
   const [swiper, setSwiper] = useState<any>();
 
   return (
@@ -53,4 +52,4 @@ const SliderApp = ({}: SliderAppProps) => {
   );
 };
 
-export default SliderApp;
+export default AboutSlider;
