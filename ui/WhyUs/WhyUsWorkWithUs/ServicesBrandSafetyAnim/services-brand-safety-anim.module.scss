@@ -1,0 +1,63 @@
+@use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../../assets/styles/partials/variables/colors" as colors;
+
+@include layout.rotate;
+
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+  
+    & > div {
+      position: absolute;
+    }
+
+    .girl {
+      bottom: 0;
+      width: 40%;
+      left: 0;
+      z-index: 100;
+    }
+
+    .cloud {
+      top: 25%;
+      width: 50%;
+      right: 0%;
+      z-index: 100;
+    }
+
+    .code {
+      top: 30%;
+      width: 18%;
+      left: 0%;
+      z-index: 100;
+
+    }
+
+    .lock {
+      bottom: 5%;
+      width: 18%;
+      left: 60%;
+      z-index: 100;
+    }
+
+    .screen {
+      top: 50%;
+      width: 38%;
+      left: 30%;
+      z-index: 90;
+    }
+
+    .security {
+      top: 5%;
+      width: 25%;
+      left: 28%;
+      z-index: 100;
+    }
+  }
+
+
+
+
+

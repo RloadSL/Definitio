@@ -15,8 +15,6 @@
   "btn.label.getStarted": "Let’s get it started",  
   "btn.label.getInTouch": "Get in touch",
 
-
-
   "form.contact.label.nameSurname": "Name & surname",
   "form.contact.label.company": "Company",
   "form.contact.label.phone": "Phone",
@@ -63,5 +61,9 @@
   "page.services.brandSafety.text":"Because we strive to be the most reliable service for your agency, we work only with trusted partners to ensure high-quality traffic. We guarantee:",
   "page.services.brandSafety.list":"<li>Premium placements within trustworthy SSPs only</li><li>Privacy-centric approach</li><li>Fraud prevention. Our ML models are focusing on anomaly detection both pre-bid and post-bid to prevent any fraudulent activity</li><li>All user data is encrypted</li>",
 
+  "page.whyus.hero.h1":"To protect, simplify, deliver, and optimize.",
+  "page.whyus.hero.text":"We help brands, agencies and app developers to understand, identify, attract, acquire and convert the right users at the right time.",
+  "page.whyus.workwithus.h2":"Work with us",
+  "page.whyus.workwithus.text":"<p><b>Take your company to the next level!</b></p><p>Are you in the GCC looking for a valid partner in the programmatic advertising landscape?</p><p>We are an AdTech firm based out of Dubai that merges the advantages of machine-learning with the power of an invaluable professional knowledge. This unique combination enables us to adjust or steer towards the right direction to improve campaign efficiency and effectiveness and assist stability and business growth.</p>",
   "section.contact.title": "Contact Us"
 }

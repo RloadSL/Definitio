@@ -1,0 +1,87 @@
+@use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/variables/colors" as colors;
+@use "../../../../assets/styles/partials/mixins/layout" as layout;
+
+@include layout.rotate;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  // border: 1px solid red;
+}
+
+.boy {
+  position: absolute;
+  bottom: 0%;
+  z-index: 100;
+  width: 50%;
+}
+
+.arms {
+  position: absolute;
+  bottom: 23.5%;
+  z-index: 110;
+  width: 8%;
+  left: 38%;
+}
+
+.girl {
+  position: absolute;
+  top: 12%;
+  z-index: 100;
+  width: 35%;
+  right: 5%;
+}
+
+.bubble1 {
+  position: absolute;
+  top: 0%;
+  z-index: 100;
+  width: 18%;
+  right: 0;
+
+}
+
+.bubble2 {
+  position: absolute;
+  top: 28%;
+  z-index: 100;
+  width: 18%;
+  left: 36%;
+
+}
+
+.yellowCircle {
+  position: absolute;
+  top: 40%;
+  z-index: 100;
+  width: 20%;
+  left: 35%;
+
+}
+.yellowCube {
+  position: absolute;
+  top: 12%;
+  z-index: 100;
+  width: 12%;
+  left: 20%;
+}
+
+.blueCircle {
+  position: absolute;
+  top: 22%;
+  z-index: 100;
+  width: 10%;
+  right: 0%;
+}
+
+.circle{
+  position: absolute;
+  z-index: 90;
+  width: 72%;
+  left: 22%;
+  top: 0;
+  animation: rotate 40s linear infinite;
+
+}
