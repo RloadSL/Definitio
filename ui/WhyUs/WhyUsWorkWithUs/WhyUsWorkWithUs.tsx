@@ -33,14 +33,13 @@ const WhyUsWorkWithUs = () => {
               <FormattedMessage id="page.whyus.workwithus.h2" />
             </h2>
             <div>
-            <FormattedMessage
+              <FormattedMessage
                 id="page.whyus.workwithus.text"
                 values={{
-                  b: children => <b>{children}</b>,
-                  p: children => <p className="hola">{children}</p>,
+                  b: (children) => <b>{children}</b>,
+                  p: (children) => <p className="hola">{children}</p>
                 }}
               />
-
             </div>
           </article>
         </div>

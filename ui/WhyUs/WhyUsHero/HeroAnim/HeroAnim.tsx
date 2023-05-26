@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import style from "./hero-anim.module.scss";
 import Image from "next/image";
-import girl from "../../../../assets/img/services/hero/girl.svg";
-import boy from "../../../../assets/img/services/hero/boy.svg";
-import arms from "../../../../assets/img/services/hero/arms.svg";
-import yellowCircle from "../../../../assets/img/services/hero/yellowCircle.svg";
-import yellowCube from "../../../../assets/img/services/hero/yellowCube.svg";
-import blueCircle from "../../../../assets/img/services/hero/blueSpot.svg";
-import bubble1 from "../../../../assets/img/services/hero/bubble1.svg";
-import bubble2 from "../../../../assets/img/services/hero/bubble2.svg";
-import circle from "../../../../assets/img/circle_b.svg";
+import manBody from "../../../../assets/img/whyus/hero/man_body.svg";
+import manHead from "../../../../assets/img/whyus/hero/man_head.svg";
+import simplifyIcon from "../../../../assets/img/whyus/hero/simplify.svg";
+import deliverIcon from "../../../../assets/img/whyus/hero/deliver.svg";
+import protectIcon from "../../../../assets/img/whyus/hero/protect.svg";
+import optimizeIcon from "../../../../assets/img/whyus/hero/optimize.svg";
+import circle from "../../../../assets/img/circle.svg";
 import useComponentAnimations from "@/hooks/animations.hooks";
+import gsap, { Power2 } from "gsap";
+import { FormattedMessage } from "react-intl";
 
 /**
  * Component to handle the animated graphics of the section
@@ -18,44 +18,56 @@ import useComponentAnimations from "@/hooks/animations.hooks";
  */
 
 const HeroAnim = () => {
-  const { fadeInAnim } = useComponentAnimations();
-
   useEffect(() => {
-    fadeInAnim(".boy, .arms", 0.8, 20);
-    fadeInAnim(".girl", 1, -50);
-    fadeInAnim(".bubble1", 1.2, -30);
-    fadeInAnim(".bubble2", 1.2, -50);
-    fadeInAnim(".yellowCircle", 1.2, -50);
-    fadeInAnim(".yellowCube", 1.5, -70);
-    fadeInAnim(".blueCircle", 1.5, -70);
+    gsap.from(".man", {
+      ease: Power2.easeInOut,
+      duration: 0.5,
+      opacity: 0
+    });
+
+    gsap.from(".icon", {
+      scale: 0,
+      ease: Power2.easeInOut,
+      stagger: {
+        each: 0.2
+      }
+    });
   }, []);
 
   return (
     <div className={style.wrapper}>
-      <canvas width={940} height={660} />
-      <div className={`${style.boy} boy`}>
-        <Image src={boy} alt={""} />
+      <canvas width={720} height={750} />
+      <div className={`${style.man} man`}>
+        <div className={style.man_head}>
+          <Image src={manHead} alt={""} />
+        </div>
+        <div className={style.man_body}>
+          <Image src={manBody} alt={""} />
+        </div>
       </div>
-      <div className={`${style.arms} arms`}>
-        <Image src={arms} alt={""} />
+      <div className={`${style.simplify} simplify`}>
+        <Image src={simplifyIcon} alt={""} className="icon" />
+        <span className={style.label}>
+          <FormattedMessage id="page.whyus.hero.iconLabel1" />
+        </span>
       </div>
-      <div className={`${style.girl} girl`}>
-        <Image src={girl} alt={""} />
+      <div className={`${style.deliver} deliver`}>
+        <Image src={deliverIcon} alt={""} className="icon" />
+        <span className={style.label}>
+          <FormattedMessage id="page.whyus.hero.iconLabel2" />
+        </span>
       </div>
-      <div className={style.yellowCircle}>
-        <Image src={yellowCircle} alt={""} />
+      <div className={`${style.optimize} optimize`}>
+        <Image src={optimizeIcon} alt={""} className="icon" />
+        <span className={style.label}>
+          <FormattedMessage id="page.whyus.hero.iconLabel3" />
+        </span>
       </div>
-      <div className={`${style.yellowCube} yellowCube`}>
-        <Image src={yellowCube} alt={""} />
-      </div>
-      <div className={`${style.blueCircle} blueCircle`}>
-        <Image src={blueCircle} alt={""} />
-      </div>
-      <div className={`${style.bubble1} bubble1`}>
-        <Image src={bubble1} alt={""} />
-      </div>
-      <div className={`${style.bubble2} bubble2`}>
-        <Image src={bubble2} alt={""} />
+      <div className={`${style.protect} protect`}>
+        <Image src={protectIcon} alt={""} className="icon" />
+        <span className={style.label}>
+          <FormattedMessage id="page.whyus.hero.iconLabel4" />
+        </span>
       </div>
       <div className={`${style.circle} circle`}>
         <Image src={circle} alt={""} />

@@ -12,7 +12,6 @@ import window3 from '../../../../assets/img/home/data_optimization/data_window3.
 import gameSpot from '../../../../assets/img/home/data_optimization/game.svg'
 
 
-
 const DataOptimizationAnim = () => {
   return (
     <div className={style.wrapper}>

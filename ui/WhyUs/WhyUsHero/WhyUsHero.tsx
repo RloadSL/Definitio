@@ -70,9 +70,13 @@ const WhyUsHero = ({ onClick }: WhyUsHeroProps) => {
               />
             </h1>
             <div className="heroText_animation">
-              <p>
-                <FormattedMessage id="page.whyus.hero.text" />
-              </p>
+              <FormattedMessage
+                id="page.whyus.hero.text"
+                values={{
+                  b: (children) => <b>{children}</b>,
+                  p: (children) => <p>{children}</p>
+                }}
+              />
             </div>
           </article>
         </div>

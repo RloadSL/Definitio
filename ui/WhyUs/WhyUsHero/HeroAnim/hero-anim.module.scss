@@ -8,80 +8,81 @@
   position: relative;
   width: 100%;
   height: auto;
-  // border: 1px solid red;
+
+  & > div {
+    position: absolute;
+  }
 }
 
-.boy {
-  position: absolute;
-  bottom: 0%;
-  z-index: 100;
-  width: 50%;
-}
-
-.arms {
-  position: absolute;
-  bottom: 23.5%;
-  z-index: 110;
-  width: 8%;
-  left: 38%;
-}
-
-.girl {
-  position: absolute;
-  top: 12%;
-  z-index: 100;
-  width: 35%;
-  right: 5%;
-}
-
-.bubble1 {
-  position: absolute;
-  top: 0%;
-  z-index: 100;
-  width: 18%;
-  right: 0;
-
-}
-
-.bubble2 {
-  position: absolute;
-  top: 28%;
-  z-index: 100;
-  width: 18%;
-  left: 36%;
-
-}
-
-.yellowCircle {
-  position: absolute;
+.man {
   top: 40%;
   z-index: 100;
-  width: 20%;
-  left: 35%;
+  width: 35%;
+  @extend %center;
 
+
+  &_head {
+    width: 35%;
+    position: absolute;
+    top: -45%;
+    left: 31%;
+    animation: headRotate 8s infinite;
+    animation-direction: alternate;
+    transform-origin: 50% 100%;
+  }
 }
-.yellowCube {
-  position: absolute;
-  top: 12%;
+
+%blueIcons {
   z-index: 100;
-  width: 12%;
-  left: 20%;
+  width: 18%;
 }
 
-.blueCircle {
-  position: absolute;
-  top: 22%;
-  z-index: 100;
-  width: 10%;
-  right: 0%;
+%center {
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 
-.circle{
-  position: absolute;
-  z-index: 90;
-  width: 72%;
-  left: 22%;
+.label {
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.protect {
+  top: 40%;
+  left: 0;
+  @extend %blueIcons;
+}
+
+.deliver {
+  top: 40%;
+  right: 0;
+  @extend %blueIcons;
+}
+
+.simplify {
   top: 0;
-  animation: rotate 40s linear infinite;
+  @extend %blueIcons;
+  @extend %center;
+}
 
+.optimize {
+  bottom: 5%;
+  @extend %blueIcons;
+  @extend %center;
+}
+
+.circle {
+  z-index: 90;
+  width: 85%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 5%;
+  animation: rotate 40s linear infinite;
 }

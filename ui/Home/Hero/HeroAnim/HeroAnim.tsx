@@ -3,7 +3,7 @@ import style from "./hero-anim.module.scss";
 import Image from "next/image";
 import manBody from "../../../../assets/img/home/hero/man_body.svg";
 import manHead from "../../../../assets/img/home/hero/man_head.svg";
-import circle from "../../../../assets/img/home/hero/circle.svg";
+import circle from "../../../../assets/img/circle.svg";
 import mobile from "../../../../assets/img/home/hero/mobile.svg";
 import graphic from "../../../../assets/img/home/hero/graphic.svg";
 import game from "../../../../assets/img/home/hero/game.svg";
@@ -35,7 +35,6 @@ const HeroAnim = () => {
       <canvas width={725} height={655} />
       <div className={`${style.man} man`}>
         <div className={style.man_head}>
-          <div className={style.man_head__eyes}></div>
           <Image src={manHead} alt={""} />
         </div>
         <div className={style.man_body}>

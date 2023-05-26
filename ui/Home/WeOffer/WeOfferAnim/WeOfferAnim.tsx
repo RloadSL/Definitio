@@ -2,7 +2,7 @@ import React from 'react'
 import style from './weoffer-anim.module.scss'
 import Image from 'next/image';
 import boy from '../../../../assets/img/home/we_offer/boy.svg'
-import circle from '../../../../assets/img/home/we_offer/circle.svg'
+import circle from "../../../../assets/img/circle_b.svg";
 import shield from '../../../../assets/img/home/we_offer/shield.svg'
 import graphic from '../../../../assets/img/home/we_offer/graphic.svg'
 import details from '../../../../assets/img/home/we_offer/small_details.svg'

@@ -27,7 +27,7 @@
   }
 
   @include devices.device(tablet) {
-    padding-top: 14rem;
+    padding-top: 9rem;
     padding-bottom: 5rem;
   }
 
@@ -96,7 +96,7 @@
     }
     @include devices.device(smScreen) {
       margin: 0 auto 3rem auto;
-      width: 50%;
+      width: 45%;
     }
   }
 }
