@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import style from "./whyus-workwithus.module.scss";
 import gsap, { Power2 } from "gsap";
-import ServicesBrandSafetyAnim from "./ServicesBrandSafetyAnim";
+import ServicesBrandSafetyAnim from "./WhyUsWorkWithUsAnim";
 import Image from "next/image";
 import cube1 from "../../../assets/img/cube.svg";
+import WhyUsWorkWithUsAnim from "./WhyUsWorkWithUsAnim";
 
 const WhyUsWorkWithUs = () => {
   // useEffect(() => {
@@ -44,7 +45,7 @@ const WhyUsWorkWithUs = () => {
           </article>
         </div>
         <div className={style.brandSafety_image}>
-          <ServicesBrandSafetyAnim />
+          <WhyUsWorkWithUsAnim />
         </div>
       </div>
     </section>

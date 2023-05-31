@@ -14,6 +14,7 @@
   "btn.label.contact": "Contact",
   "btn.label.getStarted": "Let’s get it started",  
   "btn.label.getInTouch": "Get in touch",
+  "btn.label.readMore": "Read more",
 
   "form.contact.label.nameSurname": "Name & surname",
   "form.contact.label.company": "Company",
@@ -69,6 +70,14 @@
   "page.whyus.hero.iconLabel4":"Protect",
   "page.whyus.workwithus.h2":"Work with us",
   "page.whyus.workwithus.text":"<p><b>Take your company to the next level!</b></p><p>Are you in the GCC looking for a valid partner in the programmatic advertising landscape?</p><p>We are an AdTech firm based out of Dubai that merges the advantages of machine-learning with the power of an invaluable professional knowledge. This unique combination enables us to adjust or steer towards the right direction to improve campaign efficiency and effectiveness and assist stability and business growth.</p>",
+  "page.whyus.getStarted.card1.title":"Programmatic made easy",
+  "page.whyus.getStarted.card1.text":"<span>Our goal is to make programmatic journey easier for you.</span> We will help you navigate through the variety of programmatic options and will supply the best hassle-free custom-built experience.Leave the heavy lifting of bidding, budgeting, targeting, and creatives to our machine learning models, and spend more time growing your business!",
+  "page.whyus.getStarted.card2.title":"Fraud Detection and Brand Safety at our core",
+  "page.whyus.getStarted.card2.text":"<span>Our unwavering commitment to media quality and brand safety has led us to team up with the industry's leading experts in anti-fraud, IVT, and viewability.</span> We care about you and that is why we will work side-by-side to help you maximize your return on ad spend (ROAS) and to give you peace of mind whilst reaching your business goals and achieving your success metrics.",
+  "page.whyus.getStarted.card3.title":"Delivering results in full Transparency",
+  "page.whyus.getStarted.card3.text":"<span>Things move fast and embracing a trial-and-error approach is a must to deliver excellence.</span> We will be with you along the whole journey by providing insights and analyses to enable timely and informed decisions. Our dashboards and customized performance and creative reports will help you focus your ad investment on the right strategies and cross-channel solutions to maximize your value capture and value creation.",
+  "page.whyus.getStarted.card4.title":"Optimization, we scale!",
+  "page.whyus.getStarted.card4.text":"<span>We have a scientific approach to programmatic advertising.</span> By utilizing our ML algorithm to analyze more than 70 data points and access millions of ad auctions per second, we can effectively optimize campaigns towards high-performing user segments based on targeted in-app events, ultimately maximizing ROAS. We are agile and we can scale fast. Let’s grow together!",
 
   "section.contact.title": "Contact Us"
 }

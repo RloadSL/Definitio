@@ -5,7 +5,7 @@
 
 @include layout.float;
 
-.ourTechnology {
+.letsGetStarted {
   padding-top: 4rem;
   padding-bottom: 4rem;
   overflow: hidden;
@@ -24,53 +24,13 @@
       }
     }
   
-    &_text {
-      opacity: 1;
-      position: relative;
-      top: 0;
-      text-align: center;
-
-      @include devices.device(smScreen) {
-        width: 40%;
-        text-align: left;
-      }
-
-      p {
-        &:first-child {
-          font-size: 1.8rem;
-          line-height: 2.5rem;
-        }
-      }
-    }
-  
-    &_image {
-      width: 90%;
-      margin: 3rem auto;
-
-      @include devices.device(tablet) {
-        width: 80%;
-      }
-
-      @include devices.device(smScreen) {
-        width: 50%;
-        margin-left: 0;
-      }
-    }
-
-    .accordion_text {
-      font-size: 1.3rem !important;
-      line-height: 2rem !important;
-    }
-
-    .buttonBlock {
-      margin-top: 3rem;
-    }
+   
 }
 
 .cube1 {
   position: absolute;
   left: 20%;
-  bottom: 0;
+  top: 10%;
   animation: float 5.5s ease-in-out infinite;
   animation-delay: 0.5s;
   transform: rotate(30deg);
@@ -80,7 +40,7 @@
   position: absolute;
   right: 50%;
   top: 25%;
-  transform: scale(0.5) rotate(50deg);
+  transform: scale(2) rotate(80deg);
   animation: float 8s ease-in-out infinite;
 }
 

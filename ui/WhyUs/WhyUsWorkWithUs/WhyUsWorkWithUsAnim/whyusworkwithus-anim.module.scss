@@ -1,0 +1,78 @@
+@use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../../assets/styles/partials/variables/colors" as colors;
+
+@include layout.rotate;
+
+.workwithus {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  & > div {
+    position: absolute;
+  }
+
+  &_girl {
+    bottom: 0;
+    width: 50%;
+    right: 0;
+    z-index: 10;
+  }
+
+  &_boy {
+    top: 10%;
+    width: 50%;
+    left: 8%;
+    z-index: 100;
+  }
+
+  &_window {
+    top: 31%;
+    width: 35%;
+    left: 0;
+    z-index: 10;
+  }
+
+  &_yellowCircle {
+    top: 15%;
+    width: 22%;
+    left: 45%;
+    z-index: 10;
+  }
+
+  &_switcher {
+    top: 41%;
+    width: 15%;
+    right: 0;
+    z-index: 10;
+  }
+
+  &_list {
+    top: 0;
+    width: 22%;
+    right: 15%;
+    z-index: 10;
+  }
+
+  &_bubble {
+    bottom: 25%;
+    width: 7%;
+    right: 40%;
+    z-index: 10;
+  }
+
+  &_graphic {
+    top: 15%;
+    width: 15%;
+    left: 5%;
+  }
+
+  &_circle {
+    z-index: 0;
+    width: 72%;
+    left: 22%;
+    top: 8%;
+    animation: rotate 40s linear infinite;
+  }
+}

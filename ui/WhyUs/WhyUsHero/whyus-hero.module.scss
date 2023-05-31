@@ -39,6 +39,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 2rem;
+    color: colors.$palette2;
     span {
       color: colors.$palette2;
       display: block;
@@ -73,6 +74,12 @@
     @include devices.device(smScreen) {
       max-width: 60%;
       margin-left: 0;
+    }
+
+    b {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: colors.$main;
     }
   }
 

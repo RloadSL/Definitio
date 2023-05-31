@@ -21,7 +21,7 @@ const Header = () => {
     mobileNavAnimation();
   }, []);
 
-  //checking mobile menu
+  //checking mobile
   const isMobile = useWindowSize().width <= 768 ? true : false;
 
   //adding the formatted label Array for the top menu translation JSON
