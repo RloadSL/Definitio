@@ -57,13 +57,23 @@ const RLDHorizontalAccordionCard = ({
           height: 0
         });
         gsap.to(cardAnim.current, {
-          height: "0%",
-          delay: 0.8
+          // height: "0%",
+          delay: 10
         });
       });
-      mq.add("(min-width: 1080px)", () => {
+      mq.add("(min-width: 1199px)", () => {
         gsap.to(cardAnim.current, {
-          width: "30%"
+          width: "45%"
+        });
+        gsap.to(pAnim.current, {
+          opacity: 0,
+          height: 0
+        });
+      });
+//
+      mq.add("(min-width: 1200px)", () => {
+        gsap.to(cardAnim.current, {
+          width: "35%"
         });
         gsap.to(pAnim.current, {
           opacity: 0,

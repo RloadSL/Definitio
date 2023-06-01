@@ -16,7 +16,6 @@
 
   &_card {
     position: relative;
-
     width: 100%;
     background-color: white;
     border-radius: 20px;
@@ -25,31 +24,54 @@
     cursor: pointer;
 
     @include devices.device(smScreen) {
-      margin-right: 40px;
+      margin-right: 20px;
       display: flex;
       flex-grow: 1;
     }
+
+    @include devices.device(xlgScreen) {
+      margin-right: 40px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      &_icon {
-        width: 80px;
-      }
-
-      &_number {
-        font-size: 4rem;
-        color: colors.$palette2;
-        font-weight: 300;
-      }
 
       @include devices.device(smScreen) {
         position: absolute;
         width: 100%;
         right: 0;
         left: 0;
-        padding: 20px;
+        top: 0;
+        padding: 2rem;
+      }
+
+      &_icon {
+        width: 50px;
+        flex-shrink: 0;
+
+        @include devices.device(lgScreen) {
+          width: 60px;
+        }
+
+        @include devices.device(xlgScreen) {
+          width: 80px;
+        }
+      }
+
+      &_number {
+        font-size: 4rem;
+        color: colors.$palette2;
+        font-weight: 300;
       }
     }
 
@@ -71,14 +93,21 @@
         top: auto;
         left: 0;
         width: auto;
-        padding: 20px;
-        //padding-top: 20%;
+        padding: 1.5rem;
+      }
+
+      @include devices.device(xlgScreen) {
+        padding: 2rem;
       }
     }
 
     &:not(.active) {
       opacity: 0.7;
       width: 100%;
+
+      @include devices.device(smScreen) {
+        width: 50%;
+      }
 
       &:hover {
         opacity: 1;
@@ -98,39 +127,24 @@
           opacity: inherit;
         }
       }
-
-      @include devices.device(smScreen) {
-        width: 30%;
-      }
     }
   }
 }
 
 .active {
   .horizontalAccordion_card__content {
-    top: 28%;
-
-    @include devices.device(smScreen) {
-      //   display: flex;
-      // flex-direction: column;
-      // justify-content: flex-end;
-    }
+    top: 20%;
 
     h3 {
       max-width: 400px;
-
     }
 
     p {
       color: black;
-  
-      @include devices.device(smScreen) {
+
+      @include devices.device(xlgScreen) {
         max-width: 80%;
       }
     }
   }
-
-
-
-  
 }

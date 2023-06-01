@@ -12,17 +12,43 @@
   position: relative;
     .content {
       @extend %maxContent;
-      display: flex;
-      flex-direction: column-reverse;
+      display: block;
+      // flex-direction: column-reverse;
       padding-left: 1rem;
       padding-right: 1rem;
+      padding-top: 120px;
+
   
-      @include devices.device(smScreen) {
-        flex-direction: row;
-        justify-content: flex-end;
-        padding-top: 120px;
+      // @include devices.device(smScreen) {
+      //   flex-direction: row;
+      //   justify-content: flex-end;
+      //   padding-top: 120px;
+      // }
+
+      .accordion {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+
+        // padding-left: 1rem;
+        // padding-right: 1rem;
+    
+        @include devices.device(smScreen) {
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+
+       
+
       }
     }
+
+    .buttonBlock {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+
   
    
 }

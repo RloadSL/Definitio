@@ -5,7 +5,7 @@
 
 @include layout.float;
 
-.brandSafety {
+.workwithus {
   padding-top: 4rem;
   padding-bottom: 4rem;
   overflow: hidden;
@@ -45,25 +45,7 @@
         }
       }
 
-      ul {
-        li {
-          font-size: 1.3rem;
-          display: flex;
-          align-items: center;
-          margin-bottom: 20px;
-          &::before {
-            @extend %beforeAfter;
-            background-color: colors.$palette2;
-            border-radius: 100%;
-            width: 10px;
-            height: 10px;
-            flex-shrink: 0;
-            min-width: 0;
-            margin-right: 10px;
-
-          }
-        }
-      }
+      
     }
   
     &_image {
@@ -76,7 +58,7 @@
 
       @include devices.device(smScreen) {
         width: 48%;
-        margin-left: 0;
+        margin-right: 0;
       }
     }
 }

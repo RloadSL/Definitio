@@ -9,6 +9,7 @@ import optimizeIcon from "../../../assets/img/whyus/optimize.svg";
 import protectIcon from "../../../assets/img/whyus/protect.svg";
 import simplifyIcon from "../../../assets/img/whyus/simplify.svg";
 import RLDHorizontalAccordion from "@/components/RLDHorizontalAccordion";
+import RLDButton from "@/components/RLDButton";
 
 const WhyUsLetsGetStarted = () => {
   const horizontalAccordionCards = [
@@ -34,6 +35,10 @@ const WhyUsLetsGetStarted = () => {
     }
   ];
 
+  const onClick = () => {
+    console.log("hola");
+  };
+
   return (
     <section className={`${style.letsGetStarted} letsGetStarted`}>
       <div className={`${style.cube1}`}>
@@ -43,7 +48,16 @@ const WhyUsLetsGetStarted = () => {
         <Image src={cube1} alt={""} />
       </div>
       <div className={style.content}>
-        <RLDHorizontalAccordion cards={horizontalAccordionCards} />
+        <div className={style.buttonBlock}>
+          <RLDButton
+            customClass="button button-primary"
+            labelID="btn.label.getStarted"
+            onClick={onClick}
+          />
+        </div>
+        <div className={style.accordion}>
+          <RLDHorizontalAccordion cards={horizontalAccordionCards} />
+        </div>
       </div>
     </section>
   );

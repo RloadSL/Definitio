@@ -6,29 +6,34 @@ import ServicesBrandSafetyAnim from "./WhyUsWorkWithUsAnim";
 import Image from "next/image";
 import cube1 from "../../../assets/img/cube.svg";
 import WhyUsWorkWithUsAnim from "./WhyUsWorkWithUsAnim";
+import RLDButton from "@/components/RLDButton";
 
 const WhyUsWorkWithUs = () => {
-  // useEffect(() => {
-  //   gsap.from(".brandSafety_animation", {
-  //     x: 80,
-  //     opacity: 0,
-  //     scrollTrigger: {
-  //       trigger: ".brandSafety",
-  //       start: "top center",
-  //       end: "bottom center"
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    gsap.from(".workwithusText_animation", {
+      x: -80,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".workwithus_animation",
+        start: "top center",
+        end: "bottom center"
+      }
+    });
+  }, []);
+
+  const onClick = () => {
+    console.log('hola')
+  }
   return (
-    <section className={`${style.brandSafety} brandSafety`}>
+    <section className={`${style.workwithus} workwithus`}>
       <div className={`${style.cube1}`}>
         <Image src={cube1} alt={""} />
       </div>
       <div className={`${style.cube2}`}>
         <Image src={cube1} alt={""} />
       </div>
-      <div className={`${style.content} brandSafety_animation`}>
-        <div className={`${style.brandSafety_text} brandSafetyText_animation`}>
+      <div className={`${style.content} workwithus_animation`}>
+        <div className={`${style.workwithus_text} workwithusText_animation`}>
           <article>
             <h2 className="titleButton">
               <FormattedMessage id="page.whyus.workwithus.h2" />
@@ -43,8 +48,15 @@ const WhyUsWorkWithUs = () => {
               />
             </div>
           </article>
+          <div className={style.buttonBlock}>
+          <RLDButton
+            customClass="button button-primary"
+            labelID="btn.label.workWithUs"
+            onClick={onClick}
+          />
         </div>
-        <div className={style.brandSafety_image}>
+        </div>
+        <div className={style.workwithus_image}>
           <WhyUsWorkWithUsAnim />
         </div>
       </div>

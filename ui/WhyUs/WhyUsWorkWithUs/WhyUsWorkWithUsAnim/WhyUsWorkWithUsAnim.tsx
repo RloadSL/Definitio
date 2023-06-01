@@ -15,19 +15,19 @@ import circle from "../../../../assets/img/circle_b.svg";
 const WhyUsWorkWithUsAnim = () => {
   useEffect(() => {
     gsap.from(".workwithus_girl", {
-      x: -20,
+      x: 20,
       ease: Power2.easeInOut,
       duration: 1.5,
       opacity: 0,
       scrollTrigger: {
         trigger: ".workwithus",
         scrub: 1,
-        start: "top center",
-        end: "top center"
+        start: "50px center",
+        end: "300px center"
       }
     });
     gsap.from(".workwithus_boy", {
-      x: 100,
+      x: -100,
       ease: Power2.easeInOut,
       duration: 1,
       opacity: 0,
@@ -38,7 +38,31 @@ const WhyUsWorkWithUsAnim = () => {
         end: "300px center"
       }
     });
+    gsap.from(".workwithus_yellowCircle", {
+      scale: 0,
+      ease: Power2.easeInOut,
+      duration: 1.5,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".workwithus",
+        scrub: 1,
+        start: "50px center",
+        end: "300px center"
+      }
+    });
     gsap.from(".workwithus_graphic", {
+      x: 50,
+      ease: Power2.easeInOut,
+      duration: 1.5,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".workwithus",
+        scrub: 1,
+        start: "50px center",
+        end: "300px center"
+      }
+    });
+    gsap.from(".workwithus_switcher", {
       x: 50,
       ease: Power2.easeInOut,
       duration: 1.5,

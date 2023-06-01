@@ -6,6 +6,7 @@ import RLDSEOTags from "@/components/RLDSEOTags";
 import WhyUsHero from "./WhyUsHero";
 import WhyUsWorkWithUs from "./WhyUsWorkWithUs";
 import WhyUsLetsGetStarted from "./WhyUsLetsGetStarted";
+import RLDButton from "@/components/RLDButton";
 
 /**
  * Why Us page structure component.
@@ -24,7 +25,8 @@ const WhyUs: NextPage = () => {
       </div>
       <div className="page_background2">
         <div className={style.whyUs_letsGetStarted}>
-          <WhyUsLetsGetStarted />
+
+            <WhyUsLetsGetStarted />
         </div>
         <div className={style.whyUs_workWithUs}>
           <WhyUsWorkWithUs />
