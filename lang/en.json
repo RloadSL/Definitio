@@ -17,7 +17,6 @@
   "btn.label.readMore": "Read more",
   "btn.label.workWithUs": "Work with us",
 
-
   "form.contact.label.nameSurname": "Name & surname",
   "form.contact.label.company": "Company",
   "form.contact.label.phone": "Phone",
@@ -63,6 +62,7 @@
   "page.services.brandSafety.title":"Brand Safety-centric approach",
   "page.services.brandSafety.text":"Because we strive to be the most reliable service for your agency, we work only with trusted partners to ensure high-quality traffic. We guarantee:",
   "page.services.brandSafety.list":"<li>Premium placements within trustworthy SSPs only</li><li>Privacy-centric approach</li><li>Fraud prevention. Our ML models are focusing on anomaly detection both pre-bid and post-bid to prevent any fraudulent activity</li><li>All user data is encrypted</li>",
+  "page.services.partners.title":"Our partners",
 
   "page.whyus.hero.h1":"To protect, simplify, deliver, and optimize.",
   "page.whyus.hero.text":"<p><b>This is what we believe in. This is what we offer.</b></p><p>A zero-waste programmatic advertising landscape is now possible!</p>",
@@ -80,6 +80,8 @@
   "page.whyus.getStarted.card3.text":"<span>Things move fast and embracing a trial-and-error approach is a must to deliver excellence.</span> We will be with you along the whole journey by providing insights and analyses to enable timely and informed decisions. Our dashboards and customized performance and creative reports will help you focus your ad investment on the right strategies and cross-channel solutions to maximize your value capture and value creation.",
   "page.whyus.getStarted.card4.title":"Optimization, we scale!",
   "page.whyus.getStarted.card4.text":"<span>We have a scientific approach to programmatic advertising.</span> By utilizing our ML algorithm to analyze more than 70 data points and access millions of ad auctions per second, we can effectively optimize campaigns towards high-performing user segments based on targeted in-app events, ultimately maximizing ROAS. We are agile and we can scale fast. Let’s grow together!",
+  "page.whyus.clients.title":"Our clients",
+
 
   "section.contact.title": "Contact Us"
 }

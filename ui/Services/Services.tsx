@@ -7,6 +7,8 @@ import ServicesProductsSolutions from "./ServicesProductsSolutions";
 import ServicesBrandSafety from "./ServicesBrandSafety";
 import ServicesHero from "./ServicesHero";
 import RLDSEOTags from "@/components/RLDSEOTags";
+import partnersLogos from "data/partners.json";
+import LogosSection from "@/components/LogosSection";
 
 /**
  * Services page structure component.
@@ -19,7 +21,7 @@ const Services: NextPage = () => {
 
   return (
     <div className={`${style.services} services`}>
-      <RLDSEOTags title="Services" description=""/>
+      <RLDSEOTags title="Services" description="" />
       <div className={style.services_hero}>
         <ServicesHero onClick={onClick} />
       </div>
@@ -33,8 +35,10 @@ const Services: NextPage = () => {
         <div className={style.services_brandsafety}>
           <ServicesBrandSafety />
         </div>
+        {partnersLogos.length !== 0 && (
+          <LogosSection data={partnersLogos} titleID="page.services.partners.title" />
+        )}
       </div>
-
       <BottomSection />
     </div>
   );

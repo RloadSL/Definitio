@@ -1,0 +1,53 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.logosSection {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 5rem;
+
+  .content {
+    @extend %maxContent;
+    flex-direction: column;
+
+    .logos {
+      width: 100%;
+      ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+
+        li {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          @include devices.device(tablet) {
+            width: 25%;
+          }
+        }
+      }
+
+      &_single {
+        text-align: center;
+
+        img {
+          max-width: 100px;
+
+          @include devices.device(smScreen) {
+            max-width: 150px;
+          }
+
+          @include devices.device(mdScreen) {
+            max-width: 200px;
+          }
+        }
+      }
+    }
+  }
+}

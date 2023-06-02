@@ -4,13 +4,11 @@ import Image from 'next/image';
 import girl from '../../../../assets/img/home/experience/girl.svg'
 import bubble1 from '../../../../assets/img/home/experience/bubble1.svg'
 import bubble2 from '../../../../assets/img/home/experience/bubble2.svg'
-import circle from '../../../../assets/img/home/experience/circle.svg'
+import circle from '../../../../assets/img/circle_l.svg'
 import graphic from '../../../../assets/img/home/experience/graphic.svg'
 import mobile from '../../../../assets/img/home/experience/mobile.svg'
 import people from '../../../../assets/img/home/experience/people.svg'
 import window from '../../../../assets/img/home/experience/window.svg'
-
-
 
 
 const ExperienceAnim = () => {

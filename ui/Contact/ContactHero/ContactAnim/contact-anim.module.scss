@@ -1,0 +1,81 @@
+@use "../../../../assets/styles/partials/placeholders" as placeholders;
+@use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../../assets/styles/partials/variables/colors" as colors;
+
+@include layout.rotate;
+
+.contactAnim {
+  position: relative;
+  width: 95%;
+  height: auto;
+  border: 1px solid red;
+
+  @include devices.device(tablet) {
+    width: 100%;
+  }
+
+  & > div {
+    position: absolute;
+  }
+}
+
+.boy {
+  width: 40%;
+  left: 7%;
+  bottom: 3%;
+  z-index: 100;
+}
+
+.girl {
+  width: 48%;
+  right: 7%;
+  bottom: 25%;
+  z-index: 100;
+}
+
+.window {
+  width: 20%;
+  right: 0;
+  top: 15%;
+  z-index: 0;
+}
+
+.mobile {
+  width: 8%;
+  left: 0;
+  top: 40%;
+}
+
+.bubble1 {
+  width: 20%;
+  right: 40%;
+  top: 24%;
+}
+
+.bubble2 {
+  width: 32%;
+  left: 24%;
+  top: 0;
+}
+
+.bubble2 {
+  width: 32%;
+  right: 8%;
+  bottom: 10%;
+}
+
+.blueIcon {
+  width: 10%;
+  right: 37%;
+  bottom: 0;
+}
+
+.circle {
+  width: 55%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 5%;
+  animation: rotate 40s linear infinite;
+}
