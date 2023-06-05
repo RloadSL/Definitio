@@ -3,6 +3,7 @@ import style from "./rld-horizontal-accordion.module.scss";
 import { FormattedMessage } from "react-intl";
 import gsap, { Power2 } from "gsap";
 import Image from "next/image";
+import useComponentUtils from "@/hooks/component.hooks";
 
 interface RLDHorizontalAccordionCardProps {
   item: any;
@@ -28,12 +29,23 @@ const RLDHorizontalAccordionCard = ({
   const cardAnim = useRef(null);
   const pAnim = useRef(null);
   const mq = gsap.matchMedia();
+  // const { useWindowSize } = useComponentUtils();
+
+  // const isMobile = useWindowSize().width <= 1080 ? true : false;
+
+  // console.log(isMobile)
 
   useEffect(() => {
+    // if(isMobile){
+    //   console.log('es movil')
+    // } else {
+    //   console.log('NO es movil')
+
+    // }
     if (isActive === item.title) {
       mq.add("(max-width: 1079px)", () => {
         gsap.to(cardAnim.current, {
-          height: "100%"
+          height: "100%",
         });
         gsap.to(pAnim.current, {
           opacity: 1,
@@ -43,7 +55,8 @@ const RLDHorizontalAccordionCard = ({
       mq.add("(min-width: 1080px)", () => {
         gsap.to(cardAnim.current, {
           width: "100%",
-          duration:0.5
+          duration:0.5,
+          height:'auto'
         });
         gsap.to(pAnim.current, {
           opacity: 1,
@@ -52,21 +65,31 @@ const RLDHorizontalAccordionCard = ({
       });
     } else {
       mq.add("(max-width: 1079px)", () => {
+        gsap.to(cardAnim.current, {
+         width: "100%",
+        });
         gsap.to(pAnim.current, {
           opacity: 0,
           height: 0
         });
+      });
+      mq.add("(min-width: 1080px)", () => {
         gsap.to(cardAnim.current, {
-          // height: "0%",
-          delay: 10
+          width: "50%",
+          duration:0.5,
+
+        });
+        gsap.to(pAnim.current, {
+          opacity: 0,
+          delay: 0.5
         });
       });
       mq.add("(min-width: 1199px)", () => {
         gsap.to(cardAnim.current, {
-          width: "45%"
+          width: "45%",
         });
         gsap.to(pAnim.current, {
-          opacity: 0,
+          opacity: 1,
           height: 0
         });
       });
@@ -74,10 +97,6 @@ const RLDHorizontalAccordionCard = ({
       mq.add("(min-width: 1200px)", () => {
         gsap.to(cardAnim.current, {
           width: "35%"
-        });
-        gsap.to(pAnim.current, {
-          opacity: 0,
-          height: 0
         });
       });
     }

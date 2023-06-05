@@ -20,7 +20,6 @@
   width: 35%;
   @extend %center;
 
-
   &_head {
     width: 35%;
     position: absolute;
@@ -48,9 +47,18 @@
   width: 100% !important;
   max-width: 100% !important;
   display: block;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 0px;
+
+  @include devices.device(smScreen) {
+    margin-top: 5px;
+    font-size: 1.2rem;
+  }
+
+  @include devices.device(lgScreen) {
+    margin-top: 20px;
+  }
 }
 
 .protect {

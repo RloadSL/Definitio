@@ -141,6 +141,7 @@
 
     p {
       color: black;
+      opacity: 0;
 
       @include devices.device(xlgScreen) {
         max-width: 80%;
