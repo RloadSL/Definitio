@@ -9,6 +9,11 @@
   background: url(../../assets/img/about/about_bg.png) no-repeat;
   background-size: cover;
   position: relative;
+  padding-top: 15%;
+
+  @include devices.device(tablet) {
+    padding-top: 0;
+  }
 
   h1 {
     @extend %mainTitle;
@@ -76,22 +81,43 @@
 .location {
   @extend %maxContent;
   padding-top: 5rem;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include devices.device(xlgScreen) {
+    flex-direction: row;
+  }
 
   &_map {
-    width: 60%;
+    width: 100%;
+
+    @include devices.device(xlgScreen) {
+      width: 60%;
+    }
   }
 
   &_info {
-    width: 40%;
-    padding-left: 5%;
+    width: 100%;
+    padding-top: 2rem;
+
+    @include devices.device(xlgScreen) {
+      width: 60%;
+      padding-top: 0;
+      padding-left: 5%;
+    }
 
   }
 
   iframe {
     border: none;
     width: 100%;
-    min-height: 500px;
+    min-height: 300px;
     border-radius: 20px;
+
+    @include devices.device(tablet) {
+      min-height: 500px;
+    }
   }
 
   p {
@@ -114,15 +140,23 @@
       text-align: center;
       width: 100%;
       color: colors.$palette2;
-      font-size: 4rem;
       font-weight: 600;
       margin-bottom: 1rem;
+      font-size: 3rem;
+
+      @include devices.device(tablet) {
+        font-size: 4rem;
+      }
     }
     p {
-      font-size: 4rem;
+      font-size: 2rem;
       font-weight: 600;
       color: colors.$main;
       margin-top: 0;
+
+      @include devices.device(tablet) {
+        font-size: 4rem;
+      }
     }
   }
 

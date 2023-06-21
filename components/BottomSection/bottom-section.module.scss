@@ -25,9 +25,9 @@
     background: url(../../assets/img/semicircle.svg) no-repeat;
     background-size: contain;
     background-position: top center;
-    @include devices.device(tablet) {
-      height: 80vh;
-    }
+    // @include devices.device(tablet) {
+    //   height: 80vh;
+    // }
   }
 }
 
