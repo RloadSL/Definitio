@@ -13,10 +13,6 @@ $themeFont: "Bai Jamjuree";
 html {
 	font-size: 14px;
 
-	// @include devices.device(lgScreen) {
-	// 	font-size: 14px;
-	// }
-
 	@include devices.device(lgScreen) {
 		font-size: 18px;
 	}

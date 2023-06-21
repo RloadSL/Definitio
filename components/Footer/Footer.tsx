@@ -17,7 +17,7 @@ const Footer = () => {
             <Image src={logo} alt={"Definitio logo"} />
           </div>
           <div className={style.footer_rload}>
-            Design and development by <Link href={"#"}>Rload</Link>
+            Design and development by <Link href='https://rload.es/' target="_blank">Rload</Link>
           </div>
           <div className={style.footer_social}>
             <ul>
@@ -37,14 +37,14 @@ const Footer = () => {
           <div className={style.footer_legal}>
             <ul>
               <li>
-                <Link href={"#"}>Privacy Policy</Link>
+                <Link href={"/privacy-policy"}>Privacy Policy</Link>
               </li>
               <li>
-                <Link href={"#"}>Legal Policy</Link>
+                <Link href={"/legal-notice"}>Legal Notice</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={"#"}>Cookie Policy</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

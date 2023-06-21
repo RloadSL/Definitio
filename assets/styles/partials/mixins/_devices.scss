@@ -29,7 +29,9 @@
       @content;
     }
   }
+}
 
+@mixin customDevice ($breakpoint) {
   @media only screen and (min-width: $breakpoint) {
     @content;
   }
