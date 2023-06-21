@@ -8,44 +8,11 @@ import Image from "next/image";
 import cube1 from "../../../assets/img/cube.svg";
 
 /**
- * Services hero section component
+ * Contact hero section component
  * @returns
  */
 
 const ContactHero = () => {
-  // const { homeAnim } = useComponentAnimations();
-
-  // const decoration = useRef<null | HTMLDivElement>(null);
-  // const textTitle = useRef<null | HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   homeAnim(decoration, textTitle);
-  //   gsap.from(".heroText_animation", {
-  //     x: -80,
-  //     ease: Power2.easeInOut,
-  //     duration: 1,
-  //     opacity: 0
-  //   });
-  //   gsap.to(".cube1", {
-  //     y: -600,
-  //     duration: 6,
-  //     stagger: { each: 0.4, ease: Power2.easeInOut },
-  //     scrollTrigger: {
-  //       trigger: ".cube1",
-  //       scrub: 1
-  //     }
-  //   });
-  //   gsap.to(".cube2", {
-  //     y: -100,
-  //     duration: 5,
-  //     stagger: { each: 0.4, ease: Power2.easeInOut },
-  //     scrollTrigger: {
-  //       trigger: ".cube2",
-  //       scrub: 1
-  //     }
-  //   });
-  // }, []);
-
   return (
     <div className={`${style.hero} hero`}>
       <div className={`${style.cube1} cube1`}>
@@ -58,8 +25,16 @@ const ContactHero = () => {
         <div className={style.hero_text}>
           <article>
             <h1>
-              <FormattedMessage id="Contact Us" />
+              <FormattedMessage
+                id="page.contact.h1"
+                values={{
+                  span: (children) => <span>{children}</span>
+                }}
+              />
             </h1>
+            <p>
+              <FormattedMessage id="page.contact.text" />
+            </p>
           </article>
         </div>
         <div className={style.hero_image}>

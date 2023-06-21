@@ -22,24 +22,9 @@ const Contact: NextPage = () => {
     alert("hola");
   };
 
-  // useEffect(() => {
-  //   gsap.from(".title", {
-  //     y: -80,
-  //     ease: Power2.easeInOut,
-  //     duration: 1,
-  //     opacity: 0
-  //   });
-  //   gsap.from(".text", {
-  //     y: -40,
-  //     ease: Power2.easeInOut,
-  //     duration: 0.6,
-  //     opacity: 0
-  //   });
-  // }, []);
-
   return (
     <div className={`${style.contact} contact`}>
-      <RLDSEOTags title="About" description="" />
+      <RLDSEOTags title="Contact" description="" />
       <div className={`${style.cube1} cube1`}>
         <Image src={cube1} alt={""} />
       </div>
@@ -48,6 +33,9 @@ const Contact: NextPage = () => {
       </div>
       <div className={style.hero}>
         <ContactHero />
+      </div>
+      <div className={style.map}>
+        
       </div>
       <div>
         <div className={style.content}>
