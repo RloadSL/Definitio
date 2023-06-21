@@ -15,7 +15,12 @@ const BottomSection = () => {
         <div className={style.bottomSection_content}>
           <div className={style.flexContainer}>
             <h3>
-              <FormattedMessage id="section.contact.title" />
+              <FormattedMessage
+                id="page.contact.h1"
+                values={{
+                  span: (children) => <span>{children}</span>
+                }}
+              />
             </h3>
             <div className={style.form}>
               <ContactForm />

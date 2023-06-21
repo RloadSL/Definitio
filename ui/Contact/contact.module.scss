@@ -58,7 +58,6 @@
   }
 
   &_decoration {
-
     @include devices.device(tablet) {
       width: 80%;
       margin: auto;
@@ -72,11 +71,66 @@
       width: 40%;
     }
   }
+}
 
-  &_slider {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-image: url(../../assets/img/about/slider_bg.png);
+.location {
+  @extend %maxContent;
+  padding-top: 5rem;
+
+  &_map {
+    width: 60%;
+  }
+
+  &_info {
+    width: 40%;
+    padding-left: 5%;
+
+  }
+
+  iframe {
+    border: none;
+    width: 100%;
+    min-height: 500px;
+    border-radius: 20px;
+  }
+
+  p {
+    span {
+      display: block;
+    }
+  }
+}
+
+.mail {
+  @extend %maxContent;
+  padding-top: 5rem;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  &_text {
+    width: 100%;
+    h3 {
+      text-align: center;
+      width: 100%;
+      color: colors.$palette2;
+      font-size: 4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 4rem;
+      font-weight: 600;
+      color: colors.$main;
+      margin-top: 0;
+    }
+  }
+
+  &_decoration {
+    position: relative;
+    bottom: -15px;
+    width: 100%;
+    max-width: 1100px;
   }
 }
 

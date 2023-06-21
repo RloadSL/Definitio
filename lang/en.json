@@ -83,5 +83,8 @@
   "page.whyus.clients.title":"Our clients",
 
   "page.contact.h1": "Contact <span>Us</span>",
-  "page.contact.text": "Aenean lobortis sapien quis sem euismod, ut fermentum felis pharetra. Quisque lobortis placerat congue. Mauris a finibus sem."
+  "page.contact.text": "Aenean lobortis sapien quis sem euismod, ut fermentum felis pharetra. Quisque lobortis placerat congue. Mauris a finibus sem.",
+  "page.contact.h2": "Our offices",
+  "page.contact.location.text": "<span>Marina Plaza Tower 74,</span><span>Al Marsa Street,</span> <span>Dubai Marina</span><span>Dubai, United Arab Emirates</span>",
+  "page.contact.email":"info@definitio.io"
 }

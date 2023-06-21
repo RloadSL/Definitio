@@ -25,6 +25,7 @@ const ContactHero = () => {
         <div className={style.hero_text}>
           <article>
             <h1>
+              {" "}
               <FormattedMessage
                 id="page.contact.h1"
                 values={{
