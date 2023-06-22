@@ -10,6 +10,7 @@ import cube1 from "../../assets/img/cube.svg";
 import RLDSEOTags from "@/components/RLDSEOTags";
 import AboutSlider from "./AboutSlider";
 import AboutAnim from "./AboutAnim";
+import Link from "next/link";
 
 /**
  * About page structure component.
@@ -59,11 +60,11 @@ const About: NextPage = () => {
                   }}
                 />
               </div>
-              <ButtonApp
-                customClass="button button-line"
-                labelID="btn.label.contact"
-                onClick={onClick}
-              />
+              <Link className="button button-line" href="/contact">
+                <span>
+                  <FormattedMessage id="btn.label.contact" />
+                </span>
+              </Link>
             </article>
           </div>
           <div className={style.about_decoration}>

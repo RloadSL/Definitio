@@ -2,11 +2,10 @@ import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import style from "./whyus-workwithus.module.scss";
 import gsap, { Power2 } from "gsap";
-import ServicesBrandSafetyAnim from "./WhyUsWorkWithUsAnim";
 import Image from "next/image";
 import cube1 from "../../../assets/img/cube.svg";
 import WhyUsWorkWithUsAnim from "./WhyUsWorkWithUsAnim";
-import RLDButton from "@/components/RLDButton";
+import Link from "next/link";
 
 const WhyUsWorkWithUs = () => {
   useEffect(() => {
@@ -21,9 +20,6 @@ const WhyUsWorkWithUs = () => {
     });
   }, []);
 
-  const onClick = () => {
-    console.log('hola')
-  }
   return (
     <section className={`${style.workwithus} workwithus`}>
       <div className={`${style.cube1}`}>
@@ -49,12 +45,12 @@ const WhyUsWorkWithUs = () => {
             </div>
           </article>
           <div className={style.buttonBlock}>
-          <RLDButton
-            customClass="button button-primary"
-            labelID="btn.label.workWithUs"
-            onClick={onClick}
-          />
-        </div>
+            <Link className="button button-primary" href="/contact">
+              <span>
+                <FormattedMessage id="btn.label.workWithUs" />
+              </span>
+            </Link>
+          </div>
         </div>
         <div className={style.workwithus_image}>
           <WhyUsWorkWithUsAnim />

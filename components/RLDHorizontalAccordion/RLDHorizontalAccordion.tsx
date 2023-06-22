@@ -29,19 +29,8 @@ const RLDHorizontalAccordionCard = ({
   const cardAnim = useRef(null);
   const pAnim = useRef(null);
   const mq = gsap.matchMedia();
-  // const { useWindowSize } = useComponentUtils();
-
-  // const isMobile = useWindowSize().width <= 1080 ? true : false;
-
-  // console.log(isMobile)
 
   useEffect(() => {
-    // if(isMobile){
-    //   console.log('es movil')
-    // } else {
-    //   console.log('NO es movil')
-
-    // }
     if (isActive === item.title) {
       mq.add("(max-width: 1079px)", () => {
         gsap.to(cardAnim.current, {

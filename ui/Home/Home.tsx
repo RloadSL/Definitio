@@ -15,10 +15,6 @@ import RLDSEOTags from "@/components/RLDSEOTags";
  */
 
 const Home: NextPage = () => {
-  const onClick = () => {
-    alert("hola");
-  };
-
   return (
     <div className={style.home}>
       <RLDSEOTags
@@ -26,7 +22,7 @@ const Home: NextPage = () => {
         description="Here the SEO description of the page"
       />
       <div className={style.hero_container}>
-        <Hero onClick={onClick} />
+        <Hero />
       </div>
       <div className="page_background">
         <div className={style.whoweare_container}>

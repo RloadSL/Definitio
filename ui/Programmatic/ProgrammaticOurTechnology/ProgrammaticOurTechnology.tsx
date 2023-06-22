@@ -1,19 +1,14 @@
-import ButtonApp from "@/components/RLDButton";
-import useComponentUtils from "@/hooks/component.hooks";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import cube1 from "../../../assets/img/cube.svg";
-import style from "./services-our-technology.module.scss";
+import style from "./programmatic-our-technology.module.scss";
 import gsap, { Power2 } from "gsap";
 import RLDAccordion from "@/components/RLDAccordion";
 import ServicesOurTechnologyAnim from "./ServicesOurTechnologyAnim";
 import Image from "next/image";
+import Link from "next/link";
 
-interface ServicesOurTechnologyProps {}
-
-const ServicesOurTechnology = ({}: ServicesOurTechnologyProps) => {
-  const onClick = () => console.log("click");
-
+const ProgrammaticOurTechnology = () => {
   useEffect(() => {
     gsap.from(".ourTechnologyText_animation", {
       x: 80,
@@ -51,36 +46,27 @@ const ServicesOurTechnology = ({}: ServicesOurTechnologyProps) => {
               />
             </div>
           </article>
-          <RLDAccordion
-            titleID="page.services.ourtechnology.tab1.title"
-            customClass="accordion-1"
-          >
+          <RLDAccordion titleID="page.services.ourtechnology.tab1.title" customClass="accordion-1">
             <p className={style.accordion_text}>
               <FormattedMessage id="page.services.ourtechnology.tab1.text" />
             </p>
           </RLDAccordion>
-          <RLDAccordion
-            titleID="page.services.ourtechnology.tab2.title"
-            customClass="accordion-2"
-          >
+          <RLDAccordion titleID="page.services.ourtechnology.tab2.title" customClass="accordion-2">
             <p className={style.accordion_text}>
               <FormattedMessage id="page.services.ourtechnology.tab2.text" />
             </p>
           </RLDAccordion>
-          <RLDAccordion
-            titleID="page.services.ourtechnology.tab3.title"
-            customClass="accordion-3"
-          >
+          <RLDAccordion titleID="page.services.ourtechnology.tab3.title" customClass="accordion-3">
             <p className={style.accordion_text}>
               <FormattedMessage id="page.services.ourtechnology.tab3.text" />
             </p>
           </RLDAccordion>
           <div className={style.buttonBlock}>
-            <ButtonApp
-              customClass="button button-primary"
-              labelID="btn.label.getStarted"
-              onClick={onClick}
-            />
+            <Link className="button button-primary" href="/contact">
+              <span>
+                <FormattedMessage id="btn.label.getStarted" />
+              </span>
+            </Link>
           </div>
         </div>
       </div>
@@ -88,4 +74,4 @@ const ServicesOurTechnology = ({}: ServicesOurTechnologyProps) => {
   );
 };
 
-export default ServicesOurTechnology;
+export default ProgrammaticOurTechnology;

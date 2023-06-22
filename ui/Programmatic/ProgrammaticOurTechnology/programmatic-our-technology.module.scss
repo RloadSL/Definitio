@@ -60,6 +60,10 @@
     .accordion_text {
       font-size: 1.3rem !important;
       line-height: 2rem !important;
+
+      @include devices.device(smScreen) {
+        text-align: left;
+      }
     }
 
     .buttonBlock {

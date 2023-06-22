@@ -2,21 +2,16 @@ import useComponentAnimations from "@/hooks/animations.hooks";
 import React, { useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";
 import HeroAnim from "./HeroAnim";
-import style from "./services-hero.module.scss";
+import style from "./programmatic-hero.module.scss";
 import gsap, { Power2 } from "gsap";
 import Image from "next/image";
 import cube1 from "../../../assets/img/cube.svg";
 
-interface ServicesHeroProps {
-  onClick: Function;
-}
-
 /**
- * Services hero section component
- * @returns
+ * Programmatic hero section component
  */
 
-const ServicesHero = ({ onClick }: ServicesHeroProps) => {
+const ProgrammaticHero = () => {
   const { homeAnim } = useComponentAnimations();
 
   const decoration = useRef<null | HTMLDivElement>(null);
@@ -84,4 +79,4 @@ const ServicesHero = ({ onClick }: ServicesHeroProps) => {
   );
 };
 
-export default ServicesHero;
+export default ProgrammaticHero;

@@ -30,7 +30,6 @@ const AboutSlider = () => {
           slidesPerView={"auto"}
           pagination={{ clickable: true }}
           onSwiper={(swiper) => setSwiper(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           <div className={style.test}>
             <SwiperSlide>

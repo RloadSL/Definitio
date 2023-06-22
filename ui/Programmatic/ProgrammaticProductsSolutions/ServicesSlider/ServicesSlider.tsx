@@ -33,7 +33,6 @@ const ServicesSlider = ({}: ServicesSliderProps) => {
           slidesPerView={"auto"}
           pagination={{ clickable: true }}
           onSwiper={(swiper) => setSwiper(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <div className={style.slide_card1}>

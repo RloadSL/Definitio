@@ -63,7 +63,6 @@ const useComponentAnimations = () => {
       "-=0.5"
     );
 
-    console.log("entro", tlMobile.reverse());
     tlMobile.reverse();
   };
 

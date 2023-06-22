@@ -1,39 +1,35 @@
-import React, { useEffect } from "react";
+import React from "react";
 import BottomSection from "@/components/BottomSection";
 import { NextPage } from "next";
-import style from "./services.module.scss";
-import ServicesOurTechnology from "./ServicesOurTechnology";
-import ServicesProductsSolutions from "./ServicesProductsSolutions";
-import ServicesBrandSafety from "./ServicesBrandSafety";
-import ServicesHero from "./ServicesHero";
+import style from "./programmatic.module.scss";
+import ProgrammaticBrandSafety from "./ProgrammaticBrandSafety";
+import ProgrammaticHero from "./ProgrammaticHero";
 import RLDSEOTags from "@/components/RLDSEOTags";
 import partnersLogos from "data/partners.json";
 import LogosSection from "@/components/LogosSection";
+import ProgrammaticOurTechnology from "./ProgrammaticOurTechnology";
+import ProgrammaticProductsSolutions from "./ProgrammaticProductsSolutions";
 
 /**
  * Programmatic page structure component.
  */
 
 const Programmatic: NextPage = () => {
-  const onClick = () => {
-    alert("hola");
-  };
-
   return (
     <div className={`${style.services} services`}>
       <RLDSEOTags title="Programmatic" description="" />
       <div className={style.services_hero}>
-        <ServicesHero onClick={onClick} />
+        <ProgrammaticHero />
       </div>
       <div className="page_background2">
         <div className={style.services_ourtechnology}>
-          <ServicesOurTechnology />
+          <ProgrammaticOurTechnology />
         </div>
         <div className={style.services_productsolutions}>
-          <ServicesProductsSolutions />
+          <ProgrammaticProductsSolutions />
         </div>
         <div className={style.services_brandsafety}>
-          <ServicesBrandSafety />
+          <ProgrammaticBrandSafety />
         </div>
         {partnersLogos.length !== 0 && (
           <LogosSection data={partnersLogos} titleID="page.services.partners.title" />

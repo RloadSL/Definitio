@@ -7,16 +7,11 @@ import gsap, { Power2 } from "gsap";
 import Image from "next/image";
 import cube1 from "../../../assets/img/cube.svg";
 
-interface WhyUsHeroProps {
-  onClick: Function;
-}
-
 /**
- * Services hero section component
- * @returns
+ * Why Us hero section component
  */
 
-const WhyUsHero = ({ onClick }: WhyUsHeroProps) => {
+const WhyUsHero = () => {
   const { homeAnim } = useComponentAnimations();
 
   const decoration = useRef<null | HTMLDivElement>(null);

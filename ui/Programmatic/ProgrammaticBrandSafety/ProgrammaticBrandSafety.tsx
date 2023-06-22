@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
-import style from "./services-brand-safety.module.scss";
+import style from "./programmatic-brand-safety.module.scss";
 import gsap, { Power2 } from "gsap";
 import ServicesBrandSafetyAnim from "./ServicesBrandSafetyAnim";
 import Image from "next/image";
 import cube1 from "../../../assets/img/cube.svg";
 
-const ServicesBrandSafety = () => {
+const ProgrammaticBrandSafety = () => {
   useEffect(() => {
     gsap.from(".brandSafety_animation", {
       x: 80,
@@ -55,4 +55,4 @@ const ServicesBrandSafety = () => {
   );
 };
 
-export default ServicesBrandSafety;
+export default ProgrammaticBrandSafety;

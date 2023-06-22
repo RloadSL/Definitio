@@ -1,4 +1,3 @@
-import ButtonApp from "@/components/RLDButton";
 import useComponentAnimations from "@/hooks/animations.hooks";
 import React, { useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";
@@ -7,17 +6,13 @@ import style from "./hero.module.scss";
 import gsap, { Power2 } from "gsap";
 import Image from "next/image";
 import cube1 from "../../../assets/img/cube.svg";
-
-interface HeroProps {
-  onClick: Function;
-}
+import Link from "next/link";
 
 /**
  * Home hero section component
- * @returns
  */
 
-const Hero = ({ onClick }: HeroProps) => {
+const Hero = () => {
   const { homeAnim } = useComponentAnimations();
 
   const homeRef = useRef<null | HTMLDivElement>(null);
@@ -74,7 +69,11 @@ const Hero = ({ onClick }: HeroProps) => {
               <p>
                 <FormattedMessage id="page.home.hero.text" />
               </p>
-              <ButtonApp customClass="button button-line" labelID="page.home.hero.button" onClick={onClick} />
+              <Link className="button button-line" href="/contact">
+                <span>
+                  <FormattedMessage id="page.home.hero.button" />
+                </span>
+              </Link>
             </div>
           </article>
         </div>

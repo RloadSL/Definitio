@@ -22,13 +22,13 @@ const Footer = () => {
           <div className={style.footer_social}>
             <ul>
               <li>
-                <Link href={"#"}>LinkedIn</Link>
+                <Link href={"https://www.linkedin.com/company/definitio/"} target="_blank">LinkedIn</Link>
               </li>
               <li>
-                <Link href={"#"}>Facebook</Link>
+                <Link href={"https://www.facebook.com/profile.php?id=100086211502275"} target="_blank">Facebook</Link>
               </li>
               <li>
-                <Link href={"#"}>Instagram</Link>
+                <Link href={"https://www.instagram.com/definitio.co/"} target="_blank">Instagram</Link>
               </li>
             </ul>
           </div>

@@ -1,16 +1,11 @@
-import ButtonApp from "@/components/RLDButton";
-import useComponentUtils from "@/hooks/component.hooks";
 import React, { useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";
-import style from "./services-products-solutions.module.scss";
+import style from "./programmatic-products-solutions.module.scss";
 import gsap, { Power2 } from "gsap";
 import ServicesSlider from "./ServicesSlider";
+import Link from "next/link";
 
-interface ServicesProductsSolutionsProps {}
-
-const ServicesProductsSolutions = ({}: ServicesProductsSolutionsProps) => {
-  const onClick = () => console.log("click");
-
+const ProgrammaticProductsSolutions = () => {
   useEffect(() => {
     gsap.from(".productSolutions_text", {
       x: -80,
@@ -40,21 +35,19 @@ const ServicesProductsSolutions = ({}: ServicesProductsSolutionsProps) => {
             </div>
           </article>
           <div className={style.buttonBlock}>
-          <ButtonApp
-            customClass="button button-primary"
-            labelID="btn.label.getInTouch"
-            onClick={onClick}
-          />
+            <Link className="button button-primary" href="/contact">
+              <span>
+                <FormattedMessage id="btn.label.getInTouch" />
+              </span>
+            </Link>
+          </div>
         </div>
-        </div>
-
         <div className={`${style.productSolutions_slider} ourTechnologyText_animation`}>
           <ServicesSlider />
         </div>
-
       </div>
     </section>
   );
 };
 
-export default ServicesProductsSolutions;
+export default ProgrammaticProductsSolutions;
