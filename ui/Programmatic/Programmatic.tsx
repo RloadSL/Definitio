@@ -11,7 +11,7 @@ import partnersLogos from "data/partners.json";
 import LogosSection from "@/components/LogosSection";
 
 /**
- * Services page structure component.
+ * Programmatic page structure component.
  */
 
 const Programmatic: NextPage = () => {
