@@ -14,7 +14,7 @@ import LogosSection from "@/components/LogosSection";
  * Services page structure component.
  */
 
-const Services: NextPage = () => {
+const Programmatic: NextPage = () => {
   const onClick = () => {
     alert("hola");
   };
@@ -44,4 +44,4 @@ const Services: NextPage = () => {
   );
 };
 
-export default Services;
+export default Programmatic;
