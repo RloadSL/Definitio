@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./hamburguer-button.module.scss";
 import style from "./hamburguer-button.module.scss";
 
@@ -11,18 +11,11 @@ interface HamburguerButtonProps {
  * @returns 
  */
 
-const HamburguerButton = ({ onClick }: HamburguerButtonProps) => {
-  const [isActive, setActive] = useState<boolean>(false);
-  //console.log(buttonState)
-
-  const handleClick = () => {
-    setActive(prev => !prev);
-    onClick();
-  };
-
+const HamburguerButton = ({ onClick, isActive }: { onClick: Function , isActive:boolean}) => {
+  
   return (
     <div className={style.hamburguerButton}>
-      <button aria-hidden={true} onClick={handleClick} className={isActive ? style.open : ""}>
+      <button aria-hidden={true} onClick={()=>onClick()} className={isActive ? style.open : ""}>
         <span></span>
         <span></span>
         <span></span>

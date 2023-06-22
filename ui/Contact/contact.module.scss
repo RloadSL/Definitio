@@ -18,7 +18,7 @@
   h1 {
     @extend %mainTitle;
     font-size: clamp(4.5vw, 13vw, 4.5rem);
-    line-height: 1rem;
+    // line-height: 1rem;
   }
   .content {
     @extend %maxContent;

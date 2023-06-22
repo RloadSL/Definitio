@@ -97,3 +97,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Integración de formulario de contacto
+En la carpeta pages/api esta el desarrollo de los controladores y servicios necesarios para el envío de email donde se tendrá que modificar los valores por defecto a los valores de la institución correspondiente con su respectiva configuración de SMTP y el email o grupo de emails que decen.
+
+En el componente contactForm se encuentra la integracion con el servicio anteriormente descrito con la función sendForm deonde se pasan por parametros los datos del formulario. 
