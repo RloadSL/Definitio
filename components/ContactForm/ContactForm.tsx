@@ -9,7 +9,7 @@ import { HTTP } from "@/services/http";
 
 
 /***
- * Enviando los datos a la api proporcionada por Carevision
+ * Enviando los datos a la api proporcionada por Definition
  */
 const sendForm = async (body: any) => {
   try {
