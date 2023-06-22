@@ -5,6 +5,23 @@ import InputFormikApp from "../Forms/RLDInputFormik";
 import { FormattedMessage } from "react-intl";
 import style from "./contact-form.module.scss";
 import RLDInputFormik from "../Forms/RLDInputFormik/RLDInputFormik";
+import { HTTP } from "@/services/http";
+
+
+/***
+ * Enviando los datos a la api proporcionada por Carevision
+ */
+const sendForm = async (body: any) => {
+  try {
+    const res = await HTTP.post('/api/contactform', body, {
+      'Content-Type': 'application/json'
+    })
+    return true;
+  } catch (error) {
+    return false;
+  }
+ 
+}
 
 /** Form field validation schema*/
 const validationSchema = Yup.object().shape({
@@ -22,13 +39,13 @@ interface ContactFormProps {}
 
 const ContactForm = ({}: ContactFormProps) => (
   <Formik
-    initialValues={{ name: "", email: "" }}
+    initialValues={{ fullname: "", email: "" , company : "" , phone: ""}}
     validationSchema={validationSchema}
-    onSubmit={(values, { setSubmitting }) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
-        setSubmitting(false);
-      }, 400);
+    onSubmit={async (values, { resetForm }) => {
+        const res = await sendForm(values)
+        console.log(res)
+        //Aqui la respuesta y para integrar algun tipo de loadin
+        //resetForm()
     }}
   >
     {({ isSubmitting }) => (

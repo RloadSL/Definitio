@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import style from "./header.module.scss";
@@ -6,7 +7,7 @@ import logo from "../../assets/img/logo.svg";
 import logoMobile from "../../assets/img/logo_mob.svg";
 import useComponentUtils from "@/hooks/component.hooks";
 import useComponentAnimations from "@/hooks/animations.hooks";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import HamburguerButton from "./HamburguerButton";
 
 /**
@@ -16,9 +17,18 @@ import HamburguerButton from "./HamburguerButton";
 const Header = () => {
   const { useScrollDistance, useWindowSize } = useComponentUtils();
   const { mobileNavAnimation, toggleMobileNav } = useComponentAnimations();
+  
+  const [isActive, setActive] = useState<boolean>(false);
+  const [scroll, setScroll] = useState<boolean>(false);
 
   useEffect(() => {
     mobileNavAnimation();
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 100);
+    });
   }, []);
 
   //checking mobile
@@ -27,12 +37,11 @@ const Header = () => {
   //adding the formatted label Array for the top menu translation JSON
   const menuLabelIDs: Array<string> = ["services", "why-us", "about", "contact"];
 
-  const [scroll, setScroll] = useState<boolean>(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 100);
-    });
-  }, []);
+  const handleToggle = ()=>{
+    toggleMobileNav();
+    setActive(pre => !pre);
+  }
+  
 
   return (
     <div
@@ -54,7 +63,7 @@ const Header = () => {
               <Image src={isMobile ? logoMobile : logo} alt={"Definitio logo"} />
             </div>
           </Link>
-          {isMobile && <HamburguerButton onClick={toggleMobileNav} />}
+          {isMobile && <HamburguerButton isActive={isActive} onClick={handleToggle} />}
         </div>
 
         <nav className={style.menu}>
@@ -62,7 +71,7 @@ const Header = () => {
             {menuLabelIDs.map((item, index: number) => {
               return (
                 <li className={`${style.navigation_menu__item} li-menu`} key={index}>
-                  <Link href={`/${item}`} className={style[item]} onClick={toggleMobileNav}>
+                  <Link href={`/${item}`} className={style[item]} onClick={handleToggle}>
                     <span>
                       <FormattedMessage id={`topmenu.item.label.${item}`} />
                     </span>
