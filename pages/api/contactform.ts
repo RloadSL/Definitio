@@ -13,7 +13,7 @@ export default function handlerSendMail(
   const template = buildTemplate('contacto', req.body)
   sendMailer(['hola@rload.com', 'jose@rload.es'], 'Contact form carevision', template)
   .then(()=>{
-    res.status(200)
+    res.status(200).end()
   })
   .catch(()=>{
     res.status(500).end()
