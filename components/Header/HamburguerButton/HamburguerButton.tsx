@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import "./hamburguer-button.module.scss";
 import style from "./hamburguer-button.module.scss";
 
+interface HamburguerButtonProps {
+  onClick: Function
+}
+
 /**
  * Button component for the mobile menu
  * @returns 
  */
 
-const HamburguerButton = ({ onClick }: { onClick: Function }) => {
+const HamburguerButton = ({ onClick }: HamburguerButtonProps) => {
   const [isActive, setActive] = useState<boolean>(false);
+  //console.log(buttonState)
 
   const handleClick = () => {
-    setActive(!isActive);
+    setActive(prev => !prev);
     onClick();
   };
 

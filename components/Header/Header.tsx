@@ -25,7 +25,7 @@ const Header = () => {
   const isMobile = useWindowSize().width <= 768 ? true : false;
 
   //adding the formatted label Array for the top menu translation JSON
-  const menuLabelIDs: Array<string> = ["services", "why-us", "about", "contact"];
+  const menuLabelIDs: Array<string> = ["programmatic", "why-us", "about", "contact"];
 
   const [scroll, setScroll] = useState<boolean>(false);
   useEffect(() => {
@@ -33,6 +33,10 @@ const Header = () => {
       setScroll(window.scrollY > 100);
     });
   }, []);
+
+  const handleMobileAnimation = () => {
+    toggleMobileNav();
+  }
 
   return (
     <div

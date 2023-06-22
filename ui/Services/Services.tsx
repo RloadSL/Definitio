@@ -21,7 +21,7 @@ const Services: NextPage = () => {
 
   return (
     <div className={`${style.services} services`}>
-      <RLDSEOTags title="Services" description="" />
+      <RLDSEOTags title="Programmatic" description="" />
       <div className={style.services_hero}>
         <ServicesHero onClick={onClick} />
       </div>
