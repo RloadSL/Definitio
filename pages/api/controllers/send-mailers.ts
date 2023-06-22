@@ -2,7 +2,7 @@ import { getTransport } from './configTransport'
 import * as path from 'path'
 import * as fs from 'fs'
 
-export type TEMPLATES =  'contacto'
+export type TEMPLATES =  'contact'
 export type BUILDTEMPLATE = {template: string}
 /**
  * Parsea los template en html previamente configurados para para su correspondiente funcionalidad
