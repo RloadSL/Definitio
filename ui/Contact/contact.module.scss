@@ -85,14 +85,14 @@
   padding-left: 1rem;
   padding-right: 1rem;
 
-  @include devices.device(xlgScreen) {
+  @include devices.device(smScreen) {
     flex-direction: row;
   }
 
   &_map {
     width: 100%;
 
-    @include devices.device(xlgScreen) {
+    @include devices.device(smScreen) {
       width: 60%;
     }
   }
@@ -100,11 +100,13 @@
   &_info {
     width: 100%;
     padding-top: 2rem;
+    text-align: center;
 
-    @include devices.device(xlgScreen) {
+    @include devices.device(smScreen) {
       width: 60%;
       padding-top: 0;
       padding-left: 5%;
+      text-align: left;
     }
 
   }
@@ -165,6 +167,14 @@
     bottom: -15px;
     width: 100%;
     max-width: 1100px;
+
+    @include devices.device(smScreen) {
+      width: 60%;
+    }
+
+    @include devices.device(xlgScreen) {
+      width: 100%;
+    }
   }
 }
 

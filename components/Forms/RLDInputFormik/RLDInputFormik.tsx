@@ -94,7 +94,8 @@ const RLDInputFormik = ({
             type={type}
             disabled={disabled}
             name={name}
-            autoComplete={"autocomplete"}
+            id={name}
+            autoComplete={"off"}
             placeholder={placeholder}
             step={0.01}
             onBlur={() => {
