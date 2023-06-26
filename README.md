@@ -2,22 +2,23 @@
 
 #### Definitio
 
-Website corporativo para Definitio creado con **Next.js, Typescript y Sass.** 
-Las animaciones se han manejado con la librería **Gsap**
-Los formulario utlizan** Formik y Yup** para validación
-Las traducciones se han implementado a través de** React-intl**
-Los sliders de la aplicación utilizan **Swipper**
+Website created with **Next.js, Typescript and SASS.** 
+
+## Libraries and resources of the project
+### UI
+**Gsap** for animations
+**Swipper** for sliders
+
+### Logic
+**Formik** for form implementation
+**Yup** for form implementation
+**React-intl** for translations
+**Axios** for https requets
 
 ## Project Status
 El proyecto está **completamente maquetado** y revisado siguiendo las recomendaciones de mobile-first .
-**Sí tiene integrado react-tl **para la futura integración de tradiucciones.
-**No incluye la operatividad del formulario **pero sí tiene integrado Formik para facilitar esta tarea.
-
 
 ## Installation and Setup Instructions
-
-#### Example:  
-
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
 Installation:
@@ -32,7 +33,7 @@ To Visit App:
 
 `localhost:3000/`  
 
-## Estructura principal del proyecto
+## Main folders structure of the project
 
 #### /assets
 
@@ -45,7 +46,7 @@ A su vez en la carpeta** styles/** se incluyen los **archivos scss** para el des
 
 #### /components
 
-Incluye los componentes de ámbito global de nuestra aplicación que puedan ser llamados desde cualquier otro componente principal
+Incluye los componentes de ámbito global de nuestra aplicación.
 
 #### /hooks
 
@@ -53,7 +54,7 @@ Incluye tanto los hooks de operatividad como los hooks para aquellas animaciones
 
 #### /lang
 
-**Incluye los archivos en formato json para las traducciones, cada idioma debe ir en un json separado (es.json, en.json).** Cualquier texto de la aplicación suceptible de ser traducido debe ser incluido en su respectivo json de idioma para posteriormente poder ser llamado desde el componente.
+**Incluye los archivos en formato json para las traducciones, cada idioma debe ir en un json separado (es.json, en.json).** Cualquier texto de la aplicación susceptible de ser traducido debe ser incluido en su respectivo json de idioma para posteriormente poder ser llamado desde el componente.
 
 #### /pages
 
@@ -83,6 +84,11 @@ El **componente principal** unicamente renderiza los componentes de cada secció
 El **componente de sección** incluye el **componente de gráficos animados y los textos** de esa sección. Los textos de la sección se animan desde este componente.
 El **componente de gráficos** únicamente renderiza la maquetación de las imágenes y las animaciones de estas
 
+## Integración de formulario de contacto
+En la carpeta pages/api esta el desarrollo de los controladores y servicios necesarios para el envío de email donde se tendrá que modificar los valores por defecto a los valores del cliente con su respectiva configuración de SMTP y el email o grupo de emails que necesiten.
+
+En el componente contactForm se encuentra la integracion con el servicio anteriormente descrito, con la función sendForm donde se pasan por parametros los datos del formulario. 
+
 ## NEXT js Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -98,7 +104,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Integración de formulario de contacto
-En la carpeta pages/api esta el desarrollo de los controladores y servicios necesarios para el envío de email donde se tendrá que modificar los valores por defecto a los valores de la institución correspondiente con su respectiva configuración de SMTP y el email o grupo de emails que decen.
-
-En el componente contactForm se encuentra la integracion con el servicio anteriormente descrito con la función sendForm deonde se pasan por parametros los datos del formulario. 
