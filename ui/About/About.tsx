@@ -17,10 +17,6 @@ import Link from "next/link";
  */
 
 const About: NextPage = () => {
-  const onClick = () => {
-    alert("hola");
-  };
-
   useEffect(() => {
     gsap.from(".title", {
       y: -80,

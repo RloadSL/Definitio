@@ -23,21 +23,20 @@ interface RLDInputFormikProps {
 }
 
 /**
- * Función principal del componente de la aplicación Input: Text | password | number | email del formulario
- * @param  labelID Key del json de traducción
- * @param  onChange Función para controlar el onchange de los inputs
- * @param  onBlur Función para controlar la pérdida del foco en los inputs
- * @param  type Tipo de campo de formulario
- * @param  error Error del campo de formulario
- * @param  placeholder Placeholder del campo
- * @param  name Name del campo
- * @param  inputStyle Estilo CSS del input default | code
- * @param  maxLength Longitud de entrada
- * @param inputStyle Estilo del input "default" | "code";
- * @param icon Icono del input si lo tiene;
- * @param helper Texto de ayuda
- * @param value Valor del input;
- * @param disabled Prop para deshabilitar el input en caso necesario
+ * * Main function of the application's Input component: Text | password | number | form email
+ * @param  labelID JSON translation ID
+ * @param  onChange Control input change
+ * @param  onBlur Control input focus
+ * @param  type Input type
+ * @param  error Input Error
+ * @param  placeholder Input placeholder
+ * @param  name Input name
+ * @param  inputStyle Input Style default | code
+ * @param  maxLength Input text length
+ * @param icon Input icon;
+ * @param helper Input information help text
+ * @param value Input value;
+ * @param disabled Enable / Disable Input
  */
 
 const RLDInputFormik = ({

@@ -1,231 +1,198 @@
-import React, { useEffect, useState } from 'react'
-import style from './cookie-advicer.module.scss'
-import CookieSwitcher from './CookieSwitcher'
-import { deleteCookie, removeCookies } from 'cookies-next'
+import React, { useEffect, useState } from "react";
+import style from "./cookie-advicer.module.scss";
+import CookieSwitcher from "./CookieSwitcher";
+import { deleteCookie, removeCookies } from "cookies-next";
+import Link from "next/link";
 
 interface CookieAdvicerProps {
-  cookies_items: COOKIES_ITEMS
+  cookies_items: COOKIES_ITEMS;
 }
 
 export interface COOKIES_ITEMS {
-  social: { item: string; description: string }[]
-  advertising: { item: string; description: string }[]
-  analytics: { item: string; description: string }[]
-  personalized: { item: string; description: string }[]
+  social: { item: string; description: string }[];
+  advertising: { item: string; description: string }[];
+  analytics: { item: string; description: string }[];
+  personalized: { item: string; description: string }[];
 }
 
-type cookies_keys = 'social' | 'advertising' | 'analytics' | 'personalized'
+type cookies_keys = "social" | "advertising" | "analytics" | "personalized";
 
 const CookieAdvicer = ({ cookies_items }: CookieAdvicerProps) => {
-  const [isVisibleModal, setIsVisibleModal] = useState<Boolean>(false)
-  const [isAdviceOpen, setIsAdviceOpen] = useState<Boolean>(true)
+  const [isVisibleModal, setIsVisibleModal] = useState<Boolean>(false);
+  const [isAdviceOpen, setIsAdviceOpen] = useState<Boolean>(true);
   const [switcherState, setSwitcherState] = useState<any>({
     social: true,
     advertising: true,
     analytics: true,
     personalized: true
-  })
+  });
 
   useEffect(() => {
-    localStorage.setItem('switcherState', JSON.stringify(switcherState))
-  }, [switcherState])
+    localStorage.setItem("switcherState", JSON.stringify(switcherState));
+  }, [switcherState]);
 
   useEffect(() => {
-    const stSwitcherState = localStorage.getItem('switcherState')
+    const stSwitcherState = localStorage.getItem("switcherState");
 
     if (stSwitcherState) {
-      setSwitcherState(JSON.parse(stSwitcherState))
-      handleConfirmation(JSON.parse(stSwitcherState))
+      setSwitcherState(JSON.parse(stSwitcherState));
+      handleConfirmation(JSON.parse(stSwitcherState));
     }
-  }, [])
+  }, []);
 
   /**
-   * Abre el modal de gestion de cookies
+   * Open cookie's modal configurator
    */
   const handlePreferences = () => {
-    setIsVisibleModal(true)
-  }
+    setIsVisibleModal(true);
+  };
   /**
-   * Acepta todas las cookies cookies
+   * Accept all cookies
    */
   const handleAcceptClose = () => {
-    setIsAdviceOpen(false)
-    localStorage.setItem('cookies_compliance', 'accepted')
-  }
+    setIsAdviceOpen(false);
+    localStorage.setItem("cookies_compliance", "accepted");
+  };
   /**
-   * Guarda la configuración de cookies del cliente
+   * Save the client's cookie configuration
    */
   const handleConfirmation = (stSwitcherState?: any, closeModal?: boolean) => {
-    closeModal && setIsAdviceOpen(false)
+    closeModal && setIsAdviceOpen(false);
 
-    const state = stSwitcherState || switcherState
+    const state = stSwitcherState || switcherState;
 
-    Object.keys(state).forEach(keys => {
+    Object.keys(state).forEach((keys) => {
       if (!state[keys]) {
-        cookies_items[keys as cookies_keys].forEach(cookie => {
-          deleteCookie(cookie.item)
-        })
+        cookies_items[keys as cookies_keys].forEach((cookie) => {
+          deleteCookie(cookie.item);
+        });
       }
-    })
-  }
+    });
+  };
   /**
-   * Borra todas las cookies menos las necesarias
+   * Remove non necessary cookies
    */
   const handleReject = () => {
-    setIsAdviceOpen(false)
-    Object.values(cookies_items).forEach(value => {
+    setIsAdviceOpen(false);
+    Object.values(cookies_items).forEach((value) => {
       value.forEach((cookie: any) => {
-        removeCookies(cookie.item)
-      })
-    })
-  }
+        removeCookies(cookie.item);
+      });
+    });
+  };
 
   const handleToggle = (switcherState: any) => {
-    setSwitcherState((prev: any) => ({ ...prev, ...switcherState }))
-  }
+    setSwitcherState((prev: any) => ({ ...prev, ...switcherState }));
+  };
   return (
     isAdviceOpen && (
       <div className={style.cookieAdvicer}>
         <div
           className={style.cookieAdvicer_banner}
-          style={isVisibleModal ? { display: 'none' } : { display: 'block' }}
+          style={isVisibleModal ? { display: "none" } : { display: "block" }}
         >
           <div className={style.content}>
             <p>
-              Utilizamos cookies propias y de terceros y tecnologías similares
-              para mejorar nuestro sitio, analizar nuestro tráfico, proporcionar
-              funcionalidades para redes sociales y personalizar el contenido y
-              la publicidad en función de tus hábitos de navegación, que aceptas
-              haciendo clic en el botón Aceptar. Más información sobre nuestra.
+              We use our own and third-party cookies and similar technologies to improve our site,
+              analyze our traffic, provide features for social networks and personalize content and
+              advertising based on your browsing habits, which you accept by clicking the Accept
+              button. More information about our{" "}
+              <Link href={"/privacy-policy"}> Cookie Policy</Link>
             </p>
             <div className={style.actions}>
               <button
                 className={style.button_transparent}
-                type='button'
+                type="button"
                 onClick={handlePreferences}
               >
-                Gestionar preferencias
+                Manage preferences
               </button>
-              <button
-                className={style.button_primary}
-                type='button'
-                onClick={handleAcceptClose}
-              >
-                Aceptar y cerrar
+              <button className={style.button_primary} type="button" onClick={handleAcceptClose}>
+                Accept and confirm
               </button>
             </div>
           </div>
         </div>
         {isVisibleModal && (
           <div className={style.cookieAdvicer_modal}>
-            <button
-              className={style.close}
-              type='button'
-              onClick={() => setIsVisibleModal(false)}
-            >
-              <span className='only-readers'>cerrar</span>
+            <button className={style.close} type="button" onClick={() => setIsVisibleModal(false)}>
+              <span className="only-readers">cerrar</span>
             </button>
             <div className={style.content}>
-              <h3>Preferencias de privacidad</h3>
+              <h3>Privacy preferences</h3>
               <p>
-                Cuando visita cualquier sitio web, el mismo podría obtener o
-                guardar información en su navegador, generalmente mediante el
-                uso de cookies. Esta información puede ser acerca de usted, sus
-                preferencias o su dispositivo, y se usa principalmente para que
-                el sitio funcione según lo esperado. Por lo general, la
-                información no lo identifica directamente, pero puede
-                proporcionarle una experiencia web más personalizada. Ya que
-                respetamos su derecho a la privacidad, usted puede escoger no
-                permitirnos usar ciertas cookies. Haga clic en los encabezados
-                de cada categoría para saber más y cambiar nuestras
-                configuraciones predeterminadas. Sin embargo, el bloqueo de
-                algunos tipos de cookies puede afectar su experiencia en el
-                sitio y los servicios que podemos ofrecer.
+                When you visit any website, it may obtain or save information in your browser,
+                usually through the use of cookies. This information may be about you, your
+                preferences or your device, and is mainly used for you to the site works as
+                expected. Usually the information does not directly identify you, but may provide
+                you with a more personalized web experience. Given that we respect your right to
+                privacy, you can choose not to allow us to use certain cookies. Click on the headers
+                of each category to learn more and change our default settings. However, the
+                blocking of Some types of cookies may affect your experience on the site and the
+                services we can offer.
               </p>
               <div className={style.cookieInfo}>
                 <div className={style.cookieInfo_block}>
                   <div className={style.top}>
-                    <h4>Estrictamente necesarias</h4>
+                    <h4>Strictly necessary</h4>
                     <CookieSwitcher
                       handleToggle={handleToggle}
                       isDisabled={true}
-                      inputName='necessary'
+                      inputName="necessary"
                     />
                   </div>
                   <p>
-                    Estas cookies son estrictamente necesarias para el
-                    funcionamiento del Sitio Web. Permiten la navegación del
-                    Usuario a través del Sitio Web así como el uso de las
-                    distintas opciones y servicios que el Sitio Web le ofrece.
-                    Sin ellas, ciertas funcionalidades del Sitio Web no
-                    operarían correctamente.
+                    These cookies are strictly necessary for the operation of the Website. They
+                    allow the User to navigate through the Website as well as the use of the
+                    different options and services that the Website offers. Without them, certain
+                    features of the Website would not operate correctly.
                   </p>
                 </div>
                 <div className={style.cookieInfo_block}>
                   <div className={style.top}>
-                    <h4>Analíticas</h4>
-                    <CookieSwitcher
-                      handleToggle={handleToggle}
-                      inputName='analytics'
-                    />
+                    <h4>Analytics</h4>
+                    <CookieSwitcher handleToggle={handleToggle} inputName="analytics" />
                   </div>
                   <p>
-                    Estas cookies de terceros almacenan información sobre cómo
-                    los Usuarios interactúan con el contenido del Sitio Web,
-                    sobre su procedencia, sobre el navegador que están
-                    utilizando y el tiempo que permanecen en cada página, entre
-                    otra información. Se utilizan para medir audiencias y para
-                    elaborar estadísticas.
+                    These third-party cookies store information about how Users interact with the
+                    content of the Website, about its origin, about the browser they are using and
+                    the time they spend on each page, among other information. They are used to
+                    measure audiences and to compile statistics.
                   </p>
                 </div>
                 <div className={style.cookieInfo_block}>
                   <div className={style.top}>
-                    <h4>Redes Sociales</h4>
-                    <CookieSwitcher
-                      handleToggle={handleToggle}
-                      inputName='social'
-                    />
+                    <h4>Social networks</h4>
+                    <CookieSwitcher handleToggle={handleToggle} inputName="social" />
                   </div>
                   <p>
-                    Estas cookies de terceros almacenan información sobre cómo
-                    los Usuarios interactúan con el contenido del Sitio Web,
-                    sobre su procedencia, sobre el navegador que están
-                    utilizando y el tiempo que permanecen en cada página, entre
-                    otra información. Se utilizan para medir audiencias y para
-                    elaborar estadísticas.
+                    These third-party cookies store information about how Users interact with the
+                    content of the Website, about its origin, about the browser they are using and
+                    the time they spend on each page, among other information. They are used to
+                    measure audiences and to compile statistics.
                   </p>
                 </div>
                 <div className={style.cookieInfo_block}>
                   <div className={style.top}>
-                    <h4>Publicidad personalizada</h4>
-                    <CookieSwitcher
-                      handleToggle={handleToggle}
-                      inputName='advertising'
-                    />
+                    <h4>Personalized advertising</h4>
+                    <CookieSwitcher handleToggle={handleToggle} inputName="advertising" />
                   </div>
                   <p>
-                    Estas cookies de terceros almacenan información
-                    comportamental del Usuario, obtenida a partir del análisis
-                    de sus hábitos de navegación, y nos permiten a nosotros o a
-                    terceros mostrar publicidad acorde al comportamiento e
-                    intereses del Usuario, o rastrear el comportamiento y la
-                    eficacia de campañas de publicidad.
+                    These third-party cookies store behavioral information of the User, obtained
+                    from the analysis of their browsing habits, and allow us or third parties to
+                    display advertising according to the User&apos;s behavior and interests, or
+                    track the behavior and effectiveness of advertising campaigns.
                   </p>
                 </div>
                 <div className={style.cookieInfo_block}>
                   <div className={style.top}>
-                    <h4>Cookies de personalización</h4>
-                    <CookieSwitcher
-                      handleToggle={handleToggle}
-                      inputName='personalized'
-                    />
+                    <h4>Personalization cookies</h4>
+                    <CookieSwitcher handleToggle={handleToggle} inputName="personalized" />
                   </div>
                   <p>
-                    Estas cookies recopilan información sobre la forma en que
-                    los Usuarios utilizan el Sitio Web y la recuerdan para
-                    permitir que el acceso del Usuario al Sitio Web se haga de
-                    tal manera que la experiencia del Usuario sea única para él
-                    y distinta a la de otros Usuarios.
+                    These cookies collect information about the way in which Users use the Website
+                    and remember it to allow the User to access the Website in such a way that the
+                    User&apos;s experience is unique for him and different from that of other Users.
                   </p>
                 </div>
               </div>
@@ -233,17 +200,20 @@ const CookieAdvicer = ({ cookies_items }: CookieAdvicerProps) => {
               <div className={style.actions}>
                 <button
                   className={style.button_transparent}
-                  type='button'
+                  type="button"
                   onClick={() => handleReject()}
                 >
-                  Rechazarlas todas
+                  Reject all
                 </button>
                 <button
                   className={style.button_primary}
-                  type='button'
-                  onClick={() => {handleConfirmation(null,true); handleAcceptClose()}}
+                  type="button"
+                  onClick={() => {
+                    handleConfirmation(null, true);
+                    handleAcceptClose();
+                  }}
                 >
-                  Confirmar preferencias
+                  Confirm preferences
                 </button>
               </div>
             </div>
@@ -251,7 +221,7 @@ const CookieAdvicer = ({ cookies_items }: CookieAdvicerProps) => {
         )}
       </div>
     )
-  )
-}
+  );
+};
 
-export default CookieAdvicer
+export default CookieAdvicer;

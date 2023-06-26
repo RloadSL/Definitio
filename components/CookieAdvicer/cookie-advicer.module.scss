@@ -1,7 +1,12 @@
-/* @use "../../styles/partials/mixins/devices" as devices;
-@use "../../styles/partials/variables/colors" as colors;
-@use "../../styles/partials/variables/utils" as utils;
-@use "../../styles/partials/placeholders"; */
+// @use "../../assets/" as devices;
+// @use "../../styles/partials/variables/colors" as colors;
+// @use "../../styles/partials/variables/utils" as utils;
+// @use "../../styles/partials/placeholders";
+
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
 
 .cookieAdvicer {
   background: rgba(black, 0.3);
@@ -12,6 +17,10 @@
   left: 0;
   z-index: 999;
   backdrop-filter: blur(5px);
+  p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
 
   button:not(.close) {
     padding: 18px;
@@ -44,18 +53,18 @@
       padding: 20px;
       font-size: 0.9rem;
 
-     /*  @include devices.device(smScreen) {
+      @include devices.device(smScreen) {
         width: 60%;
         display: flex;
         font-size: 1rem;
-      } */
+      }
 
       p {
         width: 100%;
 
-        /* @include devices.device(smScreen) {
+        @include devices.device(smScreen) {
           width: 90%;
-        } */
+        }
       }
     }
     .actions {
@@ -67,10 +76,10 @@
       margin: auto;
       flex-shrink: 0;
 
-      /* @include devices.device(smScreen) {
+      @include devices.device(smScreen) {
         width: 200px;
         margin-left: 20px;
-      } */
+      }
     }
   }
 
@@ -87,10 +96,10 @@
     border-radius: 20px;
     padding: 12px;
 
-    /* @include devices.device(smScreen) {
+    @include devices.device(smScreen) {
       padding: 40px;
       max-width: 700px;
-    } */
+    }
 
     .close {
       background: url(./close.svg) no-repeat;
@@ -110,9 +119,9 @@
       overflow: auto;
       height: 500px;
 
-      /* @include devices.device(smScreen) {
+      @include devices.device(smScreen) {
         height: 700px;
-      } */
+      }
     }
 
     .actions {
@@ -124,7 +133,6 @@
       /* @include devices.device(smScreen) {
       } */
     }
-
   }
 }
 
@@ -145,7 +153,7 @@
   }
 
   &_primary {
-    /* background-color: colors.$main; */
+    background-color: colors.$main;
     color: white !important;
   }
 }

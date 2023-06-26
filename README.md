@@ -5,18 +5,28 @@
 Website created with **Next.js, Typescript and SASS.** 
 
 ## Libraries and resources of the project
+
+
 ### UI
+
 **Gsap** for animations
+
 **Swipper** for sliders
 
 ### Logic
+
+
 **Formik** for form implementation
+
 **Yup** for form implementation
+
 **React-intl** for translations
+
 **Axios** for https requets
 
 ## Project Status
-El proyecto está **completamente maquetado** y revisado siguiendo las recomendaciones de mobile-first .
+
+El proyecto está **maquetado** y revisado siguiendo las recomendaciones de mobile-first .
 
 ## Installation and Setup Instructions
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
@@ -50,11 +60,11 @@ Incluye los componentes de ámbito global de nuestra aplicación.
 
 #### /hooks
 
-Incluye tanto los hooks de operatividad como los hooks para aquellas animaciones que se utilizan en varios componentes
+Incluye los hooks del proyecto
 
 #### /lang
 
-**Incluye los archivos en formato json para las traducciones, cada idioma debe ir en un json separado (es.json, en.json).** Cualquier texto de la aplicación susceptible de ser traducido debe ser incluido en su respectivo json de idioma para posteriormente poder ser llamado desde el componente.
+**Incluye los archivos en formato json para las traducciones, cada idioma debe ir en un json separado (es.json, en.json).** Cualquier texto de la aplicación susceptible de ser traducido (salvo el texto de las cookies que está incluido en el propio componente) debe ser añadido en su respectivo json de idioma para posteriormente poder ser llamado desde el componente. 
 
 #### /pages
 
@@ -62,14 +72,16 @@ Componentes de enrutado de nuestra aplicación
 
 #### /ui
 
-Layout de los componentes de enrutado
+UI Layout de lo componentes de página
 
 ## Estructura principal de un componente
 
 Debido a la complejidad de las animaciones y a la estructura completamente única de los bloques gráficos y de texto, estos se han maquetado siguiendo esta estructura para facilitar la edición futura:
 
 -/PageFolder (parent component)
+
 ---/SectionFolder (private component)
+
 -----/SectionAnimationFolder (private component)
 
 
@@ -79,7 +91,7 @@ Home (page)
 ------HomeHero (section)
 ----------HeroAnim (graphics animation)
 
-Cada componente incluye su archivo index de exportación y sus estilos respectivos
+Cada componente incluye su archivo index de exportación y sus estilos respectivos.
 El **componente principal** unicamente renderiza los componentes de cada sección de contenidos.
 El **componente de sección** incluye el **componente de gráficos animados y los textos** de esa sección. Los textos de la sección se animan desde este componente.
 El **componente de gráficos** únicamente renderiza la maquetación de las imágenes y las animaciones de estas
@@ -88,6 +100,13 @@ El **componente de gráficos** únicamente renderiza la maquetación de las imá
 En la carpeta pages/api esta el desarrollo de los controladores y servicios necesarios para el envío de email donde se tendrá que modificar los valores por defecto a los valores del cliente con su respectiva configuración de SMTP y el email o grupo de emails que necesiten.
 
 En el componente contactForm se encuentra la integracion con el servicio anteriormente descrito, con la función sendForm donde se pasan por parametros los datos del formulario. 
+
+## Cookies
+Para la configuracion de las cookies es necesario incluirlas en el archivo /constants/cookies_item.ts. Se encuentran categorizadas y se pondrá el nombre de la cookie y una breve descripcción de su objetivo EJ:
+social: {
+  item:"FACEBOOK", description: "Necesario para el tracking de facebook" 
+}
+Cualquier texto que se quiera modificar o bloque de contenido que el cliente quiera omitir debe gestionarse directamente desde el código del componente.
 
 ## NEXT js Learn More
 
@@ -103,14 +122,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-
-En el componente contactForm se encuentra la integracion con el servicio anteriormente descrito con la función sendForm deonde se pasan por parametros los datos del formulario. 
-
-## COOKIES
-Para la configuracion de las cookies es necesario plasmarlas en el archivo /constants/cookies_ítem.ts de se encuentran categorizadas y se pondra el nombre de la cookie y una breve descripcción de su objetivo EJ:
-social: {
-  item:"FACEBOOK", description: "Necesario pra el tracking de facebook" 
-}
 
 
