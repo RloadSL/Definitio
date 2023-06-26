@@ -103,10 +103,17 @@ En el componente contactForm se encuentra la integracion con el servicio anterio
 
 ## Cookies
 Para la configuracion de las cookies es necesario incluirlas en el archivo /constants/cookies_item.ts. Se encuentran categorizadas y se pondrá el nombre de la cookie y una breve descripcción de su objetivo EJ:
-social: {
-  item:"FACEBOOK", description: "Necesario para el tracking de facebook" 
-}
+
+`social: {
+  item:"FACEBOOK", description: "Facebook cookie" 
+}`
+
 Cualquier texto que se quiera modificar o bloque de contenido que el cliente quiera omitir debe gestionarse directamente desde el código del componente.
+
+## Partners block
+El proyecto incluye un componente de partners que actualmente se encuentra comentado. Se puede mostrar en cualquier página y añadir cualquier logotipo por medio del json de configuración ubicado en
+
+ `/data/partners.json`
 
 ## NEXT js Learn More
 
@@ -122,5 +129,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-
