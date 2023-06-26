@@ -11,7 +11,7 @@ export default function handlerSendMail(
   res: NextApiResponse<Data>
 ) {
   const template = buildTemplate('contact', req.body)
-  sendMailer(['jose@rload.es','hola@rload.es'], 'Contact form Definitio', template)
+  sendMailer(['hola@rload.es'], 'Contact form Definitio', template)
   .then(()=>{
     res.status(200).end()
   })

@@ -104,3 +104,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+
+En el componente contactForm se encuentra la integracion con el servicio anteriormente descrito con la función sendForm deonde se pasan por parametros los datos del formulario. 
+
+## COOKIES
+Para la configuracion de las cookies es necesario plasmarlas en el archivo /constants/cookies_ítem.ts de se encuentran categorizadas y se pondra el nombre de la cookie y una breve descripcción de su objetivo EJ:
+social: {
+  item:"FACEBOOK", description: "Necesario pra el tracking de facebook" 
+}
+
+

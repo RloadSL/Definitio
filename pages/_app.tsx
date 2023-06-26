@@ -6,6 +6,9 @@ import es from '../lang/es.json'
 import en from '../lang/en.json'
 import '../assets/styles/globals.scss'
 import Header from '@/components/Header'
+import CookieAdvicer from '@/components/CookieAdvicer'
+import { useEffect, useState } from 'react'
+import { cookies_items } from '@/constant/cookies_items'
 
 
 const messages: any = {
@@ -23,6 +26,12 @@ const getDirection = (locale: string) => {
 
 export default function App({ Component, pageProps }: AppProps) {
   const locale: any = useRouter().locale || 'en';
+  const [cookies_compliance, setCookies_compliance] = useState('accepted')
+
+  useEffect(() => {
+    const st_cookie =  localStorage.getItem('cookies_compliance')
+    setCookies_compliance(st_cookie || 'declined')
+  }, [])
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
@@ -34,6 +43,8 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Header/>
       <Component {...pageProps} dir={getDirection(locale)}/>
+      {(!cookies_compliance  || cookies_compliance === 'declined') && <CookieAdvicer cookies_items={cookies_items}/>}
+
     </IntlProvider>
   )
 }
