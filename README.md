@@ -102,3 +102,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 En la carpeta pages/api esta el desarrollo de los controladores y servicios necesarios para el envío de email donde se tendrá que modificar los valores por defecto a los valores de la institución correspondiente con su respectiva configuración de SMTP y el email o grupo de emails que decen.
 
 En el componente contactForm se encuentra la integracion con el servicio anteriormente descrito con la función sendForm deonde se pasan por parametros los datos del formulario. 
+
+## COOKIES
+Para la configuracion de las cookies es necesario plasmarlas en el archivo /constants/cookies_ítem.ts de se encuentran categorizadas y se pondra el nombre de la cookie y una breve descripcción de su objetivo EJ:
+social: {
+  item:"FACEBOOK", description: "Necesario pra el tracking de facebook" 
+}
+
+
