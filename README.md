@@ -1,21 +1,12 @@
-## Project Name
 
-#### Definitio
-
-Website created with **Next.js, Typescript and SASS.** 
-
+## Project Definitio
+Website created with **Next.js, Typescript and SASS.**
 ## Libraries and resources of the project
-
-
 ### UI
-
 **Gsap** for animations
 
 **Swipper** for sliders
-
 ### Logic
-
-
 **Formik** for form implementation
 
 **Yup** for form implementation
@@ -25,58 +16,46 @@ Website created with **Next.js, Typescript and SASS.**
 **Axios** for https requets
 
 ## Project Status
-
-El proyecto está **maquetado** y revisado siguiendo las recomendaciones de mobile-first .
-
+The project is **prototyped** and reviewed following the mobile-first recommendations.
 ## Installation and Setup Instructions
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+Clone down this repository. 
+You will need `node` and `npm` installed globally on your machine.
 
 Installation:
 
-`npm install`  
+`npm install`
 
 To Start Dev Server:
 
-`npm run dev`  
+`npm run dev`
 
 To Visit App:
 
-`localhost:3000/`  
+`localhost:3000/`
 
 ## Main folders structure of the project
 
 #### /assets
+It includes the project’s resource storage and the following directories:
 
-Almacena los recursos del proyecto incluye los siguientes directorios:
-- img/
-- fonts/
-- styles/
+`img/`
 
-A su vez en la carpeta** styles/** se incluyen los **archivos scss** para el desarrollo del proyecto.
+`fonts/`
+
+`styles/`
 
 #### /components
-
-Incluye los componentes de ámbito global de nuestra aplicación.
-
+It includes the globally scoped components of our application.
 #### /hooks
-
-Incluye los hooks del proyecto
-
+It includes the project’s hooks.
 #### /lang
-
-**Incluye los archivos en formato json para las traducciones, cada idioma debe ir en un json separado (es.json, en.json).** Cualquier texto de la aplicación susceptible de ser traducido (salvo el texto de las cookies que está incluido en el propio componente) debe ser añadido en su respectivo json de idioma para posteriormente poder ser llamado desde el componente. 
-
+**Include the files in JSON format for translations, each language must be included in a separate JSON file (es.json, en.json).** Any translatable text in the application (except for the text of the cookies that is included in the component itself), should be added to its respective language JSON file to be called from the component.
 #### /pages
-
-Componentes de enrutado de nuestra aplicación
-
+Routing components of our application.
 #### /ui
-
-UI Layout de lo componentes de página
-
-## Estructura principal de un componente
-
-Debido a la complejidad de las animaciones y a la estructura completamente única de los bloques gráficos y de texto, estos se han maquetado siguiendo esta estructura para facilitar la edición futura:
+UI layout of the page components.
+## Main structure of a component
+Due to the complexity of the animations and the completely unique structure of the graphic and text blocks, they have been prototyped following this structure to facilitate future editing:
 
 -/PageFolder (parent component)
 
@@ -84,43 +63,32 @@ Debido a la complejidad de las animaciones y a la estructura completamente únic
 
 -----/SectionAnimationFolder (private component)
 
-
-##### Ejemplo de componentes
+#### Example of components
 
 Home (page)
+
 ------HomeHero (section)
+
 ----------HeroAnim (graphics animation)
 
-Cada componente incluye su archivo index de exportación y sus estilos respectivos.
-El **componente principal** unicamente renderiza los componentes de cada sección de contenidos.
-El **componente de sección** incluye el **componente de gráficos animados y los textos** de esa sección. Los textos de la sección se animan desde este componente.
-El **componente de gráficos** únicamente renderiza la maquetación de las imágenes y las animaciones de estas
+Each component includes its export index file and its respective styles.
+The **main component**  only renders the components for each content section.
+The **section component** includes the **animated graphics component and the texts** for that section. The texts of the section are animated from this component.
+The **graphics component** solely renders the layout of the images and their animations.
 
-## Integración de formulario de contacto
-En la carpeta pages/api esta el desarrollo de los controladores y servicios necesarios para el envío de email donde se tendrá que modificar los valores por defecto a los valores del cliente con su respectiva configuración de SMTP y el email o grupo de emails que necesiten.
+## Contact Form integration
+In the pages/api folder, the development of the controllers and services necessary for email sending is located. Here, the default values should be modified to the client’s specific values, including their SMTP configuration and the email or group of emails required.
 
-En el componente contactForm se encuentra la integracion con el servicio anteriormente descrito, con la función sendForm donde se pasan por parametros los datos del formulario. 
+In the contactForm component, the integration with the aforementioned service is found. It utilizes the sendForm function where the data collected from the form is passed as parameters.
 
 ## Cookies
-Para la configuracion de las cookies es necesario incluirlas en el archivo /constants/cookies_item.ts. Se encuentran categorizadas y se pondrá el nombre de la cookie y una breve descripcción de su objetivo EJ:
-social: {
-  item:"FACEBOOK", description: "Necesario para el tracking de facebook" 
-}
-Cualquier texto que se quiera modificar o bloque de contenido que el cliente quiera omitir debe gestionarse directamente desde el código del componente.
+For the configuration of cookies, it is necessary to include them in the file `/constants/cookies_item.ts`. They are categorized, and the cookie name along with a brief description of its purpose will be added. For example:
 
-## NEXT js Learn More
+`social: {
+  item:“FACEBOOK”, description: “Facebook cookie”
+}`
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-
+Any text that needs to be modified or any content block that the client wants to omit should be managed directly from the component’s code.
+## Partners block
+The project includes a “partners” component, which is currently commented out. It can be displayed on any page and logos can be added through the configuration JSON located in...
+ `/data/partners.json`
