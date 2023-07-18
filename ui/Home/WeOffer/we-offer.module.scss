@@ -20,6 +20,11 @@
     top: 0;
     text-align: center;
 
+    span {
+      color: colors.$palette2;
+      font-weight: 500;
+    }
+
     @include devices.device(smScreen) {
       width: 35%;
       margin-left: 2rem;

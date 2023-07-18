@@ -105,7 +105,7 @@ const Experience = ({ }: ExperienceProps) => {
               <FormattedMessage
                 id="page.home.experience.text"
                 values={{
-                  b: children => <b>{children}</b>,
+                  b: children => <span>{children}</span>,
                 }}
               />
             </p>
