@@ -22,14 +22,13 @@
   "form.contact.label.phone": "Phone",
   "form.contact.label.email": "Email",
 
-  "page.home.hero.h1": "<b>Level up your</b> mobile performance marketing",
+  "page.home.hero.h1": "<b>Level Up your</b> mobile performance marketing",
   "page.home.hero.text": "Define your path to success and reach new frontiers with machine-learning powered solutions",
   "page.home.hero.button": "Yalla!",
   "page.home.whoweare.h2": "Who we are",
   "page.home.whoweare.text": "<b>Definitio</b> is a leading Programmatic Mobile Advertising Agency based out of Dubai, which is a vibrant international business hub.",
   "page.home.weoffer.h2": "We offer",
-  "page.home.weoffer.text": "We help our clients grow by <b>boosting</b> user acquistion <b>(UA)</b> and enhancing long-term <b>ROAS</b>. Our solutions are fully <b>transparent</b> and <b>fraud free</b>.",
-  "page.home.weoffer.text2": "Our solutions are fully <b>transparent</b> and <b>fraud free</b>.",
+  "page.home.weoffer.text": "<p>We help our clients grow by <b>boosting</b> user acquistion <b>(UA)</b> and enhancing long-term <b>ROAS</b></p><p>Our solutions are fully <b>transparent</b> and <b>fraud free</b>.</p>",
   "page.home.ourtechnology.h2": "Our technology",
   "page.home.ourtechnology.text": "<b>Definitio</b> uses its proprietary bidder and Machine Learning algorithms to effectively match clients with the most engaged/Paying users.",
   "page.home.experience.h2": "Experience",
@@ -38,7 +37,7 @@
   "page.home.dataoptimization.text": "Full access to <b>first-party data</b> and <b>predictive analytics</b> allow to identify and focus on the right strategies and <b>optimize</b> your investments.",
 
   "page.about.h1": "About Us",
-  "page.about.text": "<p>We believe in the power of technology, modern engineering data-driven solutions, that enables to create state-of-the-art data products.</p><p>We aspire to build a transparent, free-of-fraud, advertising experience based on machine learning tools and innovative approaches for faster reaction times and money-waste prevention.</p><p>We do believe in the power of people. Our tech-savvy team made of resourceful engineers, researchers and marketers along with the partnerships with the Tier-1 SSP and MMP players will ensure you to succeed and maximize your KPIs.</p><p>We will work together to customize the services that better match with your business needs and goals.</p>",
+  "page.about.text": "<p><i>We believe</i> in the power of technology, modern engineering data-driven solutions, that enables to create state-of-the-art data products.</p><p><i>We aspire</i> to build a transparent, free-of-fraud, advertising experience based on machine learning tools and innovative approaches for faster reaction times and money-waste prevention.</p><p><i>We do believe</i> in the power of people. Our tech-savvy team made of resourceful engineers, researchers and marketers along with the partnerships with the Tier-1 SSP and MMP players will ensure you to succeed and maximize your KPIs.</p><p><i>We will work together</i> to customize the services that better match with your business needs and goals.</p>",
 
   "page.services.hero.h1":"<span>Matching</span> clients with the most Engaged paying Users",
   "page.services.hero.text":"We help brands, agencies and app developers to understand, identify, attract, acquire and convert the right users at the right time.",

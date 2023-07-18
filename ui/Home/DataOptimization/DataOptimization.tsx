@@ -106,7 +106,7 @@ const DataOptimization = ({ }: DataOptimizationProps) => {
               <FormattedMessage
                 id="page.home.dataoptimization.text"
                 values={{
-                  b: children => <b>{children}</b>,
+                  b: children => <span>{children}</span>,
                 }}
               />
             </p>

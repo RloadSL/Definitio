@@ -24,17 +24,16 @@
       }
     }
   
-    // p {
-    //   @include devices.device(smScreen) {
-    //     max-width: 60%;
-    //   }
-    // }
-  
     &_text {
       opacity: 1;
       position: relative;
       top: 0;
       text-align: center;
+
+      span {
+        color: colors.$palette2;
+        font-weight: 500;
+      }
 
       @include devices.device(smScreen) {
         width: 40%;

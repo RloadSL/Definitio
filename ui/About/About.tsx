@@ -52,16 +52,17 @@ const About: NextPage = () => {
                 <FormattedMessage
                   id="page.about.text"
                   values={{
+                    i: (children) => <i>{children}</i>,
                     p: (children) => <p>{children}</p>
                   }}
                 />
               </div>
-              <Link className="button button-line" href="/contact">
-                <span>
-                  <FormattedMessage id="btn.label.contact" />
-                </span>
-              </Link>
             </article>
+            <Link className="button button-line" href="/contact">
+              <span>
+                <FormattedMessage id="btn.label.contact" />
+              </span>
+            </Link>
           </div>
           <div className={style.about_decoration}>
             <AboutAnim />

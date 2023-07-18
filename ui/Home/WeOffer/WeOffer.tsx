@@ -85,25 +85,13 @@ const WeOffer = ({}: WeOfferProps) => {
             <h2 className={style.titleButton}>
               <FormattedMessage id="page.home.weoffer.h2" />
             </h2>
-            <p>
-              <FormattedMessage
-                id="page.home.weoffer.text"
-                values={{
-                  b: (children) => <b>{children}</b>
-                  // p: children => <p>{children}</p>
-                }}
-              />
-            </p>
-            <p>
-              {/*@MARIA OJO aqui tienes que ver como pasar el p al format text*/}
-              <FormattedMessage
-                id="page.home.weoffer.text2"
-                values={{
-                  b: (children) => <b>{children}</b>
-                  // p: children => <p>{children}</p>
-                }}
-              />
-            </p>
+            <FormattedMessage
+              id="page.home.weoffer.text"
+              values={{
+                b: (children) => <span>{children}</span>,
+                p: (children) => <p>{children}</p>
+              }}
+            />
           </article>
         </div>
         <div className={style.weoffer_image}>

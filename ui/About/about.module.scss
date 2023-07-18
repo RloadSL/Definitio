@@ -37,6 +37,18 @@
   &_info {
     margin-bottom: 10rem;
 
+    article {
+      margin-bottom: 3rem;
+    }
+
+    a {
+      margin: auto;
+
+      @include devices.device(smScreen) {
+        margin: 0;
+      }
+    }
+
     @include devices.device(smScreen) {
       padding-left: 3rem;
       padding-top: 0;
@@ -57,7 +69,6 @@
   }
 
   &_decoration {
-
     @include devices.device(tablet) {
       width: 80%;
       margin: auto;
