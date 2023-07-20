@@ -83,12 +83,7 @@ const Contact: NextPage = () => {
       <div className={style.mail}>
         <div className={`${style.mail_text} mail_text`}>
           <h3>
-            <FormattedMessage
-              id="page.contact.h1"
-              values={{
-                span: (children) => <span>{children}</span>
-              }}
-            />
+            <FormattedMessage id="page.contact.h1Simple" />
           </h3>
           <p>
             <FormattedMessage id="page.contact.email" />
